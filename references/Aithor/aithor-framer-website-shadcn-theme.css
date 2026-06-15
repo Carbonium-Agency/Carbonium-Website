@@ -1,0 +1,17 @@
+/* shadcn/ui Theme — extracted from https://aithor.framer.website/ */
+/* Paste into your globals.css */
+
+@layer base {
+  :root {
+    --background: 0 0% 94%;
+    --foreground: 0 0% 0%;
+    --primary: 240 100% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 13 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 63%;
+    --muted-foreground: 0 0% 0%;
+    --border: 0 0% 90%;
+    --radius: 7px;
+  }
+}

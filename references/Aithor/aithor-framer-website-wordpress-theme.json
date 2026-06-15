@@ -1,0 +1,223 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "primary",
+          "color": "#0000ee",
+          "name": "Primary"
+        },
+        {
+          "slug": "secondary",
+          "color": "#ff3700",
+          "name": "Secondary"
+        },
+        {
+          "slug": "neutral-1",
+          "color": "#000000",
+          "name": "Neutral 1"
+        },
+        {
+          "slug": "neutral-2",
+          "color": "#4f4f4f",
+          "name": "Neutral 2"
+        },
+        {
+          "slug": "neutral-3",
+          "color": "#0a0a0a",
+          "name": "Neutral 3"
+        },
+        {
+          "slug": "neutral-4",
+          "color": "#f0f0f0",
+          "name": "Neutral 4"
+        },
+        {
+          "slug": "neutral-5",
+          "color": "#e5e5e5",
+          "name": "Neutral 5"
+        },
+        {
+          "slug": "bg-f0f0f0",
+          "color": "#f0f0f0",
+          "name": "Background #f0f0f0"
+        },
+        {
+          "slug": "bg-e5e5e5",
+          "color": "#e5e5e5",
+          "name": "Background #e5e5e5"
+        },
+        {
+          "slug": "bg-151619",
+          "color": "#151619",
+          "name": "Background #151619"
+        }
+      ],
+      "gradients": [
+        {
+          "slug": "gradient-1",
+          "gradient": "radial-gradient(42.6% 50% at 50% 100%, rgb(255, 55, 0) 0%, rgba(0, 0, 0, 0.15) 100%)",
+          "name": "Gradient 1"
+        },
+        {
+          "slug": "gradient-2",
+          "gradient": "radial-gradient(42.6% 50% at 50% 100%, rgb(255, 55, 0) 0%, rgba(255, 255, 255, 0) 100%)",
+          "name": "Gradient 2"
+        },
+        {
+          "slug": "gradient-3",
+          "gradient": "radial-gradient(167% 196.009% at 50% 100%, rgb(255, 55, 0) 0%, rgba(255, 255, 255, 0) 100%)",
+          "name": "Gradient 3"
+        },
+        {
+          "slug": "gradient-4",
+          "gradient": "radial-gradient(140% 164.319% at 50% 100%, rgb(255, 55, 0) 0%, rgba(0, 0, 0, 0.15) 100%)",
+          "name": "Gradient 4"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "Geist",
+          "slug": "geist",
+          "name": "Geist"
+        },
+        {
+          "fontFamily": "Halant",
+          "slug": "halant",
+          "name": "Halant"
+        },
+        {
+          "fontFamily": "Times New Roman",
+          "slug": "times-new-roman",
+          "name": "Times New Roman"
+        },
+        {
+          "fontFamily": "Outfit",
+          "slug": "outfit",
+          "name": "Outfit"
+        },
+        {
+          "fontFamily": "Switzer",
+          "slug": "switzer",
+          "name": "Switzer"
+        },
+        {
+          "fontFamily": "Inter",
+          "slug": "inter",
+          "name": "Inter"
+        },
+        {
+          "fontFamily": "Fragment Mono",
+          "slug": "fragment-mono",
+          "name": "Fragment Mono"
+        }
+      ],
+      "fontSizes": [
+        {
+          "size": "88px",
+          "slug": "size-88",
+          "name": "88px"
+        },
+        {
+          "size": "80px",
+          "slug": "size-80",
+          "name": "80px"
+        },
+        {
+          "size": "64px",
+          "slug": "size-64",
+          "name": "64px"
+        },
+        {
+          "size": "56px",
+          "slug": "size-56",
+          "name": "56px"
+        },
+        {
+          "size": "40px",
+          "slug": "size-40",
+          "name": "40px"
+        },
+        {
+          "size": "35.2px",
+          "slug": "size-35.2",
+          "name": "35.2px"
+        },
+        {
+          "size": "24px",
+          "slug": "size-24",
+          "name": "24px"
+        },
+        {
+          "size": "22.4px",
+          "slug": "size-22.4",
+          "name": "22.4px"
+        }
+      ]
+    },
+    "spacing": {
+      "spacingSizes": [
+        {
+          "size": "1px",
+          "slug": "spacing-1",
+          "name": "1px"
+        },
+        {
+          "size": "10px",
+          "slug": "spacing-10",
+          "name": "10px"
+        },
+        {
+          "size": "18px",
+          "slug": "spacing-18",
+          "name": "18px"
+        },
+        {
+          "size": "24px",
+          "slug": "spacing-24",
+          "name": "24px"
+        },
+        {
+          "size": "30px",
+          "slug": "spacing-30",
+          "name": "30px"
+        },
+        {
+          "size": "40px",
+          "slug": "spacing-40",
+          "name": "40px"
+        },
+        {
+          "size": "50px",
+          "slug": "spacing-50",
+          "name": "50px"
+        },
+        {
+          "size": "55px",
+          "slug": "spacing-55",
+          "name": "55px"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "1400px",
+      "wideSize": "1400px"
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#f0f0f0",
+      "text": "#000000"
+    },
+    "typography": {
+      "fontSize": "14.4px",
+      "lineHeight": "17.28px",
+      "fontFamily": "Geist"
+    },
+    "spacing": {}
+  }
+}

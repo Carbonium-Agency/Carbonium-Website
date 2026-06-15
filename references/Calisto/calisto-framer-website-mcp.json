@@ -1,0 +1,2120 @@
+{
+  "colors": {
+    "all": [
+      {
+        "hex": "#000000",
+        "rgb": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 0
+        },
+        "count": 7540,
+        "contexts": [
+          "text",
+          "border",
+          "background"
+        ]
+      },
+      {
+        "hex": "#0000ee",
+        "rgb": {
+          "r": 0,
+          "g": 0,
+          "b": 238,
+          "a": 1
+        },
+        "hsl": {
+          "h": 240,
+          "s": 100,
+          "l": 47
+        },
+        "count": 822,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#255ccc",
+        "rgb": {
+          "r": 37,
+          "g": 92,
+          "b": 204,
+          "a": 1
+        },
+        "hsl": {
+          "h": 220,
+          "s": 69,
+          "l": 47
+        },
+        "count": 569,
+        "contexts": [
+          "text",
+          "border",
+          "background"
+        ]
+      },
+      {
+        "hex": "#666666",
+        "rgb": {
+          "r": 102,
+          "g": 102,
+          "b": 102,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 40
+        },
+        "count": 531,
+        "contexts": [
+          "text",
+          "border",
+          "background"
+        ]
+      },
+      {
+        "hex": "#0d0d0d",
+        "rgb": {
+          "r": 13,
+          "g": 13,
+          "b": 13,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 5
+        },
+        "count": 396,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#ffffff",
+        "rgb": {
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 100
+        },
+        "count": 172,
+        "contexts": [
+          "background",
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#f5f5f5",
+        "rgb": {
+          "r": 245,
+          "g": 245,
+          "b": 245,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 96
+        },
+        "count": 126,
+        "contexts": [
+          "background"
+        ]
+      },
+      {
+        "hex": "#1c1c1c",
+        "rgb": {
+          "r": 28,
+          "g": 28,
+          "b": 28,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 11
+        },
+        "count": 90,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#525252",
+        "rgb": {
+          "r": 82,
+          "g": 82,
+          "b": 82,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 32
+        },
+        "count": 84,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#308dff",
+        "rgb": {
+          "r": 48,
+          "g": 141,
+          "b": 255,
+          "a": 1
+        },
+        "hsl": {
+          "h": 213,
+          "s": 100,
+          "l": 59
+        },
+        "count": 48,
+        "contexts": [
+          "background"
+        ]
+      },
+      {
+        "hex": "#59afff",
+        "rgb": {
+          "r": 89,
+          "g": 175,
+          "b": 255,
+          "a": 0.4
+        },
+        "hsl": {
+          "h": 209,
+          "s": 100,
+          "l": 67
+        },
+        "count": 34,
+        "contexts": [
+          "background"
+        ]
+      },
+      {
+        "hex": "#767676",
+        "rgb": {
+          "r": 118,
+          "g": 118,
+          "b": 118,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 46
+        },
+        "count": 22,
+        "contexts": [
+          "border"
+        ]
+      },
+      {
+        "hex": "#d9d9d9",
+        "rgb": {
+          "r": 217,
+          "g": 217,
+          "b": 217,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 85
+        },
+        "count": 4,
+        "contexts": [
+          "background"
+        ]
+      }
+    ]
+  },
+  "regions": [
+    {
+      "role": "nav",
+      "tag": "header",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 69.203125
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-Ji40F framer-14doa2n framer-v-14doa2n"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 40,
+        "y": 16,
+        "w": 1200,
+        "h": 53.203125
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-r3r9x8"
+    },
+    {
+      "role": "cta",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 800
+      },
+      "heading": "AI-Powered Automation",
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-1axj2dx"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 800,
+        "w": 1280,
+        "h": 643.96875
+      },
+      "heading": "Calisto is an AI automation agency helping modern businesses streamline operations, boost productivity, and scale smarter.",
+      "buttonCount": 0,
+      "cardCount": 24,
+      "className": "framer-jkaxoe"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 240,
+        "y": 1284.96875,
+        "w": 800,
+        "h": 39
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 24,
+      "className": null
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 1443.96875,
+        "w": 1280,
+        "h": 774.96875
+      },
+      "heading": "How We Bring Automation to Life",
+      "buttonCount": 0,
+      "cardCount": 40,
+      "className": "framer-kxfmn2"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 96,
+        "y": 1866.65625,
+        "w": 330.65625,
+        "h": 57
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 20,
+      "className": null
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 96,
+        "y": 1935.65625,
+        "w": 330.65625,
+        "h": 57
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 20,
+      "className": null
+    },
+    {
+      "role": "testimonials",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 2218.9375,
+        "w": 1280,
+        "h": 1189.5625
+      },
+      "heading": "AI Solutions Built for Efficiency",
+      "buttonCount": 0,
+      "cardCount": 32,
+      "className": "framer-yx1xcg"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 585.328125,
+        "y": 2969.71875,
+        "w": 193.328125,
+        "h": 44
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 16,
+      "className": null
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 501.328125,
+        "y": 3045.71875,
+        "w": 193.328125,
+        "h": 44
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 16,
+      "className": null
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 3408.5,
+        "w": 1280,
+        "h": 829.15625
+      },
+      "heading": "Automate Faster, Work Smarter",
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-wa3hio"
+    },
+    {
+      "role": "features",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 4237.65625,
+        "w": 1280,
+        "h": 941.796875
+      },
+      "heading": "Why Choose Calisto",
+      "buttonCount": 0,
+      "cardCount": 20,
+      "className": "framer-dyviff"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 240,
+        "y": 5079.453125,
+        "w": 800,
+        "h": 60
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 20,
+      "className": null
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 5179.453125,
+        "w": 1280,
+        "h": 808.96875
+      },
+      "heading": "Automation That Delivers Real Impact",
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-ljjndg"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 5988.421875,
+        "w": 1280,
+        "h": 1070.828125
+      },
+      "heading": "Flexible Plans for Every Team",
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-qms4zo"
+    },
+    {
+      "role": "testimonials",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 7059.25,
+        "w": 1280,
+        "h": 938.59375
+      },
+      "heading": "What Our Clients Are Saying",
+      "buttonCount": 0,
+      "cardCount": 12,
+      "className": "framer-fx1saz"
+    },
+    {
+      "role": "testimonials",
+      "tag": "section",
+      "bounds": {
+        "x": 160,
+        "y": 7490.84375,
+        "w": 960,
+        "h": 320
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 12,
+      "className": null
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 7997.84375,
+        "w": 1280,
+        "h": 1118.9375
+      },
+      "heading": "Meet the Team Behind Calisto",
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-102ikot"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 9116.78125,
+        "w": 1280,
+        "h": 1074.1875
+      },
+      "heading": "Frequently Asked Questions",
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-1cg020g"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 892,
+        "y": 9488.375,
+        "w": 28,
+        "h": 28
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-138568z"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 892,
+        "y": 9572.375,
+        "w": 28,
+        "h": 28
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-138568z"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 892,
+        "y": 9656.375,
+        "w": 28,
+        "h": 28
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-138568z"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 892,
+        "y": 9740.375,
+        "w": 28,
+        "h": 28
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-138568z"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 892,
+        "y": 9824.375,
+        "w": 28,
+        "h": 28
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-138568z"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 892,
+        "y": 9908.375,
+        "w": 28,
+        "h": 28
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-138568z"
+    },
+    {
+      "role": "footer",
+      "tag": "footer",
+      "bounds": {
+        "x": 0,
+        "y": 10190.96875,
+        "w": 1280,
+        "h": 828
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-sP8Q9 framer-FMJZk framer-F47W4 framer-tBVZ2 framer-p1cOQ framer-kehzY framer-2nilsz framer-v-2nilsz"
+    }
+  ],
+  "componentClusters": [],
+  "accessibility": {
+    "remediation": []
+  },
+  "cssHealth": {
+    "sheets": [
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 96,
+        "usedBytes": 96,
+        "unusedBytes": 0,
+        "unusedPercent": 0
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 299014,
+        "usedBytes": 124231,
+        "unusedBytes": 174783,
+        "unusedPercent": 58
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 11736,
+        "usedBytes": 0,
+        "unusedBytes": 11736,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 97,
+        "usedBytes": 97,
+        "unusedBytes": 0,
+        "unusedPercent": 0
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 0,
+        "usedBytes": 0,
+        "unusedBytes": 0,
+        "unusedPercent": 0
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 448,
+        "usedBytes": 0,
+        "unusedBytes": 448,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 0,
+        "usedBytes": 0,
+        "unusedBytes": 0,
+        "unusedPercent": 0
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 0,
+        "usedBytes": 0,
+        "unusedBytes": 0,
+        "unusedPercent": 0
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 0,
+        "usedBytes": 0,
+        "unusedBytes": 0,
+        "unusedPercent": 0
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 0,
+        "usedBytes": 0,
+        "unusedBytes": 0,
+        "unusedPercent": 0
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 0,
+        "unusedBytes": 162,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 115,
+        "unusedBytes": 47,
+        "unusedPercent": 29
+      },
+      {
+        "url": "https://calisto.framer.website/",
+        "totalBytes": 162,
+        "usedBytes": 115,
+        "unusedBytes": 47,
+        "unusedPercent": 29
+      }
+    ],
+    "totalBytes": 343305,
+    "usedBytes": 124654,
+    "unusedBytes": 218651,
+    "unusedPercent": 64,
+    "importantCount": 217,
+    "duplicates": 6932,
+    "vendorPrefixes": {
+      "webkit": 87,
+      "moz": 2,
+      "ms": 0,
+      "o": 0
+    },
+    "keyframes": [],
+    "specificity": {
+      "max": [
+        1,
+        5,
+        4
+      ],
+      "average": [
+        0,
+        2,
+        0.28
+      ],
+      "count": 1803
+    },
+    "issues": [
+      "217 !important rules",
+      "6932 duplicate declarations",
+      "64% unused CSS"
+    ]
+  }
+}

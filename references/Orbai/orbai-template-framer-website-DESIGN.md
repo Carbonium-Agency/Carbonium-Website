@@ -1,0 +1,127 @@
+---
+site: Orbai – AI Agency Template
+url: "https://orbai-template.framer.website/"
+generated_at: "2026-06-15T07:15:14.873Z"
+generator: "designlang@12.21.0"
+intent: landing
+material: flat
+library: vuetify
+tokens:
+  colors:
+    primary: "#0000ee"
+    background: "#f5f5f5"
+    foreground: "#000000"
+  typography:
+    sans: Inter
+    base: 16
+  spacing:
+    base: 2
+    scale: "[4, 20, 24, 30, 40, 44, 60, 80, 100, 160]"
+  radii:
+    sm: 5
+    md: 8
+    lg: 14
+    xl: 23
+  shadows:
+    sm: "rgb(0, 0, 0) 0px 0px 0px 1px inset"
+    xs: "rgba(16, 49, 77, 0.24) 0px 0.706592px 0.706592px -0.666667px, rgba(16, 49, 77, 0.23) 0px 1.80656px 1.80656px -1.33333px, rgba(16, 49, 77, 0.22) 0px 3.62176px 3.62176px -2px, rgba(16, 49, 77, 0.2) 0px 6.8656px 6.8656px -2.66667px, rgba(16, 49, 77, 0.16) 0px 13.6468px 13.6468px -3.33333px, rgba(16, 49, 77, 0.06) 0px 30px 30px -4px"
+---
+
+# Overview
+
+A **landing** page (heuristic confidence 0.59), dressed in **flat** material.
+
+Component library appears to be **vuetify** (0.9).
+
+> "ORB AI"
+
+The author writes in a **friendly** voice; headings tend to be **Title Case** case and **tight**.
+
+Reading order detected on the source: `hero → testimonial → feature-grid → content → testimonials → testimonials → content → testimonial → testimonial → pricing → content → testimonial → nav → nav → testimonial → faq → footer`.
+
+Source: <https://orbai-template.framer.website/>.
+
+# Colors
+
+| role | hex | usage |
+|---|---|---|
+| primary | `#0000ee` | 824 |
+| background | `#f5f5f5` | — |
+| foreground | `#000000` | — |
+
+**Neutrals:** `#000000` · `#f5f5f5` · `#ffffff`
+
+**Total unique colors detected:** 4.
+
+# Typography
+
+**Families**
+- `Inter` · 366 uses
+- `Satoshi` · 171 uses
+- `Times New Roman` · 120 uses
+
+**Body size:** `16px` / line-height `normal`.
+
+**Heading scale**
+| level | size | weight | line-height |
+|---|---|---|---|
+| h1 | `100px` | `400` | `120px` |
+| h2 | `56px` | `500` | `67.2px` |
+| h3 | `44px` | `500` | `52.8px` |
+| h4 | `36px` | `500` | `50.4px` |
+
+# Layout
+
+**Spacing base:** `2px` increments.
+**Scale:** `4px` · `20px` · `24px` · `30px` · `40px` · `44px` · `60px` · `80px` · `100px` · `160px`
+
+**Layout primitives:** 0 grid containers · 980 flex containers.
+
+**Breakpoints:** `[object Object]px` · `[object Object]px` · `[object Object]px` · `[object Object]px`
+
+# Elevation and Depth
+
+**Shadow scale**
+- `sm` — `rgb(0, 0, 0) 0px 0px 0px 1px inset`
+- `xs` — `rgba(0, 0, 0, 0.16) 0px 0.636953px 0.636953px -1px, rgba(0, 0, 0, 0.15) 0px 1.9316px 1.9316px -2px, rgba(0, 0, 0, 0.13) 0px 5.10612px 5.10612px -3px, rgba(0, 0, 0, 0.04) 0px 16px 16px -4px, rgba(227, 227, 227, 0.46) 0px -3px 1px 0px inset`
+- `xs` — `rgba(0, 0, 0, 0.1) 0px 0.706592px 0.706592px -0.541667px, rgba(0, 0, 0, 0.09) 0px 1.80656px 1.80656px -1.08333px, rgba(0, 0, 0, 0.09) 0px 3.62176px 3.62176px -1.625px, rgba(0, 0, 0, 0.09) 0px 6.8656px 6.8656px -2.16667px, rgba(0, 0, 0, 0.08) 0px 13.6468px 13.6468px -2.70833px, rgba(0, 0, 0, 0.05) 0px 30px 30px -3.25px, rgb(255, 255, 255) 0px 3px 1px 0px inset`
+- `xs` — `rgba(16, 49, 77, 0.24) 0px 0.706592px 0.706592px -0.666667px, rgba(16, 49, 77, 0.23) 0px 1.80656px 1.80656px -1.33333px, rgba(16, 49, 77, 0.22) 0px 3.62176px 3.62176px -2px, rgba(16, 49, 77, 0.2) 0px 6.8656px 6.8656px -2.66667px, rgba(16, 49, 77, 0.16) 0px 13.6468px 13.6468px -3.33333px, rgba(16, 49, 77, 0.06) 0px 30px 30px -4px`
+- `xs` — `rgba(158, 158, 158, 0.69) 0px 0.706592px 0.706592px -0.583333px, rgba(158, 158, 158, 0.68) 0px 1.80656px 1.80656px -1.16667px, rgba(158, 158, 158, 0.65) 0px 3.62176px 3.62176px -1.75px, rgba(158, 158, 158, 0.61) 0px 6.8656px 6.8656px -2.33333px, rgba(158, 158, 158, 0.52) 0px 13.6468px 13.6468px -2.91667px, rgba(158, 158, 158, 0.3) 0px 30px 30px -3.5px, rgb(255, 255, 255) 0px 3px 1px 0px inset`
+- `xs` — `rgba(0, 0, 0, 0.08) 0px 0.706592px 0.706592px -0.666667px, rgba(0, 0, 0, 0.08) 0px 1.80656px 1.80656px -1.33333px, rgba(0, 0, 0, 0.07) 0px 3.62176px 3.62176px -2px, rgba(0, 0, 0, 0.07) 0px 6.8656px 6.8656px -2.66667px, rgba(0, 0, 0, 0.05) 0px 13.6468px 13.6468px -3.33333px, rgba(0, 0, 0, 0.02) 0px 30px 30px -4px, rgb(255, 255, 255) 0px 3px 1px 0px inset`
+
+**Z-index layers:** 12 · ⚠ 1 issue(s)
+
+# Shapes
+
+**Radius scale**
+- `sm` — `5px`
+- `md` — `8px`
+- `lg` — `11px`
+- `lg` — `14px`
+- `xl` — `20px`
+- `xl` — `23px`
+
+# Components
+
+**Detected patterns:** `buttons` · `cards` · `inputs` · `links` · `navigation` · `footer`
+
+**Anatomy**
+| kind | variants | sizes | instances |
+|---|---|---|---|
+| button | — | — | 2 |
+
+# Do's and Don'ts
+
+**Do's**
+- Write headings in **Title Case** case, **tight** length.
+- Address the reader with the pronoun posture **we→you**.
+- Stay inside the **flat** material — match shadow and radius habits.
+
+**Don'ts**
+- Don't 16 !important rules — prefer specificity over overrides.
+- Don't 66% of css is unused — consider purging.
+- Don't 5998 duplicate css declarations.
+
+---
+_Generated by [designlang](https://github.com/Manavarya09/design-extract) v12.21.0 from <https://orbai-template.framer.website/>._
+_Compatible with the DESIGN.md convention pioneered by [design-extractor.com](https://www.design-extractor.com) — extended with intent, material, voice, anatomy, and library detection._

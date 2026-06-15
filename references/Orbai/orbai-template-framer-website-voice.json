@@ -1,0 +1,24 @@
+{
+  "tone": "friendly",
+  "pronoun": "we→you",
+  "headingStyle": "Title Case",
+  "headingLengthClass": "tight",
+  "ctaVerbs": [],
+  "buttonPatterns": [],
+  "sampleHeadings": [
+    "ORB AI",
+    "\"We harness your data, understand your audience, and use AI to help your brand rise above the noise. The best part? We execute, too.\"",
+    "Why Choose Us",
+    "All features in 1 tool",
+    "Our AI-Driven Services",
+    "Simple & Scalable",
+    "01",
+    "02",
+    "03",
+    "Proven Impact & Results"
+  ],
+  "stats": {
+    "buttons": 0,
+    "headings": 21
+  }
+}

@@ -1,0 +1,446 @@
+{
+  "pageIntent": {
+    "type": "landing",
+    "confidence": 0.59,
+    "path": "/",
+    "title": "Orbai – AI Agency Template",
+    "description": "Orbai is a premium Framer template built to elevate your AI automation agency. Designed with a sleek, modern aesthetic.",
+    "signals": [
+      {
+        "kind": "dom",
+        "type": "blog-post",
+        "weight": 0.35,
+        "detail": "byline|min-read"
+      },
+      {
+        "kind": "dom",
+        "type": "legal",
+        "weight": 0.4
+      },
+      {
+        "kind": "url",
+        "type": "landing",
+        "weight": 0.45,
+        "detail": "root-path"
+      },
+      {
+        "kind": "shape",
+        "type": "landing",
+        "weight": 0.3,
+        "detail": "hero+features+footer"
+      }
+    ],
+    "alternates": [
+      {
+        "type": "legal",
+        "score": 0.4
+      },
+      {
+        "type": "blog-post",
+        "score": 0.35
+      }
+    ],
+    "needsSmart": true
+  },
+  "sectionRoles": {
+    "sections": [
+      {
+        "index": 0,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 74.40625
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "lede": "Features"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 1,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 414.28125,
+          "y": 16,
+          "w": 460.265625,
+          "h": 38.40625
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "lede": "Features"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 2,
+        "tag": "section",
+        "role": "hero",
+        "subrole": null,
+        "confidence": 0.85,
+        "heading": "ORB AI",
+        "bounds": {
+          "x": 0,
+          "y": -10216,
+          "w": 1280,
+          "h": 800
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "ORB AI",
+          "lede": "AI AUTOMATION FOR BUSINESSES"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 3,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "\"We harness your data, understand your audience, and use AI to help your brand rise above the noise. The best part? We execute, too.\"",
+        "bounds": {
+          "x": 0,
+          "y": -9416,
+          "w": 1280,
+          "h": 411.21875
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "\"We harness your data, understand your audience, and use AI to help your brand rise above the noise. The best part? We execute, too.\""
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 4,
+        "tag": "section",
+        "role": "feature-grid",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "Why Choose Us",
+        "bounds": {
+          "x": 0,
+          "y": -9004.78125,
+          "w": 1280,
+          "h": 864.203125
+        },
+        "buttonCount": 0,
+        "cardCount": 24,
+        "slots": {
+          "heading": "Why Choose Us",
+          "lede": "BENEFITS"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 5,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 40,
+          "y": -8325.578125,
+          "w": 1200,
+          "h": 105
+        },
+        "buttonCount": 0,
+        "cardCount": 24,
+        "slots": {
+          "lede": "Faster Innovation"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 6,
+        "tag": "section",
+        "role": "testimonials",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "All features in 1 tool",
+        "bounds": {
+          "x": 0,
+          "y": -8140.578125,
+          "w": 1280,
+          "h": 1049.609375
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "All features in 1 tool",
+          "lede": "FEATURES"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 7,
+        "tag": "section",
+        "role": "testimonials",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Our AI-Driven Services",
+        "bounds": {
+          "x": 0,
+          "y": -7090.96875,
+          "w": 1280,
+          "h": 1179.203125
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Our AI-Driven Services",
+          "lede": "SERVICES"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 8,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": "Simple & Scalable",
+        "bounds": {
+          "x": 0,
+          "y": -5911.765625,
+          "w": 1280,
+          "h": 1591.203125
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Simple & Scalable",
+          "subheadings": [
+            "01",
+            "02",
+            "03"
+          ],
+          "lede": "PROCESS"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 9,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "Proven Impact & Results",
+        "bounds": {
+          "x": 0,
+          "y": -4320.5625,
+          "w": 1280,
+          "h": 975.296875
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Proven Impact & Results",
+          "lede": "PROJECTS"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 10,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "What Our Clients Say",
+        "bounds": {
+          "x": 0,
+          "y": -3345.265625,
+          "w": 1280,
+          "h": 1178.203125
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "What Our Clients Say",
+          "lede": "CUSTOMERS"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 11,
+        "tag": "section",
+        "role": "pricing",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Simple Price For All",
+        "bounds": {
+          "x": 0,
+          "y": -2167.0625,
+          "w": 1280,
+          "h": 1124.40625
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Simple Price For All",
+          "subheadings": [
+            "$800",
+            "$1700",
+            "$4700"
+          ],
+          "lede": "PRICING"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 12,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": "Precision vs Basic",
+        "bounds": {
+          "x": 0,
+          "y": -1042.65625,
+          "w": 1280,
+          "h": 886.859375
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Precision vs Basic",
+          "subheadings": [
+            "ORB AI",
+            "Others"
+          ],
+          "lede": "COMPARISON"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 13,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "Team Behind Success",
+        "bounds": {
+          "x": 0,
+          "y": -155.796875,
+          "w": 1280,
+          "h": 873.203125
+        },
+        "buttonCount": 2,
+        "cardCount": 16,
+        "slots": {
+          "heading": "Team Behind Success",
+          "ctaCount": 2,
+          "lede": "TEAM"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 14,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": null,
+        "bounds": {
+          "x": 40,
+          "y": 143.40625,
+          "w": 1200,
+          "h": 514
+        },
+        "buttonCount": 2,
+        "cardCount": 16,
+        "slots": {
+          "ctaCount": 2,
+          "lede": "Gwen chase"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 15,
+        "tag": "section",
+        "role": "faq",
+        "subrole": null,
+        "confidence": 0.85,
+        "heading": "Questions? Answers!",
+        "bounds": {
+          "x": 0,
+          "y": 717.40625,
+          "w": 1280,
+          "h": 825.015625
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Questions? Answers!",
+          "lede": "FAQS"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 16,
+        "tag": "footer",
+        "role": "footer",
+        "subrole": null,
+        "confidence": 0.95,
+        "heading": "ORB AI",
+        "bounds": {
+          "x": 0,
+          "y": 1392.421875,
+          "w": 1280,
+          "h": 746.40625
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "ORB AI"
+        },
+        "needsSmart": false
+      }
+    ],
+    "counts": {
+      "nav": 2,
+      "hero": 1,
+      "testimonial": 5,
+      "feature-grid": 1,
+      "content": 3,
+      "testimonials": 2,
+      "pricing": 1,
+      "faq": 1,
+      "footer": 1
+    },
+    "readingOrder": [
+      "hero",
+      "testimonial",
+      "feature-grid",
+      "content",
+      "testimonials",
+      "testimonials",
+      "content",
+      "testimonial",
+      "testimonial",
+      "pricing",
+      "content",
+      "testimonial",
+      "nav",
+      "nav",
+      "testimonial",
+      "faq",
+      "footer"
+    ]
+  }
+}

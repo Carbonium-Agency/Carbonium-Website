@@ -1,0 +1,96 @@
+:root {
+  /* Colors — Primary */
+  --color-primary: #0000ee;
+  --color-secondary: #ff3700;
+
+  /* Colors — Neutrals */
+  --color-neutral-50: #000000;
+  --color-neutral-100: #4f4f4f;
+  --color-neutral-200: #0a0a0a;
+  --color-neutral-300: #f0f0f0;
+  --color-neutral-400: #e5e5e5;
+  --color-neutral-500: #ffffff;
+  --color-neutral-600: #767676;
+  --color-neutral-700: #151619;
+  --color-neutral-800: #a1a1a1;
+
+  /* Colors — Backgrounds */
+  --color-bg: #f0f0f0;
+  --color-bg-1: #e5e5e5;
+  --color-bg-2: #151619;
+
+  /* Colors — Text */
+  --color-text: #000000;
+  --color-text-1: #0000ee;
+  --color-text-2: #151619;
+  --color-text-3: #0a0a0a;
+  --color-text-4: #f0f0f0;
+
+  /* Typography — Families */
+  --font-body: 'Geist', sans-serif;
+  --font-heading: 'Halant', sans-serif;
+  --font-body: 'Times New Roman', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --font-body: 'Switzer', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-body: 'Fragment Mono', sans-serif;
+
+  /* Typography — Scale */
+  --font-size-88: 88px;
+  --font-size-80: 80px;
+  --font-size-64: 64px;
+  --font-size-56: 56px;
+  --font-size-40: 40px;
+  --font-size-35.2: 35.2px;
+  --font-size-24: 24px;
+  --font-size-22.4: 22.4px;
+  --font-size-20: 20px;
+  --font-size-18.4: 18.4px;
+  --font-size-17.6: 17.6px;
+  --font-size-16: 16px;
+
+  /* Spacing */
+  --spacing-1: 1px;
+  --spacing-10: 10px;
+  --spacing-18: 18px;
+  --spacing-24: 24px;
+  --spacing-30: 30px;
+  --spacing-40: 40px;
+  --spacing-50: 50px;
+  --spacing-55: 55px;
+  --spacing-60: 60px;
+  --spacing-80: 80px;
+  --spacing-100: 100px;
+  --spacing-140: 140px;
+  --spacing-150: 150px;
+  --spacing-160: 160px;
+  --spacing-180: 180px;
+  --spacing-200: 200px;
+
+  /* Border Radius */
+  --radius-sm: 3px;
+  --radius-md: 7px;
+  --radius-md: 10px;
+  --radius-lg: 13px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 30px;
+  --radius-full: 50px;
+
+  /* Box Shadows */
+  --shadow-sm: rgb(0, 0, 0) 0px 0px 0px 1px inset;
+  --shadow-xs: rgba(0, 0, 0, 0.08) 0px 0.602187px 0.602187px -0.916667px, rgba(0, 0, 0, 0.08) 0px 2.28853px 2.28853px -1.83333px, rgba(0, 0, 0, 0.07) 0px 10px 10px -2.75px;
+  --shadow-xs: rgba(255, 255, 255, 0.03) 0px 2px 0px 0px inset;
+  --shadow-xs: rgba(255, 255, 255, 0.03) 0px 1.99825px 0px 0px inset;
+  --shadow-xs: rgba(0, 0, 0, 0.17) 0px 0.602187px 1.56569px -1.5px, rgba(0, 0, 0, 0.14) 0px 2.28853px 5.95019px -3px, rgba(0, 0, 0, 0.02) 0px 10px 26px -4.5px;
+
+  /* Original Site Variables */
+  /* — other — */
+  --one-if-corner-shape-supported: 1;
+  /* — semantic — */
+  success: [object Object];
+  warning: [object Object];
+  error: [object Object];
+  info: [object Object];
+
+}

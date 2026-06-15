@@ -1,0 +1,306 @@
+{
+  "$metadata": {
+    "generator": "designlang",
+    "version": "7.0.0",
+    "spec": "https://design-tokens.github.io/community-group/format/",
+    "source": "https://orbai-template.framer.website/",
+    "generatedAt": "2026-06-15T07:14:03.259Z"
+  },
+  "primitive": {
+    "color": {
+      "brand": {
+        "primary": {
+          "$value": "#0000ee",
+          "$type": "color"
+        }
+      },
+      "neutral": {
+        "n100": {
+          "$value": "#000000",
+          "$type": "color"
+        },
+        "n200": {
+          "$value": "#f5f5f5",
+          "$type": "color"
+        },
+        "n300": {
+          "$value": "#ffffff",
+          "$type": "color"
+        }
+      },
+      "background": {
+        "bg0": {
+          "$value": "#f5f5f5",
+          "$type": "color"
+        },
+        "bg1": {
+          "$value": "#ffffff",
+          "$type": "color"
+        }
+      },
+      "text": {
+        "text0": {
+          "$value": "#000000",
+          "$type": "color"
+        },
+        "text1": {
+          "$value": "#0000ee",
+          "$type": "color"
+        },
+        "text2": {
+          "$value": "#ffffff",
+          "$type": "color"
+        }
+      }
+    },
+    "spacing": {
+      "s0": {
+        "$value": "4px",
+        "$type": "dimension"
+      },
+      "s1": {
+        "$value": "20px",
+        "$type": "dimension"
+      },
+      "s2": {
+        "$value": "24px",
+        "$type": "dimension"
+      },
+      "s3": {
+        "$value": "30px",
+        "$type": "dimension"
+      },
+      "s4": {
+        "$value": "40px",
+        "$type": "dimension"
+      },
+      "s5": {
+        "$value": "44px",
+        "$type": "dimension"
+      },
+      "s6": {
+        "$value": "60px",
+        "$type": "dimension"
+      },
+      "s7": {
+        "$value": "80px",
+        "$type": "dimension"
+      },
+      "s8": {
+        "$value": "100px",
+        "$type": "dimension"
+      },
+      "s9": {
+        "$value": "160px",
+        "$type": "dimension"
+      },
+      "s10": {
+        "$value": "200px",
+        "$type": "dimension"
+      }
+    },
+    "radius": {
+      "r0": {
+        "$value": "5px",
+        "$type": "dimension"
+      },
+      "r1": {
+        "$value": "8px",
+        "$type": "dimension"
+      },
+      "r2": {
+        "$value": "11px",
+        "$type": "dimension"
+      },
+      "r3": {
+        "$value": "14px",
+        "$type": "dimension"
+      },
+      "r4": {
+        "$value": "20px",
+        "$type": "dimension"
+      },
+      "r5": {
+        "$value": "23px",
+        "$type": "dimension"
+      },
+      "r6": {
+        "$value": "34px",
+        "$type": "dimension"
+      },
+      "r7": {
+        "$value": "40px",
+        "$type": "dimension"
+      },
+      "r8": {
+        "$value": "50px",
+        "$type": "dimension"
+      },
+      "r9": {
+        "$value": "60px",
+        "$type": "dimension"
+      },
+      "r10": {
+        "$value": "100px",
+        "$type": "dimension"
+      },
+      "r11": {
+        "$value": "192px",
+        "$type": "dimension"
+      },
+      "r12": {
+        "$value": "228px",
+        "$type": "dimension"
+      },
+      "r13": {
+        "$value": "455px",
+        "$type": "dimension"
+      },
+      "r14": {
+        "$value": "1000px",
+        "$type": "dimension"
+      }
+    },
+    "shadow": {
+      "sh0": {
+        "$value": "rgb(0, 0, 0) 0px 0px 0px 1px inset",
+        "$type": "shadow"
+      },
+      "sh1": {
+        "$value": "rgba(0, 0, 0, 0.16) 0px 0.636953px 0.636953px -1px, rgba(0, 0, 0, 0.15) 0px 1.9316px 1.9316px -2px, rgba(0, 0, 0, 0.13) 0px 5.10612px 5.10612px -3px, rgba(0, 0, 0, 0.04) 0px 16px 16px -4px, rgba(227, 227, 227, 0.46) 0px -3px 1px 0px inset",
+        "$type": "shadow"
+      },
+      "sh2": {
+        "$value": "rgba(0, 0, 0, 0.1) 0px 0.706592px 0.706592px -0.541667px, rgba(0, 0, 0, 0.09) 0px 1.80656px 1.80656px -1.08333px, rgba(0, 0, 0, 0.09) 0px 3.62176px 3.62176px -1.625px, rgba(0, 0, 0, 0.09) 0px 6.8656px 6.8656px -2.16667px, rgba(0, 0, 0, 0.08) 0px 13.6468px 13.6468px -2.70833px, rgba(0, 0, 0, 0.05) 0px 30px 30px -3.25px, rgb(255, 255, 255) 0px 3px 1px 0px inset",
+        "$type": "shadow"
+      },
+      "sh3": {
+        "$value": "rgba(16, 49, 77, 0.24) 0px 0.706592px 0.706592px -0.666667px, rgba(16, 49, 77, 0.23) 0px 1.80656px 1.80656px -1.33333px, rgba(16, 49, 77, 0.22) 0px 3.62176px 3.62176px -2px, rgba(16, 49, 77, 0.2) 0px 6.8656px 6.8656px -2.66667px, rgba(16, 49, 77, 0.16) 0px 13.6468px 13.6468px -3.33333px, rgba(16, 49, 77, 0.06) 0px 30px 30px -4px",
+        "$type": "shadow"
+      },
+      "sh4": {
+        "$value": "rgba(158, 158, 158, 0.69) 0px 0.706592px 0.706592px -0.583333px, rgba(158, 158, 158, 0.68) 0px 1.80656px 1.80656px -1.16667px, rgba(158, 158, 158, 0.65) 0px 3.62176px 3.62176px -1.75px, rgba(158, 158, 158, 0.61) 0px 6.8656px 6.8656px -2.33333px, rgba(158, 158, 158, 0.52) 0px 13.6468px 13.6468px -2.91667px, rgba(158, 158, 158, 0.3) 0px 30px 30px -3.5px, rgb(255, 255, 255) 0px 3px 1px 0px inset",
+        "$type": "shadow"
+      },
+      "sh5": {
+        "$value": "rgba(0, 0, 0, 0.08) 0px 0.706592px 0.706592px -0.666667px, rgba(0, 0, 0, 0.08) 0px 1.80656px 1.80656px -1.33333px, rgba(0, 0, 0, 0.07) 0px 3.62176px 3.62176px -2px, rgba(0, 0, 0, 0.07) 0px 6.8656px 6.8656px -2.66667px, rgba(0, 0, 0, 0.05) 0px 13.6468px 13.6468px -3.33333px, rgba(0, 0, 0, 0.02) 0px 30px 30px -4px, rgb(255, 255, 255) 0px 3px 1px 0px inset",
+        "$type": "shadow"
+      },
+      "sh6": {
+        "$value": "rgba(0, 0, 0, 0.2) 0px 0.706592px 0.706592px -0.666667px, rgba(0, 0, 0, 0.19) 0px 1.80656px 1.80656px -1.33333px, rgba(0, 0, 0, 0.18) 0px 3.62176px 3.62176px -2px, rgba(0, 0, 0, 0.17) 0px 6.8656px 6.8656px -2.66667px, rgba(0, 0, 0, 0.13) 0px 13.6468px 13.6468px -3.33333px, rgba(0, 0, 0, 0.05) 0px 30px 30px -4px, rgb(255, 255, 255) 0px 3px 1px 0px inset",
+        "$type": "shadow"
+      },
+      "sh7": {
+        "$value": "rgba(0, 0, 0, 0.08) 0px 0.706592px 0.706592px -0.666667px, rgba(0, 0, 0, 0.08) 0px 1.80656px 1.80656px -1.33333px, rgba(0, 0, 0, 0.07) 0px 3.62176px 3.62176px -2px, rgba(0, 0, 0, 0.07) 0px 6.8656px 6.8656px -2.66667px, rgba(0, 0, 0, 0.05) 0px 13.6468px 13.6468px -3.33333px, rgba(0, 0, 0, 0.02) 0px 30px 30px -4px",
+        "$type": "shadow"
+      },
+      "sh8": {
+        "$value": "rgba(171, 171, 171, 0.64) 0px 0.706592px 0.706592px -0.541667px, rgba(171, 171, 171, 0.63) 0px 1.80656px 1.80656px -1.08333px, rgba(171, 171, 171, 0.61) 0px 3.62176px 3.62176px -1.625px, rgba(171, 171, 171, 0.58) 0px 6.8656px 6.8656px -2.16667px, rgba(171, 171, 171, 0.51) 0px 13.6468px 13.6468px -2.70833px, rgba(171, 171, 171, 0.35) 0px 30px 30px -3.25px",
+        "$type": "shadow"
+      },
+      "sh9": {
+        "$value": "rgba(0, 0, 0, 0.16) 0px 0.706592px 0.706592px -0.666667px, rgba(0, 0, 0, 0.15) 0px 1.80656px 1.80656px -1.33333px, rgba(0, 0, 0, 0.15) 0px 3.62176px 3.62176px -2px, rgba(0, 0, 0, 0.13) 0px 6.8656px 6.8656px -2.66667px, rgba(0, 0, 0, 0.11) 0px 13.6468px 13.6468px -3.33333px, rgba(0, 0, 0, 0.04) 0px 30px 30px -4px, rgb(36, 36, 36) 0px 3px 1px 0px inset",
+        "$type": "shadow"
+      },
+      "sh10": {
+        "$value": "rgba(0, 0, 0, 0.08) 0px 0.706592px 0.706592px -0.666667px inset, rgba(0, 0, 0, 0.08) 0px 1.80656px 1.80656px -1.33333px inset, rgba(0, 0, 0, 0.07) 0px 3.62176px 3.62176px -2px inset, rgba(0, 0, 0, 0.07) 0px 6.8656px 6.8656px -2.66667px inset, rgba(0, 0, 0, 0.05) 0px 13.6468px 13.6468px -3.33333px inset, rgba(0, 0, 0, 0.02) 0px 30px 30px -4px inset",
+        "$type": "shadow"
+      },
+      "sh11": {
+        "$value": "rgba(0, 0, 0, 0) 0px 0.706592px 0.706592px -0.666667px inset, rgba(0, 0, 0, 0) 0px 1.80656px 1.80656px -1.33333px inset, rgba(0, 0, 0, 0) 0px 3.62176px 3.62176px -2px inset, rgba(0, 0, 0, 0) 0px 6.8656px 6.8656px -2.66667px inset, rgba(0, 0, 0, 0) 0px 13.6468px 13.6468px -3.33333px inset, rgba(0, 0, 0, 0) 0px 30px 30px -4px inset",
+        "$type": "shadow"
+      },
+      "sh12": {
+        "$value": "rgba(16, 49, 77, 0.05) 0px 0.706592px 0.706592px -0.291667px, rgba(16, 49, 77, 0.06) 0px 1.80656px 1.80656px -0.583333px, rgba(16, 49, 77, 0.06) 0px 3.62176px 3.62176px -0.875px, rgba(16, 49, 77, 0.06) 0px 6.8656px 6.8656px -1.16667px, rgba(16, 49, 77, 0.07) 0px 13.6468px 13.6468px -1.45833px, rgba(16, 49, 77, 0.1) 0px 30px 30px -1.75px",
+        "$type": "shadow"
+      },
+      "sh13": {
+        "$value": "rgba(61, 61, 61, 0.72) 0px 0.602187px 1.08394px -1.25px, rgba(61, 61, 61, 0.64) 0px 2.28853px 4.11936px -2.5px, rgba(61, 61, 61, 0.25) 0px 10px 18px -3.75px, rgba(0, 0, 0, 0.35) 0px 0.706592px 0.706592px -0.583333px, rgba(0, 0, 0, 0.34) 0px 1.80656px 1.80656px -1.16667px, rgba(0, 0, 0, 0.33) 0px 3.62176px 3.62176px -1.75px, rgba(0, 0, 0, 0.3) 0px 6.8656px 6.8656px -2.33333px, rgba(0, 0, 0, 0.26) 0px 13.6468px 13.6468px -2.91667px, rgba(0, 0, 0, 0.15) 0px 30px 30px -3.5px",
+        "$type": "shadow"
+      },
+      "sh14": {
+        "$value": "rgba(122, 122, 122, 0.58) 0px 0.706592px 0.989229px -0.541667px, rgba(122, 122, 122, 0.57) 0px 1.80656px 2.52919px -1.08333px, rgba(122, 122, 122, 0.55) 0px 3.62176px 5.07046px -1.625px, rgba(122, 122, 122, 0.52) 0px 6.8656px 9.61184px -2.16667px, rgba(122, 122, 122, 0.46) 0px 13.6468px 19.1055px -2.70833px, rgba(122, 122, 122, 0.32) 0px 30px 42px -3.25px",
+        "$type": "shadow"
+      },
+      "sh15": {
+        "$value": "rgba(0, 0, 0, 0.17) 0px 0.602187px 1.56569px -1.5px, rgba(0, 0, 0, 0.14) 0px 2.28853px 5.95019px -3px, rgba(0, 0, 0, 0.02) 0px 10px 26px -4.5px",
+        "$type": "shadow"
+      },
+      "sh16": {
+        "$value": "rgba(0, 0, 0, 0) 0px 1px 2px 0px inset",
+        "$type": "shadow"
+      },
+      "sh17": {
+        "$value": "rgba(255, 255, 255, 0.4) 0px 3px 1px 0px inset, rgba(255, 255, 255, 0.4) 0px -3px 1px 0px inset",
+        "$type": "shadow"
+      },
+      "sh18": {
+        "$value": "rgba(255, 255, 255, 0.5) 0px 0px 9px 0px inset",
+        "$type": "shadow"
+      },
+      "sh19": {
+        "$value": "rgba(0, 0, 0, 0.2) 1px 20px 30px -12px",
+        "$type": "shadow"
+      }
+    },
+    "fontFamily": {
+      "f0": {
+        "$value": "Inter",
+        "$type": "fontFamily"
+      },
+      "f1": {
+        "$value": "Satoshi",
+        "$type": "fontFamily"
+      },
+      "f2": {
+        "$value": "Times New Roman",
+        "$type": "fontFamily"
+      }
+    }
+  },
+  "semantic": {
+    "color": {
+      "action": {
+        "primary": {
+          "$value": "{primitive.color.brand.primary}",
+          "$type": "color"
+        }
+      },
+      "surface": {
+        "default": {
+          "$value": "{primitive.color.background.bg0}",
+          "$type": "color"
+        }
+      },
+      "text": {
+        "body": {
+          "$value": "{primitive.color.text.text0}",
+          "$type": "color"
+        }
+      }
+    },
+    "typography": {
+      "body": {
+        "$value": {
+          "fontFamily": "Inter",
+          "fontSize": "100px",
+          "fontWeight": "400",
+          "lineHeight": "120px"
+        },
+        "$type": "typography"
+      }
+    },
+    "radius": {
+      "control": {
+        "$value": "{primitive.radius.r0}",
+        "$type": "dimension"
+      }
+    },
+    "shadow": {
+      "elevated": {
+        "$value": "{primitive.shadow.sh0}",
+        "$type": "shadow"
+      }
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "url": "https://agent.framer.wiki/",
+  "path": "/",
+  "added": {
+    "primitive": {
+      "color": {
+        "neutral": {
+          "n900": {
+            "$value": "#d1d5dd"
+          },
+          "n1000": {
+            "$value": "#686b6e"
+          }
+        },
+        "background": {
+          "bg4": {
+            "$value": "#000000"
+          },
+          "bg5": {
+            "$value": "#6aebc9"
+          },
+          "bg6": {
+            "$value": "#1a1d21"
+          },
+          "bg7": {
+            "$value": "#131619"
+          },
+          "bg8": {
+            "$value": "#f1fef8"
+          },
+          "bg9": {
+            "$value": "#e9ebef"
+          }
+        }
+      },
+      "radius": {
+        "r7": {
+          "$value": "100px"
+        },
+        "r8": {
+          "$value": "1000px"
+        }
+      },
+      "shadow": {
+        "sh4": {
+          "$value": "rgba(182, 240, 156, 0.16) 0px 4px 6px -4px, rgba(182, 240, 156, 0.16) 0px 10px 15px -3px"
+        },
+        "sh5": {
+          "$value": "rgba(74, 201, 126, 0.48) 0px 0px 12px 0px"
+        },
+        "sh6": {
+          "$value": "rgba(255, 255, 255, 0.08) 0px 8px 12px 0px inset, rgba(0, 0, 0, 0.12) 0px 24px 24px -16px, rgba(255, 255, 255, 0.08) 16px 24px 64px -24px inset"
+        },
+        "sh7": {
+          "$value": "rgba(119, 126, 150, 0.1) 0px 10px 20px -5px"
+        },
+        "sh8": {
+          "$value": "rgba(107, 110, 148, 0.12) 0px 120px 164px -25px, rgba(0, 0, 0, 0.25) 0px 2px 4px 0px"
+        }
+      }
+    }
+  },
+  "changed": {
+    "primitive": {
+      "color": {
+        "brand": {
+          "primary": {
+            "$value": "#37ea9e"
+          },
+          "secondary": {
+            "$value": "#0000ee"
+          }
+        },
+        "neutral": {
+          "n200": {
+            "$value": "#ffffff"
+          },
+          "n300": {
+            "$value": "#9ba5b5"
+          },
+          "n400": {
+            "$value": "#4e5b6d"
+          },
+          "n500": {
+            "$value": "#e9ebef"
+          },
+          "n600": {
+            "$value": "#273241"
+          },
+          "n700": {
+            "$value": "#1a1d21"
+          },
+          "n800": {
+            "$value": "#9b9c9e"
+          }
+        },
+        "background": {
+          "bg1": {
+            "$value": "#ffffff"
+          },
+          "bg2": {
+            "$value": "#95f4cc"
+          },
+          "bg3": {
+            "$value": "#37ea9e"
+          }
+        },
+        "text": {
+          "text1": {
+            "$value": "#0000ee"
+          },
+          "text2": {
+            "$value": "#4e5b6d"
+          },
+          "text3": {
+            "$value": "#ffffff"
+          },
+          "text4": {
+            "$value": "#e9ebef"
+          },
+          "text5": {
+            "$value": "#9ba5b5"
+          },
+          "text6": {
+            "$value": "#37ea9e"
+          },
+          "text7": {
+            "$value": "#d1d5dd"
+          },
+          "text8": {
+            "$value": "#16a781"
+          },
+          "text9": {
+            "$value": "#9b9c9e"
+          }
+        }
+      },
+      "spacing": {
+        "s0": {
+          "$value": "2px"
+        },
+        "s1": {
+          "$value": "20px"
+        },
+        "s2": {
+          "$value": "24px"
+        },
+        "s3": {
+          "$value": "32px"
+        },
+        "s4": {
+          "$value": "36px"
+        },
+        "s5": {
+          "$value": "40px"
+        },
+        "s6": {
+          "$value": "48px"
+        },
+        "s7": {
+          "$value": "64px"
+        },
+        "s8": {
+          "$value": "80px"
+        },
+        "s9": {
+          "$value": "96px"
+        }
+      },
+      "radius": {
+        "r0": {
+          "$value": "4px"
+        },
+        "r1": {
+          "$value": "8px"
+        },
+        "r2": {
+          "$value": "12px"
+        },
+        "r3": {
+          "$value": "16px"
+        },
+        "r4": {
+          "$value": "20px"
+        },
+        "r5": {
+          "$value": "30px"
+        },
+        "r6": {
+          "$value": "90px"
+        }
+      },
+      "shadow": {
+        "sh0": {
+          "$value": "rgb(39, 50, 65) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.53) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.1) 0px 0.80621px 0.564347px -0.625px, rgba(0, 0, 0, 0.1) 0px 1.91086px 1.3376px -1.25px, rgba(0, 0, 0, 0.09) 0px 3.48561px 2.43992px -1.875px, rgba(0, 0, 0, 0.09) 0px 5.79481px 4.05637px -2.5px, rgba(0, 0, 0, 0.08) 0px 9.35815px 6.55071px -3.125px, rgba(0, 0, 0, 0.07) 0px 15.3184px 10.7229px -3.75px, rgba(0, 0, 0, 0.05) 0px 26.3772px 18.464px -4.375px, rgba(0, 0, 0, 0) 0px 48px 33.6px -5px"
+        },
+        "sh1": {
+          "$value": "rgba(0, 0, 0, 0.26) 0px 0.636953px 1.14652px -1.125px, rgba(0, 0, 0, 0.24) 0px 1.9316px 3.47689px -2.25px, rgba(0, 0, 0, 0.192) 0px 5.10612px 9.19102px -3.375px, rgba(0, 0, 0, 0.03) 0px 16px 28.8px -4.5px"
+        },
+        "sh2": {
+          "$value": "rgba(0, 0, 0, 0.05) 0px 2px 2px 0px"
+        },
+        "sh3": {
+          "$value": "rgba(104, 107, 110, 0.16) 0px 4px 6px -4px, rgba(104, 107, 110, 0.16) 0px 10px 15px -3px"
+        }
+      },
+      "fontFamily": {
+        "f0": {
+          "$value": "Geist"
+        },
+        "f1": {
+          "$value": "Times New Roman"
+        },
+        "f2": {
+          "$value": "Plus Jakarta Sans"
+        }
+      }
+    },
+    "semantic": {
+      "typography": {
+        "body": {
+          "$value": {
+            "fontFamily": "Geist",
+            "fontSize": "64px",
+            "fontWeight": "500",
+            "lineHeight": "64px"
+          }
+        }
+      }
+    }
+  }
+}

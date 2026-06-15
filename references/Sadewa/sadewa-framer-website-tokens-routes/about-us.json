@@ -1,0 +1,84 @@
+{
+  "url": "https://sadewa.framer.website/about-us",
+  "path": "/about-us",
+  "added": {},
+  "changed": {
+    "primitive": {
+      "color": {
+        "neutral": {
+          "n300": {
+            "$value": "#f3f3f3"
+          },
+          "n400": {
+            "$value": "#ffffff"
+          },
+          "n500": {
+            "$value": "#797979"
+          },
+          "n600": {
+            "$value": "#d3d3d3"
+          },
+          "n700": {
+            "$value": "#e5e5e5"
+          }
+        },
+        "text": {
+          "text2": {
+            "$value": "#797979"
+          },
+          "text3": {
+            "$value": "#0000ee"
+          },
+          "text4": {
+            "$value": "#ffffff"
+          }
+        }
+      },
+      "spacing": {
+        "s0": {
+          "$value": "4px"
+        },
+        "s1": {
+          "$value": "32px"
+        },
+        "s2": {
+          "$value": "48px"
+        },
+        "s3": {
+          "$value": "56px"
+        },
+        "s4": {
+          "$value": "80px"
+        },
+        "s5": {
+          "$value": "100px"
+        }
+      },
+      "radius": {
+        "r0": {
+          "$value": "2px"
+        }
+      },
+      "fontFamily": {
+        "f1": {
+          "$value": "Roboto Mono"
+        },
+        "f2": {
+          "$value": "Times New Roman"
+        }
+      }
+    },
+    "semantic": {
+      "typography": {
+        "body": {
+          "$value": {
+            "fontFamily": "Satoshi",
+            "fontSize": "80px",
+            "fontWeight": "700",
+            "lineHeight": "72px"
+          }
+        }
+      }
+    }
+  }
+}

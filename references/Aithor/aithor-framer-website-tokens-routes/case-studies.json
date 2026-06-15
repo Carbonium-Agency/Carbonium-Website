@@ -1,0 +1,119 @@
+{
+  "url": "https://aithor.framer.website/case-studies",
+  "path": "/case-studies",
+  "added": {},
+  "changed": {
+    "primitive": {
+      "color": {
+        "neutral": {
+          "n200": {
+            "$value": "#0a0a0a"
+          },
+          "n300": {
+            "$value": "#4f4f4f"
+          },
+          "n500": {
+            "$value": "#ffffff"
+          },
+          "n600": {
+            "$value": "#767676"
+          },
+          "n700": {
+            "$value": "#151619"
+          },
+          "n800": {
+            "$value": "#e5e5e5"
+          }
+        },
+        "background": {
+          "bg1": {
+            "$value": "#e5e5e5"
+          }
+        }
+      },
+      "spacing": {
+        "s1": {
+          "$value": "13px"
+        },
+        "s2": {
+          "$value": "25px"
+        },
+        "s3": {
+          "$value": "30px"
+        },
+        "s4": {
+          "$value": "40px"
+        },
+        "s5": {
+          "$value": "50px"
+        },
+        "s6": {
+          "$value": "80px"
+        },
+        "s7": {
+          "$value": "100px"
+        },
+        "s8": {
+          "$value": "150px"
+        },
+        "s9": {
+          "$value": "160px"
+        },
+        "s10": {
+          "$value": "200px"
+        }
+      },
+      "radius": {
+        "r0": {
+          "$value": "7px"
+        },
+        "r1": {
+          "$value": "10px"
+        },
+        "r2": {
+          "$value": "20px"
+        },
+        "r3": {
+          "$value": "50px"
+        }
+      },
+      "shadow": {
+        "sh0": {
+          "$value": "rgb(0, 0, 0) 0px 0px 0px 1px inset"
+        },
+        "sh1": {
+          "$value": "rgba(0, 0, 0, 0.17) 0px 0.602187px 1.56569px -1.5px, rgba(0, 0, 0, 0.14) 0px 2.28853px 5.95019px -3px, rgba(0, 0, 0, 0.02) 0px 10px 26px -4.5px"
+        }
+      },
+      "fontFamily": {
+        "f0": {
+          "$value": "Geist"
+        },
+        "f1": {
+          "$value": "Halant"
+        },
+        "f2": {
+          "$value": "Times New Roman"
+        },
+        "f3": {
+          "$value": "Outfit"
+        },
+        "f4": {
+          "$value": "Switzer"
+        }
+      }
+    },
+    "semantic": {
+      "typography": {
+        "body": {
+          "$value": {
+            "fontFamily": "Geist",
+            "fontSize": "88px",
+            "fontWeight": "600",
+            "lineHeight": "92.4px"
+          }
+        }
+      }
+    }
+  }
+}

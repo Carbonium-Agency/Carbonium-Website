@@ -1,0 +1,647 @@
+{
+  "colors": {
+    "all": [
+      {
+        "hex": "#000000",
+        "rgb": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 0
+        },
+        "count": 8102,
+        "contexts": [
+          "text",
+          "border",
+          "background"
+        ]
+      },
+      {
+        "hex": "#0000ee",
+        "rgb": {
+          "r": 0,
+          "g": 0,
+          "b": 238,
+          "a": 1
+        },
+        "hsl": {
+          "h": 240,
+          "s": 100,
+          "l": 47
+        },
+        "count": 3956,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#4f4f4f",
+        "rgb": {
+          "r": 79,
+          "g": 79,
+          "b": 79,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 31
+        },
+        "count": 982,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#0a0a0a",
+        "rgb": {
+          "r": 10,
+          "g": 10,
+          "b": 10,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 4
+        },
+        "count": 939,
+        "contexts": [
+          "text",
+          "border",
+          "background"
+        ]
+      },
+      {
+        "hex": "#f0f0f0",
+        "rgb": {
+          "r": 240,
+          "g": 240,
+          "b": 240,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 94
+        },
+        "count": 413,
+        "contexts": [
+          "background",
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#ff3700",
+        "rgb": {
+          "r": 255,
+          "g": 55,
+          "b": 0,
+          "a": 1
+        },
+        "hsl": {
+          "h": 13,
+          "s": 100,
+          "l": 50
+        },
+        "count": 238,
+        "contexts": [
+          "background",
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#e5e5e5",
+        "rgb": {
+          "r": 229,
+          "g": 229,
+          "b": 229,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 90
+        },
+        "count": 135,
+        "contexts": [
+          "background",
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#ffffff",
+        "rgb": {
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 0.15
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 100
+        },
+        "count": 135,
+        "contexts": [
+          "background"
+        ]
+      },
+      {
+        "hex": "#767676",
+        "rgb": {
+          "r": 118,
+          "g": 118,
+          "b": 118,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 46
+        },
+        "count": 121,
+        "contexts": [
+          "border"
+        ]
+      },
+      {
+        "hex": "#151619",
+        "rgb": {
+          "r": 21,
+          "g": 22,
+          "b": 25,
+          "a": 1
+        },
+        "hsl": {
+          "h": 225,
+          "s": 9,
+          "l": 9
+        },
+        "count": 106,
+        "contexts": [
+          "text",
+          "border",
+          "background"
+        ]
+      },
+      {
+        "hex": "#a1a1a1",
+        "rgb": {
+          "r": 161,
+          "g": 161,
+          "b": 161,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 63
+        },
+        "count": 2,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      }
+    ]
+  },
+  "regions": [
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 76
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-8BVRx framer-1v4w5j2 framer-v-1v4w5j2"
+    },
+    {
+      "role": "pricing",
+      "tag": "main",
+      "bounds": {
+        "x": 0,
+        "y": -7791,
+        "w": 1280,
+        "h": 7863.046875
+      },
+      "heading": "We Build The AI That Runs Your Business.",
+      "buttonCount": 0,
+      "cardCount": 39,
+      "className": "framer-rjw9nm"
+    },
+    {
+      "role": "nav",
+      "tag": "header",
+      "bounds": {
+        "x": 0,
+        "y": -7791,
+        "w": 1280,
+        "h": 680
+      },
+      "heading": "We Build The AI That Runs Your Business.",
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-1wi9mqb"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": -7111,
+        "w": 1280,
+        "h": 80
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-a8tatr"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": -7031,
+        "w": 1280,
+        "h": 1418.375
+      },
+      "heading": "Everything You Need To Put AI To Work.",
+      "buttonCount": 0,
+      "cardCount": 30,
+      "className": "framer-eybf3k"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 836.65625,
+        "y": -6542.875,
+        "w": 363.34375,
+        "h": 90
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 15,
+      "className": null
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 836.65625,
+        "y": -6442.875,
+        "w": 363.34375,
+        "h": 90
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 15,
+      "className": null
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": -5612.625,
+        "w": 1280,
+        "h": 978.5
+      },
+      "heading": "From Friction To Fully Live.",
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-1ov5dvv"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": -4634.125,
+        "w": 1280,
+        "h": 770.84375
+      },
+      "heading": "Real Business Results.",
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-1b9cz5i"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": -3863.28125,
+        "w": 1280,
+        "h": 815.71875
+      },
+      "heading": "AI Partner, Done Right.",
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-1r7bbz8"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": -3047.5625,
+        "w": 1280,
+        "h": 1001.515625
+      },
+      "heading": "What Our Clients Say.",
+      "buttonCount": 0,
+      "cardCount": 9,
+      "className": "framer-1rlqwfu"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": -2046.046875,
+        "w": 1280,
+        "h": 198.3125
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-1nvpfva"
+    },
+    {
+      "role": "pricing",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": -1847.734375,
+        "w": 1280,
+        "h": 997.171875
+      },
+      "heading": "Pricing That Scales With You.",
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-bufzvk"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": -850.5625,
+        "w": 1280,
+        "h": 922.609375
+      },
+      "heading": "Need Answers?",
+      "buttonCount": 0,
+      "cardCount": 0,
+      "className": "framer-1y8jpnp"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 0,
+        "y": 72.046875,
+        "w": 1280,
+        "h": 130
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 9,
+      "className": "framer-bdzn25"
+    },
+    {
+      "role": "content",
+      "tag": "section",
+      "bounds": {
+        "x": 40,
+        "y": 72.046875,
+        "w": 1200,
+        "h": 130
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 9,
+      "className": null
+    },
+    {
+      "role": "footer",
+      "tag": "footer",
+      "bounds": {
+        "x": 0,
+        "y": 202.046875,
+        "w": 1280,
+        "h": 677.859375
+      },
+      "heading": "AITHOR",
+      "buttonCount": 1,
+      "cardCount": 0,
+      "className": "framer-uvV4e framer-6MGvi framer-HGY9h framer-Mf4b2 framer-P2eav framer-117jz9u framer-v-117jz9u"
+    }
+  ],
+  "componentClusters": [
+    {
+      "kind": "input",
+      "structuralHash": "textarea",
+      "instanceCount": 1,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(10, 10, 10)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(10, 10, 10)",
+            "fontSize": "14.4px",
+            "fontWeight": "400"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "input",
+      "structuralHash": "input",
+      "instanceCount": 1,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(10, 10, 10)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(10, 10, 10)",
+            "fontSize": "16px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "button>div>div>div>div",
+      "instanceCount": 1,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0.15)",
+            "color": "rgb(0, 0, 0)",
+            "padding": "16px 16px 16px 16px",
+            "borderRadius": "50px",
+            "border": "0px outset rgb(0, 0, 0)",
+            "fontSize": "12px",
+            "fontWeight": "400"
+          },
+          "instanceCount": 1
+        }
+      ]
+    }
+  ],
+  "accessibility": {
+    "remediation": []
+  },
+  "cssHealth": {
+    "sheets": [
+      {
+        "url": "https://aithor.framer.website/",
+        "totalBytes": 449,
+        "usedBytes": 116,
+        "unusedBytes": 333,
+        "unusedPercent": 74
+      },
+      {
+        "url": "https://aithor.framer.website/",
+        "totalBytes": 97,
+        "usedBytes": 97,
+        "unusedBytes": 0,
+        "unusedPercent": 0
+      },
+      {
+        "url": "https://aithor.framer.website/",
+        "totalBytes": 22535,
+        "usedBytes": 0,
+        "unusedBytes": 22535,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://aithor.framer.website/",
+        "totalBytes": 96,
+        "usedBytes": 96,
+        "unusedBytes": 0,
+        "unusedPercent": 0
+      },
+      {
+        "url": "https://aithor.framer.website/",
+        "totalBytes": 265921,
+        "usedBytes": 103295,
+        "unusedBytes": 162626,
+        "unusedPercent": 61
+      },
+      {
+        "url": "https://aithor.framer.website/",
+        "totalBytes": 176,
+        "usedBytes": 0,
+        "unusedBytes": 176,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://aithor.framer.website/",
+        "totalBytes": 96,
+        "usedBytes": 0,
+        "unusedBytes": 96,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://aithor.framer.website/",
+        "totalBytes": 176,
+        "usedBytes": 0,
+        "unusedBytes": 176,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://unpkg.com/lenis@1.3.23/dist/lenis.css",
+        "totalBytes": 513,
+        "usedBytes": 0,
+        "unusedBytes": 513,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://aithor.framer.website/",
+        "totalBytes": 96,
+        "usedBytes": 0,
+        "unusedBytes": 96,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://unpkg.com/lenis@1.3.23/dist/lenis.css",
+        "totalBytes": 513,
+        "usedBytes": 0,
+        "unusedBytes": 513,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://unpkg.com/lenis@1.3.23/dist/lenis.css",
+        "totalBytes": 513,
+        "usedBytes": 174,
+        "unusedBytes": 339,
+        "unusedPercent": 66
+      },
+      {
+        "url": "https://aithor.framer.website/",
+        "totalBytes": 176,
+        "usedBytes": 0,
+        "unusedBytes": 176,
+        "unusedPercent": 100
+      }
+    ],
+    "totalBytes": 291357,
+    "usedBytes": 103778,
+    "unusedBytes": 187579,
+    "unusedPercent": 64,
+    "importantCount": 19,
+    "duplicates": 5616,
+    "vendorPrefixes": {
+      "webkit": 105,
+      "moz": 2,
+      "ms": 0,
+      "o": 0
+    },
+    "keyframes": [],
+    "specificity": {
+      "max": [
+        1,
+        5,
+        4
+      ],
+      "average": [
+        0,
+        1.99,
+        0.41
+      ],
+      "count": 1321
+    },
+    "issues": [
+      "19 !important rules",
+      "5616 duplicate declarations",
+      "64% unused CSS"
+    ]
+  }
+}

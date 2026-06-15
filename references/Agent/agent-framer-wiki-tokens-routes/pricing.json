@@ -1,0 +1,165 @@
+{
+  "url": "https://agent.framer.wiki/pricing",
+  "path": "/pricing",
+  "added": {},
+  "changed": {
+    "primitive": {
+      "color": {
+        "brand": {
+          "primary": {
+            "$value": "#37ea9e"
+          },
+          "secondary": {
+            "$value": "#0000ee"
+          }
+        },
+        "neutral": {
+          "n200": {
+            "$value": "#ffffff"
+          },
+          "n300": {
+            "$value": "#4e5b6d"
+          },
+          "n400": {
+            "$value": "#9ba5b5"
+          },
+          "n500": {
+            "$value": "#e9ebef"
+          },
+          "n600": {
+            "$value": "#273241"
+          },
+          "n700": {
+            "$value": "#101010"
+          },
+          "n800": {
+            "$value": "#d1d5dd"
+          }
+        },
+        "background": {
+          "bg1": {
+            "$value": "#ffffff"
+          },
+          "bg2": {
+            "$value": "#e9ebef"
+          },
+          "bg3": {
+            "$value": "#37ea9e"
+          }
+        },
+        "text": {
+          "text1": {
+            "$value": "#0000ee"
+          },
+          "text2": {
+            "$value": "#4e5b6d"
+          },
+          "text3": {
+            "$value": "#ffffff"
+          },
+          "text4": {
+            "$value": "#107a5e"
+          },
+          "text5": {
+            "$value": "#101010"
+          },
+          "text6": {
+            "$value": "#16a781"
+          },
+          "text7": {
+            "$value": "#37ea9e"
+          },
+          "text8": {
+            "$value": "#9ba5b5"
+          },
+          "text9": {
+            "$value": "#273241"
+          }
+        }
+      },
+      "spacing": {
+        "s0": {
+          "$value": "2px"
+        },
+        "s1": {
+          "$value": "20px"
+        },
+        "s2": {
+          "$value": "24px"
+        },
+        "s3": {
+          "$value": "36px"
+        },
+        "s4": {
+          "$value": "48px"
+        },
+        "s5": {
+          "$value": "64px"
+        },
+        "s6": {
+          "$value": "80px"
+        },
+        "s7": {
+          "$value": "88px"
+        },
+        "s8": {
+          "$value": "96px"
+        }
+      },
+      "radius": {
+        "r0": {
+          "$value": "3px"
+        },
+        "r1": {
+          "$value": "6px"
+        },
+        "r2": {
+          "$value": "10px"
+        },
+        "r3": {
+          "$value": "16px"
+        },
+        "r4": {
+          "$value": "20px"
+        },
+        "r5": {
+          "$value": "32px"
+        },
+        "r6": {
+          "$value": "100px"
+        }
+      },
+      "shadow": {
+        "sh0": {
+          "$value": "rgba(0, 0, 0, 0.26) 0px 0.636953px 1.14652px -1.125px, rgba(0, 0, 0, 0.24) 0px 1.9316px 3.47689px -2.25px, rgba(0, 0, 0, 0.192) 0px 5.10612px 9.19102px -3.375px, rgba(0, 0, 0, 0.03) 0px 16px 28.8px -4.5px"
+        },
+        "sh1": {
+          "$value": "rgba(107, 110, 148, 0.12) 0px 120px 164px -25px, rgba(0, 0, 0, 0.25) 0px 2px 4px 0px"
+        }
+      },
+      "fontFamily": {
+        "f0": {
+          "$value": "Geist"
+        },
+        "f1": {
+          "$value": "Times New Roman"
+        },
+        "f2": {
+          "$value": "Inter"
+        }
+      }
+    },
+    "semantic": {
+      "typography": {
+        "body": {
+          "$value": {
+            "fontFamily": "Geist",
+            "fontSize": "48px",
+            "fontWeight": "600",
+            "lineHeight": "48px"
+          }
+        }
+      }
+    }
+  }
+}

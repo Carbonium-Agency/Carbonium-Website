@@ -1,0 +1,637 @@
+{
+  "pageIntent": {
+    "type": "landing",
+    "confidence": 0.31,
+    "path": "/",
+    "title": "Calisto - AI Agency Framer Template",
+    "description": "Calisto is a modern, clean Framer template built for AI agencies and automation startups.",
+    "signals": [
+      {
+        "kind": "dom",
+        "type": "blog-post",
+        "weight": 0.35,
+        "detail": "byline|min-read"
+      },
+      {
+        "kind": "url",
+        "type": "landing",
+        "weight": 0.45,
+        "detail": "root-path"
+      }
+    ],
+    "alternates": [
+      {
+        "type": "blog-post",
+        "score": 0.35
+      }
+    ],
+    "needsSmart": true
+  },
+  "sectionRoles": {
+    "sections": [
+      {
+        "index": 0,
+        "tag": "header",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 69.203125
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "lede": "Process"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 1,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 40,
+          "y": 16,
+          "w": 1200,
+          "h": 53.203125
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "lede": "Process"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 2,
+        "tag": "section",
+        "role": "cta",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "AI-Powered Automation",
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 800
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "AI-Powered Automation",
+          "subheadings": [
+            "for Modern Teams"
+          ],
+          "lede": "AI-Powered Automation\nfor Modern Teams"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 3,
+        "tag": "section",
+        "role": "logo-wall",
+        "subrole": null,
+        "confidence": 0.85,
+        "heading": "Calisto is an AI automation agency helping modern businesses streamline operations, boost productivity, and scale smarter.",
+        "bounds": {
+          "x": 0,
+          "y": 800,
+          "w": 1280,
+          "h": 643.96875
+        },
+        "buttonCount": 0,
+        "cardCount": 24,
+        "slots": {
+          "heading": "Calisto is an AI automation agency helping modern businesses streamline operations, boost productivity, and scale smarter.",
+          "lede": "About us"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 4,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 240,
+          "y": 1284.96875,
+          "w": 800,
+          "h": 39
+        },
+        "buttonCount": 0,
+        "cardCount": 24,
+        "slots": {},
+        "needsSmart": true
+      },
+      {
+        "index": 5,
+        "tag": "section",
+        "role": "steps",
+        "subrole": null,
+        "confidence": 0.75,
+        "heading": "How We Bring Automation to Life",
+        "bounds": {
+          "x": 0,
+          "y": 1443.96875,
+          "w": 1280,
+          "h": 774.96875
+        },
+        "buttonCount": 0,
+        "cardCount": 40,
+        "slots": {
+          "heading": "How We Bring Automation to Life",
+          "subheadings": [
+            "Discover & Analyze",
+            "Design & Build",
+            "Launch & Optimize"
+          ],
+          "lede": "Process"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 6,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 96,
+          "y": 1866.65625,
+          "w": 330.65625,
+          "h": 57
+        },
+        "buttonCount": 0,
+        "cardCount": 20,
+        "slots": {},
+        "needsSmart": true
+      },
+      {
+        "index": 7,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 96,
+          "y": 1935.65625,
+          "w": 330.65625,
+          "h": 57
+        },
+        "buttonCount": 0,
+        "cardCount": 20,
+        "slots": {},
+        "needsSmart": true
+      },
+      {
+        "index": 8,
+        "tag": "section",
+        "role": "steps",
+        "subrole": null,
+        "confidence": 0.75,
+        "heading": "AI Solutions Built for Efficiency",
+        "bounds": {
+          "x": 0,
+          "y": 2218.9375,
+          "w": 1280,
+          "h": 1189.5625
+        },
+        "buttonCount": 0,
+        "cardCount": 32,
+        "slots": {
+          "heading": "AI Solutions Built for Efficiency",
+          "subheadings": [
+            "Custom AI Chatbots",
+            "Content Generation",
+            "Business Consulting",
+            "Workflow Automation"
+          ],
+          "lede": "Services"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 9,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 585.328125,
+          "y": 2969.71875,
+          "w": 193.328125,
+          "h": 44
+        },
+        "buttonCount": 0,
+        "cardCount": 16,
+        "slots": {},
+        "needsSmart": true
+      },
+      {
+        "index": 10,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 501.328125,
+          "y": 3045.71875,
+          "w": 193.328125,
+          "h": 44
+        },
+        "buttonCount": 0,
+        "cardCount": 16,
+        "slots": {},
+        "needsSmart": true
+      },
+      {
+        "index": 11,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": "Automate Faster, Work Smarter",
+        "bounds": {
+          "x": 0,
+          "y": 3408.5,
+          "w": 1280,
+          "h": 829.15625
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Automate Faster, Work Smarter",
+          "subheadings": [
+            "AI-Powered Decision Making",
+            "Custom Workflows",
+            "Seamless Integrations",
+            "Fast Implementation"
+          ],
+          "lede": "Features"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 12,
+        "tag": "section",
+        "role": "feature-grid",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "Why Choose Calisto",
+        "bounds": {
+          "x": 0,
+          "y": 4237.65625,
+          "w": 1280,
+          "h": 941.796875
+        },
+        "buttonCount": 0,
+        "cardCount": 20,
+        "slots": {
+          "heading": "Why Choose Calisto",
+          "subheadings": [
+            "Calisto",
+            "Other Agencies"
+          ],
+          "lede": "Benefits"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 13,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 240,
+          "y": 5079.453125,
+          "w": 800,
+          "h": 60
+        },
+        "buttonCount": 0,
+        "cardCount": 20,
+        "slots": {
+          "lede": "85"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 14,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": "Automation That Delivers Real Impact",
+        "bounds": {
+          "x": 0,
+          "y": 5179.453125,
+          "w": 1280,
+          "h": 808.96875
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Automation That Delivers Real Impact",
+          "subheadings": [
+            "Orbit CRM"
+          ],
+          "lede": "Projects"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 15,
+        "tag": "section",
+        "role": "pricing",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Flexible Plans for Every Team",
+        "bounds": {
+          "x": 0,
+          "y": 5988.421875,
+          "w": 1280,
+          "h": 1070.828125
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Flexible Plans for Every Team",
+          "lede": "Pricing"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 16,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "What Our Clients Are Saying",
+        "bounds": {
+          "x": 0,
+          "y": 7059.25,
+          "w": 1280,
+          "h": 938.59375
+        },
+        "buttonCount": 0,
+        "cardCount": 12,
+        "slots": {
+          "heading": "What Our Clients Are Saying",
+          "lede": "Testimonials"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 17,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": null,
+        "bounds": {
+          "x": 160,
+          "y": 7490.84375,
+          "w": 960,
+          "h": 320
+        },
+        "buttonCount": 0,
+        "cardCount": 12,
+        "slots": {
+          "lede": "Daniel Reyes"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 18,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "Meet the Team Behind Calisto",
+        "bounds": {
+          "x": 0,
+          "y": 7997.84375,
+          "w": 1280,
+          "h": 1118.9375
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Meet the Team Behind Calisto",
+          "subheadings": [
+            "Amira Khalil",
+            "Leo Tanaka",
+            "Nina Duarte",
+            "Omar Haddad"
+          ],
+          "lede": "Team"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 19,
+        "tag": "section",
+        "role": "faq",
+        "subrole": null,
+        "confidence": 0.85,
+        "heading": "Frequently Asked Questions",
+        "bounds": {
+          "x": 0,
+          "y": 9116.78125,
+          "w": 1280,
+          "h": 1074.1875
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Frequently Asked Questions",
+          "lede": "FAQs"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 20,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 892,
+          "y": 9488.375,
+          "w": 28,
+          "h": 28
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {},
+        "needsSmart": false
+      },
+      {
+        "index": 21,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 892,
+          "y": 9572.375,
+          "w": 28,
+          "h": 28
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {},
+        "needsSmart": false
+      },
+      {
+        "index": 22,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 892,
+          "y": 9656.375,
+          "w": 28,
+          "h": 28
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {},
+        "needsSmart": false
+      },
+      {
+        "index": 23,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 892,
+          "y": 9740.375,
+          "w": 28,
+          "h": 28
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {},
+        "needsSmart": false
+      },
+      {
+        "index": 24,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 892,
+          "y": 9824.375,
+          "w": 28,
+          "h": 28
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {},
+        "needsSmart": false
+      },
+      {
+        "index": 25,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 892,
+          "y": 9908.375,
+          "w": 28,
+          "h": 28
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {},
+        "needsSmart": false
+      },
+      {
+        "index": 26,
+        "tag": "footer",
+        "role": "footer",
+        "subrole": null,
+        "confidence": 0.95,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 10190.96875,
+          "w": 1280,
+          "h": 828
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "lede": "Automate Smarter"
+        },
+        "needsSmart": false
+      }
+    ],
+    "counts": {
+      "nav": 8,
+      "cta": 1,
+      "logo-wall": 1,
+      "content": 8,
+      "steps": 2,
+      "feature-grid": 1,
+      "pricing": 1,
+      "testimonial": 3,
+      "faq": 1,
+      "footer": 1
+    },
+    "readingOrder": [
+      "nav",
+      "cta",
+      "nav",
+      "logo-wall",
+      "content",
+      "steps",
+      "content",
+      "content",
+      "steps",
+      "content",
+      "content",
+      "content",
+      "feature-grid",
+      "content",
+      "content",
+      "pricing",
+      "testimonial",
+      "testimonial",
+      "testimonial",
+      "faq",
+      "nav",
+      "nav",
+      "nav",
+      "nav",
+      "nav",
+      "nav",
+      "footer"
+    ]
+  }
+}

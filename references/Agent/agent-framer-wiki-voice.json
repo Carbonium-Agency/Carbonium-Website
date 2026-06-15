@@ -1,0 +1,34 @@
+{
+  "tone": "friendly",
+  "pronoun": "you-only",
+  "headingStyle": "Title Case",
+  "headingLengthClass": "tight",
+  "ctaVerbs": [
+    {
+      "value": "get",
+      "count": 1
+    }
+  ],
+  "buttonPatterns": [
+    {
+      "value": "get access",
+      "count": 1
+    }
+  ],
+  "sampleHeadings": [
+    "Automate Smarter",
+    "Grow",
+    "Bolder.",
+    "L",
+    "e",
+    "How it works?",
+    "01.",
+    "Choose\nAgents",
+    "Discover the amazing ",
+    "features of our AI Agents"
+  ],
+  "stats": {
+    "buttons": 1,
+    "headings": 25
+  }
+}

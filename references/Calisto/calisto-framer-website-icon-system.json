@@ -1,0 +1,207 @@
+{
+  "library": "heroicons-solid",
+  "confidence": 0.55,
+  "alternates": [
+    {
+      "id": "material",
+      "score": 0.4
+    }
+  ],
+  "stats": {
+    "count": 148,
+    "strokeOnly": 0,
+    "fillOnly": 148,
+    "mixed": 0,
+    "avgStrokeWidth": 0,
+    "gridDistribution": {
+      "24": 80
+    },
+    "roundedCapsFraction": 0
+  },
+  "signals": [
+    "fillDominant",
+    "grid24"
+  ],
+  "icons": [
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "",
+      "grid": null,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-YnhV6 framer-bol2bv",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-vD47W framer-bol2bv",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-b8top framer-40959d",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-C66Lx framer-156bkfr",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-JK0qE framer-3c95n3",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-EcbMb framer-4bi7yn",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-aadXx framer-1rpx5r0",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-LmhHe framer-bol2bv",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-C66Lx framer-u84hqk",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-GrUq6 framer-197n8tk",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-DjqIQ framer-1d8sokf",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-9jswL framer-2brai1",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-Nj0EX framer-ncqx2s",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-k1wVI framer-2esr8k",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-ewdLd framer-srn8zl",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-icXAD framer-3i4lb8",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-6c5up framer-w378wx",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-vxsvr framer-1jop5wa",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-In32S framer-ze63tn",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-GrUq6 framer-1iu4nys",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-DjqIQ framer-1l0htpl",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-SdjjD framer-1clcy6a",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-SdjjD framer-1c6otnt",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-z7nYg framer-1a5bec2",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-cDUB7 framer-1il0q6f",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-cBrfg framer-j02ilf",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-30Bgq framer-1wy5d2p",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    },
+    {
+      "class": "framer-cTK3q framer-1i9x99s",
+      "grid": 24,
+      "strokeWidth": null,
+      "style": "fill"
+    }
+  ]
+}

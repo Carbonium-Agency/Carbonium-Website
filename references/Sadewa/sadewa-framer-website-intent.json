@@ -1,0 +1,403 @@
+{
+  "pageIntent": {
+    "type": "landing",
+    "confidence": 0.31,
+    "path": "/",
+    "title": "Sadewa - AI Automation Agency Framer Template",
+    "description": "Sadewa helps AI automation agencies proudly show their services, build trust with clients, and grow their business with a modern website.",
+    "signals": [
+      {
+        "kind": "dom",
+        "type": "blog-post",
+        "weight": 0.35,
+        "detail": "byline|min-read"
+      },
+      {
+        "kind": "url",
+        "type": "landing",
+        "weight": 0.45,
+        "detail": "root-path"
+      }
+    ],
+    "alternates": [
+      {
+        "type": "blog-post",
+        "score": 0.35
+      }
+    ],
+    "needsSmart": true
+  },
+  "sectionRoles": {
+    "sections": [
+      {
+        "index": 0,
+        "tag": "main",
+        "role": "pricing",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Smart AI Automation for Growing Brands.",
+        "bounds": {
+          "x": 0,
+          "y": -4906,
+          "w": 1280,
+          "h": 15220.6875
+        },
+        "buttonCount": 0,
+        "cardCount": 15,
+        "slots": {
+          "heading": "Smart AI Automation for Growing Brands.",
+          "subheadings": [
+            "Eliminate the bottlenecks\nthat hold you back",
+            "Automation solutions",
+            "AI strategy & consulting",
+            "AI content creation"
+          ]
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 1,
+        "tag": "section",
+        "role": "logo-wall",
+        "subrole": null,
+        "confidence": 0.85,
+        "heading": "Smart AI Automation for Growing Brands.",
+        "bounds": {
+          "x": 0,
+          "y": -4906,
+          "w": 1280,
+          "h": 856.984375
+        },
+        "buttonCount": 0,
+        "cardCount": 15,
+        "slots": {
+          "heading": "Smart AI Automation for Growing Brands."
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 2,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": null,
+        "bounds": {
+          "x": 664.8125,
+          "y": -4184.015625,
+          "w": 595.1875,
+          "h": 35
+        },
+        "buttonCount": 0,
+        "cardCount": 15,
+        "slots": {},
+        "needsSmart": true
+      },
+      {
+        "index": 3,
+        "tag": "section",
+        "role": "testimonials",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Eliminate the bottlenecks\nthat hold you back",
+        "bounds": {
+          "x": 0,
+          "y": -4049.015625,
+          "w": 1280,
+          "h": 2415
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Eliminate the bottlenecks\nthat hold you back",
+          "lede": "Teams spend too much time on repetitive tasks."
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 4,
+        "tag": "section",
+        "role": "testimonials",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Automation solutions",
+        "bounds": {
+          "x": 0,
+          "y": -1634.015625,
+          "w": 1280,
+          "h": 1025
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Automation solutions",
+          "subheadings": [
+            "AI strategy & consulting",
+            "AI content creation",
+            "AI agent development",
+            "CRM AI automation"
+          ],
+          "lede": "/"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 5,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": "Latest works",
+        "bounds": {
+          "x": 0,
+          "y": -609.015625,
+          "w": 1280,
+          "h": 1342.6875
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Latest works",
+          "subheadings": [
+            "AI Automation & Portfolio Website for a Design Studio",
+            "40%",
+            "3",
+            "2x"
+          ],
+          "lede": "/"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 6,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": "Discover",
+        "bounds": {
+          "x": 0,
+          "y": 733.671875,
+          "w": 1280,
+          "h": 3331
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Discover",
+          "subheadings": [
+            "Plan",
+            "Build",
+            "Scale"
+          ],
+          "lede": "/"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 7,
+        "tag": "section",
+        "role": "testimonials",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": 4064.671875,
+          "w": 1280,
+          "h": 587
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "lede": "/"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 8,
+        "tag": "section",
+        "role": "content",
+        "subrole": null,
+        "confidence": 0.3,
+        "heading": "Tech stack we use",
+        "bounds": {
+          "x": 0,
+          "y": 6211.671875,
+          "w": 1280,
+          "h": 535
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Tech stack we use",
+          "lede": "/"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 9,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "Meet the Visionaries",
+        "bounds": {
+          "x": 0,
+          "y": 6746.671875,
+          "w": 1280,
+          "h": 995
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Meet the Visionaries",
+          "lede": "/"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 10,
+        "tag": "section",
+        "role": "pricing",
+        "subrole": null,
+        "confidence": 0.4,
+        "heading": "Choose your plan",
+        "bounds": {
+          "x": 0,
+          "y": 7741.671875,
+          "w": 1280,
+          "h": 870.609375
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Choose your plan",
+          "subheadings": [
+            "$",
+            "$",
+            "799",
+            "$"
+          ],
+          "lede": "/"
+        },
+        "needsSmart": true
+      },
+      {
+        "index": 11,
+        "tag": "section",
+        "role": "faq",
+        "subrole": null,
+        "confidence": 0.85,
+        "heading": "Frequently Asked Questions",
+        "bounds": {
+          "x": 0,
+          "y": 8612.28125,
+          "w": 1280,
+          "h": 744
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Frequently Asked Questions",
+          "lede": "/"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 12,
+        "tag": "section",
+        "role": "testimonial",
+        "subrole": null,
+        "confidence": 0.8,
+        "heading": "Latest insights",
+        "bounds": {
+          "x": 0,
+          "y": 9356.28125,
+          "w": 1280,
+          "h": 958.40625
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Latest insights",
+          "subheadings": [
+            "From Data to Decisions: How AI Turns Insights into Action"
+          ],
+          "lede": "/"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 13,
+        "tag": "nav",
+        "role": "nav",
+        "subrole": null,
+        "confidence": 0.9,
+        "heading": null,
+        "bounds": {
+          "x": 0,
+          "y": -72,
+          "w": 1280,
+          "h": 72
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "lede": "CASE STUDIES"
+        },
+        "needsSmart": false
+      },
+      {
+        "index": 14,
+        "tag": "footer",
+        "role": "footer",
+        "subrole": null,
+        "confidence": 0.95,
+        "heading": "Ready to implement AI in your business?",
+        "bounds": {
+          "x": 0,
+          "y": 10314.6875,
+          "w": 1280,
+          "h": 1356.453125
+        },
+        "buttonCount": 0,
+        "cardCount": 0,
+        "slots": {
+          "heading": "Ready to implement AI in your business?",
+          "subheadings": [
+            "hello@sadewa.com"
+          ]
+        },
+        "needsSmart": false
+      }
+    ],
+    "counts": {
+      "pricing": 2,
+      "logo-wall": 1,
+      "content": 4,
+      "testimonials": 3,
+      "testimonial": 2,
+      "faq": 1,
+      "nav": 1,
+      "footer": 1
+    },
+    "readingOrder": [
+      "pricing",
+      "logo-wall",
+      "content",
+      "testimonials",
+      "testimonials",
+      "content",
+      "nav",
+      "content",
+      "testimonials",
+      "content",
+      "testimonial",
+      "pricing",
+      "faq",
+      "testimonial",
+      "footer"
+    ]
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "url": "https://sadewa.framer.website/",
+  "path": "/",
+  "added": {
+    "primitive": {
+      "spacing": {
+        "s12": {
+          "$value": "150px"
+        }
+      }
+    }
+  },
+  "changed": {
+    "primitive": {
+      "color": {
+        "neutral": {
+          "n300": {
+            "$value": "#f3f3f3"
+          },
+          "n400": {
+            "$value": "#ffffff"
+          },
+          "n500": {
+            "$value": "#d3d3d3"
+          },
+          "n600": {
+            "$value": "#797979"
+          },
+          "n700": {
+            "$value": "#e5e5e5"
+          }
+        },
+        "background": {
+          "bg2": {
+            "$value": "#131313"
+          }
+        },
+        "text": {
+          "text2": {
+            "$value": "#0000ee"
+          },
+          "text3": {
+            "$value": "#fefefe"
+          },
+          "text4": {
+            "$value": "#797979"
+          },
+          "text5": {
+            "$value": "#d3d3d3"
+          },
+          "text6": {
+            "$value": "#ffffff"
+          }
+        }
+      },
+      "spacing": {
+        "s0": {
+          "$value": "2px"
+        },
+        "s1": {
+          "$value": "24px"
+        },
+        "s2": {
+          "$value": "32px"
+        },
+        "s3": {
+          "$value": "40px"
+        },
+        "s4": {
+          "$value": "48px"
+        },
+        "s5": {
+          "$value": "56px"
+        },
+        "s6": {
+          "$value": "70px"
+        },
+        "s7": {
+          "$value": "80px"
+        },
+        "s8": {
+          "$value": "100px"
+        },
+        "s9": {
+          "$value": "110px"
+        },
+        "s10": {
+          "$value": "130px"
+        },
+        "s11": {
+          "$value": "140px"
+        }
+      },
+      "radius": {
+        "r0": {
+          "$value": "2px"
+        },
+        "r1": {
+          "$value": "1000px"
+        }
+      },
+      "fontFamily": {
+        "f1": {
+          "$value": "Roboto Mono"
+        },
+        "f2": {
+          "$value": "Times New Roman"
+        }
+      }
+    },
+    "semantic": {
+      "typography": {
+        "body": {
+          "$value": {
+            "fontFamily": "Satoshi",
+            "fontSize": "80px",
+            "fontWeight": "700",
+            "lineHeight": "72px"
+          }
+        }
+      }
+    }
+  }
+}
