@@ -256,28 +256,40 @@ p  { color: var(--text-sec); line-height: 1.75; }
 
 /* ── Hero ── */
 .hero {
-  padding: 152px 0 0;
-  background: var(--bg-page);
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   text-align: center;
 }
-/* Radial bloom — rises from behind the orb */
-.hero::before {
+
+/* Full-bleed video background */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero__bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    ellipse 70% 60% at 50% 85%,
-    rgba(27,108,232,0.09) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
-  z-index: 0;
+  background: rgba(0, 0, 0, 0.32);
 }
-.hero .container {
+.hero__bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Content overlaid on video */
+.hero__content {
   position: relative;
   z-index: 1;
+  max-width: 760px;
+  padding: 0 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -288,42 +300,28 @@ p  { color: var(--text-sec); line-height: 1.75; }
   line-height: 1.05;
   letter-spacing: -0.035em;
   margin: 0 auto 20px;
-  max-width: 860px;
-  color: var(--text);
+  color: #ffffff;
 }
 .hero__headline .accent { color: var(--accent); }
 .hero__sub {
   font-size: 1.05rem;
-  color: var(--text-sec);
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.75;
   margin: 0 auto 36px;
   max-width: 560px;
 }
 .hero__micro {
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.6);
   margin-top: 14px;
 }
-
-/* ── Hero orb ── */
-.hero__orb {
-  width: 480px;
-  height: 480px;
-  margin: 48px auto 0;
-  position: relative;
-  flex-shrink: 0;
-}
-.hero__orb video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  pointer-events: none;
-  display: block;
-  box-shadow:
-    0 0 0 1px rgba(27,108,232,0.15),
-    0 0 60px rgba(27,108,232,0.18),
-    0 32px 80px rgba(0,0,0,0.18);
+/* Eyebrow pill on dark/video background */
+.hero__content .eyebrow-pill {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 /* Hero visual */
@@ -1136,8 +1134,7 @@ p  { color: var(--text-sec); line-height: 1.75; }
 
 @media (max-width: 640px) {
   .section { padding: 60px 0; }
-  .hero    { padding: 120px 0 0; }
-  .hero__orb { width: 280px; height: 280px; }
+  .hero { min-height: 100svh; }
 
   .services__grid,
   .why__grid,
