@@ -276,7 +276,7 @@ p  { color: var(--text-sec); line-height: 1.75; }
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.65);
   z-index: 1;
 }
 .hero__bg video {
@@ -286,8 +286,8 @@ p  { color: var(--text-sec); line-height: 1.75; }
   pointer-events: none;
   position: relative;
   z-index: 0;
-  filter: brightness(2.5) contrast(0.8) grayscale(1);
-  mix-blend-mode: luminosity;
+  filter: brightness(1.8) contrast(0.6) grayscale(1);
+  mix-blend-mode: normal;
 }
 
 /* Content overlaid on video */
