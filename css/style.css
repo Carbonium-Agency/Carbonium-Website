@@ -131,6 +131,7 @@ p  { color: var(--text-sec); line-height: 1.75; }
   transition: all var(--trans);
   text-decoration: none;
   white-space: nowrap;
+  touch-action: manipulation;
   line-height: 1;
 }
 .btn--primary {
@@ -366,15 +367,15 @@ p  { color: var(--text-sec); line-height: 1.75; }
 /* Float wrapper — idle bob+breathe lives here, away from hover/active transforms */
 .hero__btns .btn-wrap {
   display: inline-flex;
-  will-change: transform;
   animation: btn-float 3s ease-in-out infinite;
   transition: transform 0.2s ease-out;
 }
 .hero__btns .btn-wrap--b { animation-delay: 0.6s; }
 
-/* Pause float on hover/press; transition smooths the snap back to rest */
+/* Pause float on hover/press/tap; transition smooths the snap back to rest */
 .hero__btns .btn-wrap:has(a:hover),
-.hero__btns .btn-wrap:has(a:active) {
+.hero__btns .btn-wrap:has(a:active),
+.hero__btns .btn-wrap:has(a.is-tapped) {
   animation: none;
   transform: translateY(0) scale(1);
 }
@@ -384,8 +385,22 @@ p  { color: var(--text-sec); line-height: 1.75; }
   50%       { transform: translateY(-6px) scale(1.02); }
 }
 
+/* Touch tap: lift → squish → rest (mirrors hover+click feel for mobile) */
+.btn--dark.is-tapped,
+.btn--light.is-tapped {
+  animation: btn-tap 0.45s ease-out forwards;
+}
+@keyframes btn-tap {
+  0%   { transform: translateY(0)   scale(1); }
+  28%  { transform: translateY(-5px) scale(1.04); }
+  62%  { transform: translateY(0)   scale(0.96); }
+  100% { transform: translateY(0)   scale(1); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero__btns .btn-wrap { animation: none; }
+  .btn--dark.is-tapped,
+  .btn--light.is-tapped { animation: none; }
 }
 
 /* Arrow nudge on primary CTA hover */

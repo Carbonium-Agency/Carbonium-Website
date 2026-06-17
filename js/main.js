@@ -157,8 +157,22 @@ function initBlogFilter() {
   });
 }
 
+/* ── Hero button touch tap (lift → squish → rest, mirrors desktop hover+click) ── */
+function initButtonTouch() {
+  document.querySelectorAll('.hero__btns .btn').forEach(btn => {
+    btn.addEventListener('touchstart', () => {
+      btn.classList.remove('is-tapped');
+      void btn.offsetWidth; // force reflow to restart animation
+      btn.classList.add('is-tapped');
+    }, { passive: true });
+    btn.addEventListener('touchend',    () => setTimeout(() => btn.classList.remove('is-tapped'), 450), { passive: true });
+    btn.addEventListener('touchcancel', () => btn.classList.remove('is-tapped'), { passive: true });
+  });
+}
+
 /* ── Init ── */
 document.addEventListener('DOMContentLoaded', () => {
+  initButtonTouch();
   initScrollAnimations();
   initNav();
   initCookieBanner();
