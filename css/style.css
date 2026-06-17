@@ -257,6 +257,7 @@ p  { color: var(--text-sec); line-height: 1.75; }
 /* ── Hero — fullscreen video, text left ── */
 .hero {
   height: 100vh;
+  height: 100dvh;
   min-height: 600px;
   width: 100%;
   position: relative;
