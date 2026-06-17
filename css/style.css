@@ -302,19 +302,19 @@ p  { color: var(--text-sec); line-height: 1.75; }
   line-height: 1.05;
   letter-spacing: -0.035em;
   margin: 0 auto 20px;
-  color: #ffffff;
+  color: #2E2E2E;
 }
 .hero__headline .accent { color: var(--accent); }
 .hero__sub {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.82);
+  color: #555555;
   line-height: 1.75;
   margin: 0 auto 36px;
   max-width: 560px;
 }
 .hero__micro {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: #707070;
   margin-top: 14px;
 }
 /* Eyebrow pill on dark video background */
