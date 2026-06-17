@@ -329,46 +329,26 @@ p  { color: var(--text-sec); line-height: 1.75; }
   color: #1a1a1a;
 }
 
-/* Sub / tagline — dark base + holographic shimmer sweep */
-.hero__sub {
-  position: relative;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #1A1A1A;
-  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.85);
-  line-height: 1.65;
-  margin-bottom: 40px;
-  max-width: 460px;
-  text-align: center;
-}
-
-/* Shimmer layer — transparent gradient sweeps across, overlaid on base text */
-.hero__sub::after {
-  content: attr(data-text);
-  position: absolute;
-  inset: 0;
-  text-align: center;
-  line-height: inherit;
-  font-weight: inherit;
+/* Primary button label shimmer */
+.btn__label-shimmer {
   background: linear-gradient(
     110deg,
-    transparent  0%,
-    transparent 38%,
-    #3038C8     47%,
-    #22D3EE     53%,
-    transparent 62%,
-    transparent 100%
+    #FFFFFF  0%,
+    #FFFFFF  40%,
+    #A5F3FC  48%,
+    #E0F2FE  52%,
+    #FFFFFF  60%,
+    #FFFFFF  100%
   );
   background-size: 250% 100%;
   background-position: 200% 0;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  pointer-events: none;
-  animation: shimmer-sweep 4.5s ease-in-out infinite;
+  animation: btn-shimmer 4.5s ease-in-out infinite;
 }
 
-@keyframes shimmer-sweep {
+@keyframes btn-shimmer {
   0%, 8%  { background-position: 200% 0; }
   72%     { background-position: -50% 0; }
   100%    { background-position: -50% 0; }
