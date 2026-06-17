@@ -164,6 +164,7 @@ function initButtonTouch() {
       btn.classList.remove('is-tapped');
       void btn.offsetWidth; // force reflow to restart animation
       btn.classList.add('is-tapped');
+      if (navigator.vibrate) navigator.vibrate(15);
     }, { passive: true });
     btn.addEventListener('touchend',    () => setTimeout(() => btn.classList.remove('is-tapped'), 450), { passive: true });
     btn.addEventListener('touchcancel', () => btn.classList.remove('is-tapped'), { passive: true });
