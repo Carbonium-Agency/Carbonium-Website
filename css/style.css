@@ -363,6 +363,38 @@ p  { color: var(--text-sec); line-height: 1.75; }
   flex-wrap: wrap;
 }
 
+/* Float wrapper — idle bob+breathe lives here, away from hover/active transforms */
+.hero__btns .btn-wrap {
+  display: inline-flex;
+  will-change: transform;
+  animation: btn-float 3s ease-in-out infinite;
+  transition: transform 0.2s ease-out;
+}
+.hero__btns .btn-wrap--b { animation-delay: 0.6s; }
+
+/* Pause float on hover/press; transition smooths the snap back to rest */
+.hero__btns .btn-wrap:has(a:hover),
+.hero__btns .btn-wrap:has(a:active) {
+  animation: none;
+  transform: translateY(0) scale(1);
+}
+
+@keyframes btn-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-4px) scale(1.02); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__btns .btn-wrap { animation: none; }
+}
+
+/* Arrow nudge on primary CTA hover */
+.btn__arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.btn--dark:hover .btn__arrow { transform: translateX(3px); }
+
 /* ORB-style dark primary — glossy black */
 .btn--dark {
   background: linear-gradient(180deg, #1C1C1C 0%, #0A0A0A 100%);
@@ -380,11 +412,14 @@ p  { color: var(--text-sec); line-height: 1.75; }
 .btn--dark:hover {
   background: linear-gradient(180deg, #2a2a2a 0%, #141414 100%);
   color: #fff;
-  transform: translateY(-2px);
+  transform: translateY(-6px) scale(1.05);
   box-shadow:
-    0 10px 26px rgba(0, 0, 0, 0.30),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 16px 36px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
     inset 0 -2px 4px rgba(0, 0, 0, 0.35);
+}
+.btn--dark:active {
+  transform: scale(0.96) translateY(0);
 }
 
 /* ORB-style light secondary — pillowy white */
@@ -404,16 +439,14 @@ p  { color: var(--text-sec); line-height: 1.75; }
 .btn--light:hover {
   background: linear-gradient(180deg, #FFFFFF 0%, #E8E8E8 100%);
   color: #0A0A0A;
-  transform: translateY(-2px);
+  transform: translateY(-6px) scale(1.05);
   box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.13),
+    0 12px 28px rgba(0, 0, 0, 0.16),
     inset 0 1px 0 rgba(255, 255, 255, 0.95),
     inset 0 -2px 3px rgba(0, 0, 0, 0.05);
 }
-.btn--light:hover {
-  background: rgba(255, 255, 255, 0.96);
-  color: #1a1a1a;
-  transform: translateY(-1px);
+.btn--light:active {
+  transform: scale(0.96) translateY(0);
 }
 
 /* ── Trust bar ── */
@@ -1131,9 +1164,17 @@ p  { color: var(--text-sec); line-height: 1.75; }
     gap: 10px;
     justify-content: center;
   }
+  .hero__btns .btn-wrap {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+  }
+  .hero__btns .btn-wrap .btn {
+    width: 100%;
+    justify-content: center;
+  }
   .hero__btns .btn--dark,
   .hero__btns .btn--light {
-    flex: 1 1 0;
     padding: 16px 14px;
     font-size: 0.94rem;
     text-align: center;
