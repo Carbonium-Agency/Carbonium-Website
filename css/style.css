@@ -270,10 +270,14 @@ p  { color: var(--text-sec); line-height: 1.75; }
   z-index: 0;
 }
 .hero__bg video {
-  width: 100%;
+  display: block;
+  width: 115%;
   height: 100%;
   object-fit: cover;
+  object-position: left center;
   pointer-events: none;
+  margin-left: auto;
+  margin-right: -15%;
 }
 
 .hero__content {
