@@ -1021,6 +1021,18 @@ p  { color: var(--text-sec); line-height: 1.75; }
 /* ═══════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════ */
+@media (max-width: 768px) {
+  .nav {
+    background: transparent;
+    border-bottom: none;
+    position: absolute;
+  }
+  .hero {
+    height: 70dvh;
+    min-height: 480px;
+  }
+}
+
 @media (max-width: 1100px) {
   .services__grid { grid-template-columns: repeat(2,1fr); }
   .stats__grid    { grid-template-columns: repeat(3,1fr); }
