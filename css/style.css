@@ -264,7 +264,7 @@ p  { color: var(--text-sec); line-height: 1.75; }
   overflow: hidden;
   display: flex;
   align-items: center;
-  background: var(--bg-page);
+  background: transparent;
 }
 
 .hero__bg {
