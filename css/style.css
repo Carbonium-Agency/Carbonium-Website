@@ -264,7 +264,8 @@ p  { color: var(--text-sec); line-height: 1.75; }
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  flex-direction: column;
   background: transparent;
 }
 
@@ -288,7 +289,7 @@ p  { color: var(--text-sec); line-height: 1.75; }
   z-index: 1;
   width: 100%;
   max-width: 720px;
-  padding: 0 28px;
+  padding: 0 28px 72px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -329,7 +330,7 @@ p  { color: var(--text-sec); line-height: 1.75; }
 /* Sub */
 .hero__sub {
   font-size: 1.05rem;
-  color: #555;
+  color: #2E2E2E;
   line-height: 1.65;
   margin-bottom: 40px;
   max-width: 460px;
