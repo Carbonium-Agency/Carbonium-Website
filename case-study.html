@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-Commerce Lead Generation — Case Study — Carbonium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,800,900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #1A1A1A;
+    --paper: #F1F1F1;
+    --mid: #555555;
+    --soft: #707070;
+    --fade: #9A9A9A;
+    --hair: #D3D3D3;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    font-family: 'Satoshi', system-ui, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; color: inherit; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+  /* ─────────────── Nav (locked) ─────────────── */
+  nav.site {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 72px;
+    background: rgba(241,241,241,.6);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,.05);
+  }
+  nav.site .inner {
+    max-width: 1200px; margin: 0 auto; height: 100%; padding: 0 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  nav.site img { height: 26px; width: auto; }
+  nav.site ul { display: flex; gap: 30px; list-style: none; }
+  nav.site ul a {
+    font-size: 14px; font-weight: 500; color: #2E2E2E;
+    font-family: 'DM Sans', sans-serif; transition: color .18s;
+  }
+  nav.site ul a:hover { color: var(--ink); }
+  nav.site ul a.active { color: var(--ink); font-weight: 700; }
+  .nav-cta {
+    background: var(--ink); color: #fff; padding: 11px 22px; border-radius: 8px;
+    font-size: 14px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; border: none;
+  }
+  @media (max-width: 760px) { nav.site ul { display: none; } }
+
+  /* ─────────────── Section 1 — Case header (dark) ─────────────── */
+  .cs-head { background: #1A1A1A; padding: 152px 0 80px; }
+  .crumb {
+    font-family: 'DM Sans', sans-serif; font-size: 13px; color: #9A9A9A;
+    display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 30px;
+  }
+  .crumb a { color: #9A9A9A; transition: color .18s; }
+  .crumb a:hover { color: #fff; }
+  .crumb .here { color: #fff; }
+  .cs-head-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+  @media (max-width: 768px) { .cs-head-grid { grid-template-columns: 1fr; gap: 44px; } }
+  .cs-head-left { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+  .eyebrow-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #2A2A2A; border: 1px solid #353535; border-radius: 999px;
+    padding: 7px 16px; font-family: 'DM Sans', sans-serif; font-size: 12px;
+    font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #CFCFCF;
+  }
+  .eyebrow-pill .dot { width: 5px; height: 5px; border-radius: 50%; background: #6F6F6F; }
+  .cs-head h1 {
+    font-family: 'Satoshi', sans-serif; font-weight: 800;
+    font-size: clamp(36px, 4vw, 52px); line-height: 1.06; letter-spacing: -.03em;
+    color: #fff; text-wrap: pretty;
+  }
+  .cs-head h1 .serif { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+  .cs-head .answer-first {
+    font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: 17px;
+    line-height: 1.6; color: #B5B5B5; max-width: 560px;
+  }
+  .cs-byline {
+    width: 100%; border-top: 1px solid #2A2A2A; padding-top: 16px;
+    font-family: 'DM Sans', sans-serif; font-size: 12px; color: #9A9A9A;
+  }
+  .cs-byline b { color: #fff; font-weight: 600; }
+
+  /* Lead Pipeline panel — ported exactly from WebsiteCaseStudies MockCRM (bordered for dark bg) */
+  .crm-panel { width: 100%; background: #1A1A1A; border: 1px solid #2A2A2A; border-radius: 20px; padding: 24px; display: flex; align-items: center; min-height: 320px; }
+  .crm { width: 100%; display: flex; flex-direction: column; gap: 14px; }
+  .crm .hd { display: flex; align-items: center; justify-content: space-between; }
+  .crm .hd .t { font-family: 'Satoshi', 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; color: #FFF; letter-spacing: -.01em; }
+  .crm .hd .d { font-family: 'DM Sans', sans-serif; font-size: 10px; color: #7A7A7A; }
+  .crm .cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .crm .col { background: #202020; border: 1px solid #2E2E2E; border-radius: 8px; padding: 8px; }
+  .crm .col .ch { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .crm .col .ch .cn { font-family: 'DM Sans', sans-serif; font-size: 9.5px; font-weight: 600; color: #BDBDBD; }
+  .crm .col .ch .cc { font-family: 'DM Sans', sans-serif; font-size: 9px; color: #6E6E6E; background: #2A2A2A; border-radius: 999px; padding: 1px 6px; }
+  .crm .cards { display: flex; flex-direction: column; gap: 6px; }
+  .crm .card { background: #1A1A1A; border: 1px solid #2E2E2E; border-radius: 6px; padding: 7px 8px; }
+  .crm .card .nm { font-family: 'DM Sans', sans-serif; font-size: 9.5px; font-weight: 600; color: #EAEAEA; margin-bottom: 5px; }
+  .crm .card .rw { display: flex; align-items: center; justify-content: space-between; }
+  .crm .card .av2 { width: 14px; height: 14px; border-radius: 50%; background: #333; }
+  .crm .card .vl { font-family: 'DM Sans', sans-serif; font-size: 9px; color: #8A8A8A; }
+  .crm .vol { background: #202020; border: 1px solid #2E2E2E; border-radius: 8px; padding: 10px 12px; }
+  .crm .vol .vh { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .crm .vol .vh .vt { font-family: 'DM Sans', sans-serif; font-size: 10px; color: #BDBDBD; }
+  .crm .vol .vh .vv { font-family: 'Satoshi', 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; color: #FFF; }
+  .crm .bars { display: flex; align-items: flex-end; gap: 6px; height: 42px; }
+  .crm .bars i { flex: 1; background: #3A3A3A; border-radius: 3px 3px 0 0; }
+  .crm .bars i:last-child { background: #FFFFFF; }
+
+  /* ─────────────── Section 2 — Meta strip ─────────────── */
+  .meta-strip-sec { background: #FFFFFF; padding: 40px 0; }
+  .meta-strip { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #E7E7E7; border-bottom: 1px solid #E7E7E7; }
+  .meta-cell { padding: 20px 24px; border-left: 1px solid #E7E7E7; display: flex; flex-direction: column; gap: 8px; }
+  .meta-cell:first-child { border-left: none; padding-left: 0; }
+  .meta-cell .lbl { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600; color: #707070; text-transform: uppercase; letter-spacing: .08em; }
+  .meta-cell .val { font-family: 'Satoshi', sans-serif; font-size: 16px; font-weight: 700; color: #1A1A1A; letter-spacing: -.01em; }
+  @media (max-width: 768px) {
+    .meta-strip { grid-template-columns: 1fr 1fr; }
+    .meta-cell:nth-child(3) { border-left: none; padding-left: 0; }
+    .meta-cell:nth-child(-n+2) { border-bottom: 1px solid #E7E7E7; }
+  }
+  @media (max-width: 480px) {
+    .meta-strip { grid-template-columns: 1fr; }
+    .meta-cell { border-left: none; padding-left: 0; }
+    .meta-cell:not(:last-child) { border-bottom: 1px solid #E7E7E7; }
+  }
+
+  /* ─────────────── Section 3 — Results scoreboard ─────────────── */
+  .score-sec { background: #FFFFFF; padding: 60px 0; }
+  .score-card { background: #F1F1F1; border-radius: 20px; overflow: hidden; }
+  .score-hd { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 32px; border-bottom: 1px solid #E7E7E7; }
+  .score-hd .l { display: inline-flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; color: #1A1A1A; text-transform: uppercase; letter-spacing: .08em; }
+  .score-hd .l .dot6 { width: 6px; height: 6px; border-radius: 50%; background: #1A1A1A; flex-shrink: 0; }
+  .score-hd .r { font-family: 'DM Sans', sans-serif; font-size: 11px; color: #707070; text-transform: uppercase; letter-spacing: .08em; }
+  .score-row { display: flex; align-items: center; padding: 24px 32px; }
+  .score-row + .score-row { border-top: 1px solid #E7E7E7; }
+  .score-row .m-lbl { min-width: 260px; font-family: 'DM Sans', sans-serif; font-size: 12px; color: #707070; text-transform: uppercase; letter-spacing: .08em; }
+  .score-row .m-old { font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: 18px; color: #9A9A9A; text-decoration: line-through; white-space: nowrap; }
+  .score-row .m-line { flex: 1 1 auto; height: 1px; background: #D5D5D5; margin: 0 20px; }
+  .score-row .m-new { font-family: 'Satoshi', sans-serif; font-weight: 800; font-size: 34px; color: #1A1A1A; letter-spacing: -.03em; white-space: nowrap; display: inline-flex; align-items: baseline; gap: 8px; }
+  .score-row .m-new .sfx { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; color: #707070; letter-spacing: .04em; }
+  .score-row.dark { background: #1A1A1A; }
+  .score-row.dark .m-lbl { color: #9A9A9A; }
+  .score-row.dark .m-old { color: #707070; }
+  .score-row.dark .m-line { background: #3A3A3A; }
+  .score-row.dark .m-new { color: #FFFFFF; }
+  @media (max-width: 680px) {
+    .score-row { flex-wrap: wrap; gap: 10px; }
+    .score-row .m-lbl { min-width: 100%; }
+  }
+
+  /* ─────────────── Section 4 — Case body ─────────────── */
+  .body-sec { background: #FFFFFF; padding: 80px 0; }
+  .body-grid { display: flex; gap: 56px; align-items: flex-start; }
+  .body-main { flex: 1 1 auto; max-width: 760px; min-width: 0; }
+  .body-side { width: 300px; flex-shrink: 0; position: sticky; top: 100px; }
+  @media (max-width: 1024px) { .body-side { display: none; } .body-main { max-width: none; } }
+
+  /* TOC card */
+  .toc-card { background: #F1F1F1; border-radius: 16px; padding: 24px; }
+  .toc-hd { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+  .toc-hd .t { font-family: 'Satoshi', sans-serif; font-size: 14px; font-weight: 700; color: #1A1A1A; }
+  .toc-prog { display: inline-flex; align-items: center; gap: 7px; }
+  .toc-prog svg { display: block; }
+  .toc-prog .pct { font-family: 'DM Sans', sans-serif; font-size: 11px; color: #707070; min-width: 30px; text-align: right; }
+  .toc-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .toc-list a { font-family: 'Satoshi', sans-serif; font-size: 13px; font-weight: 400; color: #555555; transition: color .18s; display: block; }
+  .toc-list a:hover { color: #1A1A1A; }
+  .toc-list a.on { color: #1A1A1A; font-weight: 700; }
+  .toc-div { height: 1px; background: #E7E7E7; margin: 16px 0; }
+  .toc-thesis { font-family: 'Satoshi', sans-serif; font-style: italic; font-size: 12px; line-height: 1.6; color: #707070; }
+
+  /* Chapters */
+  .chapter { scroll-margin-top: 100px; }
+  .ch-label { display: inline-flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; color: #707070; text-transform: uppercase; letter-spacing: .08em; }
+  .ch-label::before { content: ''; width: 6px; height: 6px; background: #1A1A1A; flex-shrink: 0; }
+  .chapter h2 { font-family: 'Satoshi', sans-serif; font-weight: 800; font-size: 30px; letter-spacing: -.03em; line-height: 1.15; color: #1A1A1A; margin: 16px 0 22px; }
+  .chapter h2 .serif { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+  .chapter p { font-family: 'Satoshi', sans-serif; font-size: 16px; line-height: 1.7; color: #555555; margin: 0 0 18px; }
+  .chapter ul.chev { list-style: none; margin: 4px 0 22px; display: flex; flex-direction: column; gap: 10px; }
+  .chapter ul.chev li { display: flex; gap: 12px; font-family: 'Satoshi', sans-serif; font-size: 15px; line-height: 1.6; color: #555555; }
+  .chapter ul.chev li::before { content: '›'; color: #1A1A1A; font-weight: 700; flex-shrink: 0; }
+  .chapter + .chapter { margin-top: 56px; }
+  .steps { display: flex; flex-direction: column; gap: 32px; margin-top: 28px; }
+  .step h3 { font-family: 'Satoshi', sans-serif; font-size: 19px; font-weight: 700; color: #1A1A1A; letter-spacing: -.01em; margin: 0 0 8px; }
+  .agent-tag { display: inline-block; background: #F1F1F1; border-radius: 999px; padding: 3px 12px; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: #555555; margin: 0 0 10px; }
+  .step p { font-family: 'Satoshi', sans-serif; font-size: 15px; line-height: 1.7; color: #555555; margin: 0; }
+  .callout { background: #1A1A1A; border-radius: 16px; padding: 32px 36px; margin: 28px 0 22px; }
+  .callout .co-lbl { display: block; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600; color: #9A9A9A; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 16px; }
+  .callout ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .callout ul li { display: flex; gap: 12px; font-family: 'Satoshi', sans-serif; font-size: 15px; line-height: 1.8; color: #B5B5B5; }
+  .callout ul li::before { content: '›'; color: #FFFFFF; font-weight: 700; flex-shrink: 0; }
+  .callout ul li b { color: #FFFFFF; font-weight: 700; }
+  .takeaways-card { background: #F1F1F1; border-left: 3px solid #1A1A1A; border-radius: 16px; padding: 32px 36px; margin: 28px 0 22px; display: flex; flex-direction: column; gap: 18px; }
+  .takeaways-card .tk { display: flex; gap: 14px; font-family: 'Satoshi', sans-serif; font-size: 15px; line-height: 1.7; color: #555555; }
+  .takeaways-card .tk .no { font-weight: 800; font-size: 15px; color: #1A1A1A; flex-shrink: 0; }
+  .takeaways-card .tk b { color: #1A1A1A; font-weight: 700; }
+
+  /* ─────────────── Section 6 — FAQ (ported from WebsiteFAQ) ─────────────── */
+  .faq-sec { background: #FFFFFF; padding: 96px 0; }
+  .faq-wrap { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+  .faq-head { text-align: center; margin-bottom: 56px; }
+  .faq-pill {
+    display: inline-flex; align-items: center; gap: 8px; background: #ffffff; border-radius: 999px;
+    padding: 10px 22px; font-size: 12px; font-weight: 600; color: #555555; letter-spacing: 1.2px;
+    text-transform: uppercase; font-family: 'DM Sans', sans-serif; margin-bottom: 24px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 4px 10px rgba(0,0,0,0.08), 0 12px 28px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.9);
+    border: 1px solid #D3D3D3;
+  }
+  .faq-head h2 { font-family: 'Satoshi', 'DM Sans', sans-serif; font-size: clamp(32px, 4.2vw, 54px); font-weight: 800; line-height: 1.1; letter-spacing: -.03em; color: #0A0A0A; margin: 0 0 16px; }
+  .faq-head .sub { font-family: 'Satoshi', sans-serif; font-size: 16px; color: #707070; line-height: 1.65; margin: 0 auto; max-width: 480px; }
+  .faq-list { border-top: 1px solid #E8E8E8; }
+  .faq-item { border-bottom: 1px solid #E8E8E8; }
+  .faq-q {
+    width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 22px 0; background: transparent; border: none; cursor: pointer; text-align: left;
+  }
+  .faq-q .qt { font-family: 'Satoshi', 'DM Sans', sans-serif; font-size: 17px; font-weight: 600; color: #0A0A0A; line-height: 1.35; letter-spacing: -.01em; }
+  .faq-q .tgl { width: 28px; height: 28px; flex-shrink: 0; background: #F0F0F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background .2s; }
+  .faq-item.open .faq-q .tgl { background: #1A1A1A; }
+  .faq-q .tgl svg { display: block; }
+  .faq-q .tgl .v-line { transition: opacity .15s; }
+  .faq-item.open .faq-q .tgl .v-line { opacity: 0; }
+  .faq-q .tgl line { stroke: #888; }
+  .faq-item.open .faq-q .tgl line { stroke: #fff; }
+  .faq-a { display: none; padding-bottom: 22px; }
+  .faq-item.open .faq-a { display: block; }
+  .faq-a p { font-family: 'DM Sans', sans-serif; font-size: 15px; color: #555555; line-height: 1.75; margin: 0; }
+
+  /* ─────────────── Section 7 — CTA ─────────────── */
+  .cta-sec { background: #FFFFFF; padding: 0 0 100px; }
+  .cta-card { background: #1A1A1A; border-radius: 24px; padding: 72px 56px; text-align: center; }
+  .cta-card h2 { font-family: 'Satoshi', sans-serif; font-weight: 800; font-size: clamp(40px, 4.4vw, 48px); letter-spacing: -.03em; line-height: 1.08; color: #FFFFFF; margin: 0 0 18px; }
+  .cta-card h2 .serif { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+  .cta-card .sub { font-family: 'Satoshi', sans-serif; font-size: 17px; line-height: 1.6; color: #B5B5B5; max-width: 560px; margin: 0 auto; }
+  .btn-light-pill {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 32px;
+    background: #FFFFFF; color: #1A1A1A; border: none; border-radius: 999px; padding: 15px 26px;
+    font-family: 'Satoshi', sans-serif; font-size: 15px; font-weight: 700; cursor: pointer;
+    transition: transform .18s ease-out;
+  }
+  .btn-light-pill .arr { display: inline-block; transition: transform .18s ease-out; }
+  .btn-light-pill:hover { transform: translateY(-2px); }
+  .btn-light-pill:hover .arr { transform: translateX(3px); }
+  @media (max-width: 600px) { .cta-card { padding: 40px 24px; } }
+
+  /* ─────────────── Section 8 — More case studies ─────────────── */
+  .more-sec { background: #F1F1F1; padding: 80px 0; }
+  .more-hd { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .more-hd h2 { font-family: 'Satoshi', sans-serif; font-weight: 800; font-size: 32px; letter-spacing: -.03em; color: #1A1A1A; }
+  .more-hd a { font-family: 'Satoshi', sans-serif; font-weight: 700; font-size: 14px; color: #1A1A1A; white-space: nowrap; }
+  .more-hd a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .more-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+  @media (max-width: 768px) { .more-grid { grid-template-columns: 1fr; } }
+  .more-card { background: #FFFFFF; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; transition: transform .18s ease-out, box-shadow .18s ease-out; }
+  .more-card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,.08); }
+  .more-card h3 {
+    font-family: 'Satoshi', sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25;
+    letter-spacing: -.02em; color: #1A1A1A; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .more-card .rm { font-family: 'Satoshi', sans-serif; font-weight: 700; font-size: 14px; color: #1A1A1A; }
+  /* light-page eyebrow pill + before/after stat pill (same specs as case-studies.html) */
+  .case-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(180deg, #ffffff 0%, #F2F2F2 100%); border-radius: 999px;
+    padding: 10px 22px; font-size: 12px; font-weight: 600; color: #1A1A1A;
+    letter-spacing: 1.2px; text-transform: uppercase; font-family: 'DM Sans', sans-serif;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 4px 10px rgba(0,0,0,0.08), 0 12px 28px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.9);
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  .ba-pill { background: #F1F1F1; border-radius: 12px; padding: 14px 18px; display: flex; flex-direction: column; gap: 6px; }
+  .ba-pill .lbl { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600; color: #707070; text-transform: uppercase; letter-spacing: .08em; }
+  .ba-pill .val { display: flex; align-items: baseline; gap: 8px; }
+  .ba-pill .old { font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: 14px; color: #9A9A9A; text-decoration: line-through; }
+  .ba-pill .arr2 { font-family: 'Satoshi', sans-serif; font-size: 13px; color: #9A9A9A; }
+  .ba-pill .new { font-family: 'Satoshi', sans-serif; font-weight: 800; font-size: 18px; color: #1A1A1A; letter-spacing: -.02em; }
+
+  /* WhatsApp FAB (locked) */
+  .wa-fab {
+    position: fixed; right: 24px; bottom: 24px; z-index: 90;
+    width: 56px; height: 56px; border-radius: 50%; background: #1A1A1A;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,.25); transition: transform .18s ease-out;
+  }
+  .wa-fab:hover { transform: translateY(-2px); }
+</style>
+</head>
+<body>
+
+  <nav class="site">
+    <div class="inner">
+      <a href="index.html"><img src="assets/logos/carbonium-logo.png" alt="Carbonium"></a>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="case-studies.html" class="active">Case Studies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-cta" onclick="location.href='contact.html'">Let's Talk</button>
+    </div>
+  </nav>
+
+  <!-- ───────── Section 1 — Case header ───────── -->
+  <header class="cs-head" data-screen-label="Case Header">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span><a href="case-studies.html">Case Studies</a><span>/</span><span class="here">Lead Generation</span>
+      </nav>
+      <div class="cs-head-grid">
+
+        <div class="cs-head-left">
+          <span class="eyebrow-pill"><span class="dot"></span>E-Commerce · Lead Generation</span>
+          <h1>How an E-Commerce Brand Turned <span class="serif">40 Leads</span> a Month Into <span class="serif">120</span> — in 60 Days</h1>
+          <p class="answer-first">We built an AI lead capture and CRM automation system for a regional e-commerce brand: automated qualification, instant follow-up, and full pipeline visibility. In 60 days, qualified leads grew 3x while cost per lead dropped 44% — without adding a single salesperson.</p>
+          <div class="cs-byline"><b>Vega</b> · The Commander · June 2026 · 60-day engagement</div>
+        </div>
+
+        <div class="crm-panel">
+          <div class="crm">
+            <div class="hd"><span class="t">Lead Pipeline</span><span class="d">Last 60 days</span></div>
+            <div class="cols">
+              <div class="col">
+                <div class="ch"><span class="cn">New</span><span class="cc">12</span></div>
+                <div class="cards">
+                  <div class="card"><div class="nm">Acme Co.</div><div class="rw"><div class="av2"></div><span class="vl">£2.4k</span></div></div>
+                  <div class="card"><div class="nm">Bright Labs</div><div class="rw"><div class="av2"></div><span class="vl">£1.1k</span></div></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="ch"><span class="cn">Qualified</span><span class="cc">7</span></div>
+                <div class="cards">
+                  <div class="card"><div class="nm">Nova Retail</div><div class="rw"><div class="av2"></div><span class="vl">£5.0k</span></div></div>
+                  <div class="card"><div class="nm">PeakFit</div><div class="rw"><div class="av2"></div><span class="vl">£3.2k</span></div></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="ch"><span class="cn">Converted</span><span class="cc">5</span></div>
+                <div class="cards">
+                  <div class="card"><div class="nm">Lumen Inc.</div><div class="rw"><div class="av2"></div><span class="vl">£8.6k</span></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="vol">
+              <div class="vh"><span class="vt">Lead volume</span><span class="vv">+212%</span></div>
+              <div class="bars"><i style="height:34%"></i><i style="height:46%"></i><i style="height:40%"></i><i style="height:58%"></i><i style="height:72%"></i><i style="height:90%"></i></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ───────── Section 2 — Meta strip ───────── -->
+  <section class="meta-strip-sec" data-screen-label="Meta Strip">
+    <div class="wrap">
+      <div class="meta-strip">
+        <div class="meta-cell"><span class="lbl">Client</span><span class="val">Nova Retail Group</span></div>
+        <div class="meta-cell"><span class="lbl">Industry</span><span class="val">E-Commerce &amp; Retail</span></div>
+        <div class="meta-cell"><span class="lbl">Services</span><span class="val">AI Lead Generation · CRM Automation</span></div>
+        <div class="meta-cell"><span class="lbl">Duration</span><span class="val">60 Days</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Section 3 — Results scoreboard ───────── -->
+  <section class="score-sec" data-screen-label="Results Scoreboard">
+    <div class="wrap">
+      <div class="score-card" id="scoreboard">
+        <div class="score-hd">
+          <span class="l"><span class="dot6"></span>Result · 60 Days</span>
+          <span class="r">Nova Retail Group</span>
+        </div>
+        <div class="score-row">
+          <span class="m-lbl">Monthly Qualified Leads</span>
+          <span class="m-old">40</span>
+          <span class="m-line"></span>
+          <span class="m-new"><span class="cnt" data-from="40" data-to="120" data-decimals="0">40</span></span>
+        </div>
+        <div class="score-row">
+          <span class="m-lbl">Cost Per Lead</span>
+          <span class="m-old">AED 118</span>
+          <span class="m-line"></span>
+          <span class="m-new"><span class="cnt" data-from="118" data-to="66" data-decimals="0" data-prefix="AED ">AED 118</span><span class="sfx">-44%</span></span>
+        </div>
+        <div class="score-row">
+          <span class="m-lbl">Email Open Rate</span>
+          <span class="m-old">22%</span>
+          <span class="m-line"></span>
+          <span class="m-new"><span class="cnt" data-from="22" data-to="48" data-decimals="0" data-suffix="%">22%</span><span class="sfx">+119%</span></span>
+        </div>
+        <div class="score-row dark">
+          <span class="m-lbl">Lead-to-Sale Conversion</span>
+          <span class="m-old">1x</span>
+          <span class="m-line"></span>
+          <span class="m-new"><span class="cnt" data-from="1" data-to="2.7" data-decimals="1" data-suffix="x">1x</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Section 4 — Case body ───────── -->
+  <section class="body-sec" id="case-body" data-screen-label="Case Body">
+    <div class="wrap">
+      <div class="body-grid">
+
+        <div class="body-main">
+          <div class="chapter" id="ch-challenge">
+            <span class="ch-label">01 — The Challenge</span>
+            <h2>Growing traffic. <span class="serif">Leaking</span> pipeline.</h2>
+            <p>Nova Retail Group had traffic most e-commerce brands would envy. What they didn’t have was a system. Every inquiry — website forms, Instagram DMs, WhatsApp messages — landed in a different inbox, waiting for a human to notice.</p>
+            <p>By the time the sales team followed up, the average lead was 4 hours old. Interest had cooled. Competitors had answered first.</p>
+            <ul class="chev">
+              <li>No central lead capture — 5 disconnected channels</li>
+              <li>Manual qualification eating 3+ hours of sales time daily</li>
+              <li>39% of leads never received any follow-up at all</li>
+              <li>Zero visibility on which channel produced buyers</li>
+            </ul>
+            <p>The founders weren’t short on demand. They were short on infrastructure.</p>
+          </div>
+
+          <div class="chapter" id="ch-what-we-did">
+            <span class="ch-label">02 — What We Did</span>
+            <h2>One system. <span class="serif">Every lead.</span> Zero gaps.</h2>
+            <p>We didn’t start with ads or content. We started by rebuilding how a lead flows through the business — capture, qualify, follow up, book. Four steps, each run by an agent.</p>
+            <div class="steps">
+              <div class="step">
+                <h3>1. Unified lead capture</h3>
+                <span class="agent-tag">Run by Vega · The Commander</span>
+                <p>Every channel — website, Instagram, WhatsApp, email — now feeds one pipeline. No lead enters the business without being logged, tagged, and timestamped.</p>
+              </div>
+              <div class="step">
+                <h3>2. AI qualification</h3>
+                <span class="agent-tag">Run by Qubit · The Quantum</span>
+                <p>Incoming leads are scored in seconds against budget, intent, and product fit. Sales only sees leads worth their time — the rest enter automated nurture.</p>
+              </div>
+              <div class="step">
+                <h3>3. Instant follow-up</h3>
+                <span class="agent-tag">Run by Aisha · The Closer</span>
+                <p>Qualified leads get a personalised response in under 2 minutes, any hour of the day. Questions answered, objections handled, viewing the catalogue booked into the conversation.</p>
+              </div>
+              <div class="step">
+                <h3>4. Pipeline intelligence</h3>
+                <span class="agent-tag">Run by Lumen · The Analyst</span>
+                <p>A live dashboard shows which channels produce buyers, where leads stall, and what the next bottleneck is. Decisions moved from gut feel to numbers.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="chapter" id="ch-results">
+            <span class="ch-label">03 — The Results</span>
+            <h2>Sixty days later, the <span class="serif">numbers</span> spoke.</h2>
+            <p>No extra ad spend. No new hires. The same demand, finally captured by a system built to convert it.</p>
+            <div class="callout">
+              <span class="co-lbl">The Transformation</span>
+              <ul>
+                <li><span><b>3x qualified leads</b> — from 40 to 120 per month, same traffic</span></li>
+                <li><span><b>-44% cost per lead</b> — AED 118 down to AED 66</span></li>
+                <li><span><b>+119% email open rate</b> — sequences people actually read</span></li>
+                <li><span><b>2.7x lead-to-sale conversion</b> — sales talks only to buyers</span></li>
+                <li><span><b>100% follow-up coverage</b> — no lead left unanswered, ever</span></li>
+              </ul>
+            </div>
+            <p>The system now runs the top of the funnel end to end. The sales team’s job changed from chasing to closing.</p>
+          </div>
+
+          <div class="chapter" id="ch-takeaways">
+            <span class="ch-label">Key Takeaways</span>
+            <h2>What this case <span class="serif">proves</span></h2>
+            <div class="takeaways-card">
+              <div class="tk"><span class="no">01.</span><span><b>Speed beats spend.</b> Responding in 2 minutes instead of 4 hours tripled conversions before a single dirham more went into ads.</span></div>
+              <div class="tk"><span class="no">02.</span><span><b>Qualification is leverage.</b> Sales output doubled not by working harder, but by never talking to the wrong lead again.</span></div>
+              <div class="tk"><span class="no">03.</span><span><b>Systems compound.</b> Every automated follow-up, score, and dashboard insight keeps paying back monthly — hires don’t.</span></div>
+              <div class="tk"><span class="no">04.</span><span><b>Visibility changes decisions.</b> Knowing which channel produces buyers moved budget where it actually converts.</span></div>
+            </div>
+            <p>A small e-commerce brand doesn’t need a bigger team to grow — it needs infrastructure that never sleeps.</p>
+          </div>
+        </div>
+
+        <aside class="body-side">
+          <div class="toc-card">
+            <div class="toc-hd">
+              <span class="t">In this case study:</span>
+              <span class="toc-prog">
+                <svg width="18" height="18" viewBox="0 0 18 18">
+                  <circle cx="9" cy="9" r="7" fill="none" stroke="#D5D5D5" stroke-width="2"></circle>
+                  <circle id="toc-ring" cx="9" cy="9" r="7" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-dasharray="43.98" stroke-dashoffset="43.98" transform="rotate(-90 9 9)"></circle>
+                </svg>
+                <span class="pct" id="toc-pct">0%</span>
+              </span>
+            </div>
+            <ul class="toc-list" id="toc-list">
+              <li><a href="#ch-challenge" class="on">The Challenge</a></li>
+              <li><a href="#ch-what-we-did">What We Did</a></li>
+              <li><a href="#ch-results">The Results</a></li>
+              <li><a href="#ch-takeaways">Key Takeaways</a></li>
+            </ul>
+            <div class="toc-div"></div>
+            <p class="toc-thesis">From manual chasing to a system that qualifies, follows up, and books — automatically.</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Section 6 — FAQ ───────── -->
+  <section class="faq-sec" id="faq" data-screen-label="FAQ">
+    <div class="faq-wrap">
+      <div class="faq-head">
+        <div class="faq-pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#555555" stroke-width="2.4" style="display:block;flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="12" cy="17" r="0.6" fill="#555555" stroke="#555555"></circle></svg>FAQS</div>
+        <h2>Questions? Answered.</h2>
+        <p class="sub">What business owners ask before starting a project like this.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q"><span class="qt">How long does a project like this take to launch?</span><span class="tgl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" width="12" height="12"><line class="v-line" x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button>
+          <div class="faq-a"><p>This system went live in 3 weeks, with the full 60-day engagement covering optimisation and training. Most lead automation builds launch within 2-4 weeks.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qt">Do we need to change our CRM or existing tools?</span><span class="tgl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" width="12" height="12"><line class="v-line" x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button>
+          <div class="faq-a"><p>No. We build on top of what you already use. In this case, the client kept their CRM — we connected the channels, automation, and dashboard around it.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qt">What happens to leads the AI can’t handle?</span><span class="tgl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" width="12" height="12"><line class="v-line" x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button>
+          <div class="faq-a"><p>They route instantly to a human with full conversation context. The AI handles the routine 80% so your team focuses on the 20% that needs judgment.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qt">Is this only for e-commerce businesses?</span><span class="tgl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" width="12" height="12"><line class="v-line" x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button>
+          <div class="faq-a"><p>No — the same capture-qualify-follow-up-book structure works for real estate, clinics, agencies, and any business that lives on inbound leads.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qt">How do we know it’s working?</span><span class="tgl"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" width="12" height="12"><line class="v-line" x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span></button>
+          <div class="faq-a"><p>You watch it live. Every engagement includes a real-time dashboard tracking leads, response times, conversion, and cost — the same numbers shown in this case study.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Section 7 — CTA ───────── -->
+  <section class="cta-sec" data-screen-label="CTA">
+    <div class="wrap">
+      <div class="cta-card">
+        <h2>Want <span class="serif">numbers</span> like these?</h2>
+        <p class="sub">Book a free growth audit. We’ll map where your leads leak, what to automate first, and what results to expect — before you spend a dirham.</p>
+        <button class="btn-light-pill" onclick="location.href='contact.html'">Book Your Free Audit <span class="arr">→</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Section 8 — More case studies ───────── -->
+  <section class="more-sec" data-screen-label="More Case Studies">
+    <div class="wrap">
+      <div class="more-hd">
+        <h2>More Case Studies</h2>
+        <a href="case-studies.html">View all case studies →</a>
+      </div>
+      <div class="more-grid">
+        <a class="more-card" href="case-study.html">
+          <span class="case-eyebrow">SaaS · Paid Advertising</span>
+          <h3>How a SaaS Company Cut CAC by 40% With AI Ad Optimisation</h3>
+          <div class="ba-pill">
+            <span class="lbl">Customer Acquisition Cost</span>
+            <span class="val"><span class="old">AED 890</span><span class="arr2">→</span><span class="new">AED 534</span></span>
+          </div>
+          <span class="rm">Read Case Study →</span>
+        </a>
+        <a class="more-card" href="case-study.html">
+          <span class="case-eyebrow">Real Estate · AI Automation</span>
+          <h3>How a Real Estate Agency Automated Lead Follow-Up From First Message to Booked Viewing</h3>
+          <div class="ba-pill">
+            <span class="lbl">Avg Response Time</span>
+            <span class="val"><span class="old">4 hrs</span><span class="arr2">→</span><span class="new">&lt; 2 min</span></span>
+          </div>
+          <span class="rm">Read Case Study →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── (sections to come) ───────── -->
+
+  <!-- ───────── CTA + Footer (locked, ported from WebsiteCTA) ───────── -->
+  <section id="contact" style="background:#1A1A1A;padding:100px 0;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 28px;">
+      <h2 style="font-family:'Satoshi','DM Sans',sans-serif;font-size:clamp(72px,12vw,128px);font-weight:800;line-height:0.92;letter-spacing:-0.045em;color:#FFFFFF;margin:0 0 56px;text-align:center;">Let's Talk.</h2>
+
+      <div style="display:grid;grid-template-columns:45fr 55fr;">
+        <!-- LEFT -->
+        <div style="padding-right:56px;border-right:1px solid #333333;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 0 32px;">
+            <span style="font-family:'Satoshi','DM Sans',sans-serif;font-size:22px;font-weight:600;color:#FFFFFF;letter-spacing:-0.02em;">Follow us</span>
+            <div style="display:flex;gap:12px;">
+              <a href="https://instagram.com" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:50%;background:#2A2A2A;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5" fill="#FFF"></circle></svg></a>
+              <a href="https://tiktok.com" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:50%;background:#2A2A2A;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="#FFF"><path d="M16.5 3c.3 2.1 1.6 3.6 3.7 3.9v2.4c-1.3.1-2.5-.3-3.7-1v5.7c0 3.3-2.4 5.6-5.4 5.6-2.9 0-5-2.1-5-4.9 0-2.9 2.3-4.9 5.3-4.7v2.5c-.5-.1-1-.1-1.5 0-1.1.3-1.7 1-1.6 2.1.1 1.1 1 1.8 2.1 1.7 1.2-.1 1.9-1 1.9-2.3V3h2.7z"></path></svg></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:50%;background:#2A2A2A;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="#FFF"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.62-1.18 2.14-2.43 4.4-2.43 4.7 0 5.57 3.1 5.57 7.13V24h-5v-7c0-1.67-.03-3.82-2.33-3.82-2.33 0-2.68 1.82-2.68 3.7V24h-5V8z"></path></svg></a>
+              <a href="https://wa.me/971567985386" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:50%;background:#2A2A2A;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="#FFF"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.05-1.34A9.93 9.93 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"></path></svg></a>
+            </div>
+          </div>
+
+          <div style="padding:32px 0;border-top:1px solid #333333;">
+            <h3 style="font-family:'Satoshi','DM Sans',sans-serif;font-size:22px;font-weight:600;color:#FFFFFF;letter-spacing:-0.02em;margin:0 0 18px;">What we offer</h3>
+            <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;">
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Weekly performance review</li>
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Reporting portal</li>
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Live Dashboard</li>
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Responds to leads in under 60 seconds</li>
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Runs 24/7 with zero downtime</li>
+            </ul>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:32px 0 0;border-top:1px solid #333333;">
+            <div>
+              <div style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;letter-spacing:0.02em;margin-bottom:14px;">/ Digital</div>
+              <a href="mailto:info@carbonium.agency" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:16px;color:#FFFFFF;">info@carbonium.agency</a>
+            </div>
+            <div>
+              <div style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;letter-spacing:0.02em;margin-bottom:14px;">/ Navigation</div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <a href="index.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Home</a>
+                <a href="about.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">About</a>
+                <a href="services.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Services</a>
+                <a href="case-studies.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Case Studies</a>
+                <a href="blog.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Blog</a>
+                <a href="contact.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT — form -->
+        <div style="padding-left:56px;">
+          <div style="padding-bottom:28px;border-bottom:1px solid #333333;margin-bottom:28px;">
+            <h3 style="font-family:'Satoshi','DM Sans',sans-serif;font-size:24px;font-weight:600;color:#FFFFFF;letter-spacing:-0.02em;margin:0 0 8px;">Got a question, challenge, or idea?</h3>
+            <p style="font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;margin:0;">Fill out the form — we'll get back to you shortly.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <input type="text" placeholder="Your Name" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;">
+            <input type="email" placeholder="Your Email" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;">
+            <input type="text" placeholder="Your Company" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;">
+            <textarea rows="5" placeholder="Your message" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;resize:vertical;min-height:130px;line-height:1.5;"></textarea>
+          </div>
+          <button onmouseenter="this.style.background='#333333';" onmouseleave="this.style.background='#1A1A1A';" style="width:100%;height:52px;margin-top:24px;background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:background 200ms ease;">&rarr; Let's Talk</button>
+          <p style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;margin:14px 0 0;line-height:1.5;text-align:center;">By submitting, you agree to our <a href="#privacy" style="color:#707070;text-decoration:underline;text-underline-offset:2px;">Privacy Policy</a>.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid #333333;margin-top:56px;padding-top:28px;">
+        <span style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;">© 2026 Carbonium AI Marketing Agency. All rights reserved.</span>
+        <div style="display:flex;gap:24px;">
+          <a href="#privacy" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;">Privacy Policy</a>
+          <a href="#terms" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a class="wa-fab" href="https://wa.me/971567985386" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    // Scoreboard count-up — 900ms ease-out, staggered 120ms per row
+    (function () {
+      var board = document.getElementById('scoreboard');
+      if (!board) return;
+      var els = board.querySelectorAll('.cnt');
+      function run() {
+        els.forEach(function (el, i) {
+          var from = parseFloat(el.dataset.from), to = parseFloat(el.dataset.to);
+          var dec = parseInt(el.dataset.decimals || '0', 10);
+          var pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+          setTimeout(function () {
+            var start, dur = 900;
+            function tick(t) {
+              if (start === undefined) start = t;
+              var p = Math.min((t - start) / dur, 1);
+              var e = 1 - Math.pow(1 - p, 3);
+              el.textContent = pre + (from + (to - from) * e).toFixed(dec) + suf;
+              if (p < 1) requestAnimationFrame(tick);
+              else el.textContent = pre + to.toFixed(dec) + suf;
+            }
+            requestAnimationFrame(tick);
+          }, i * 120);
+        });
+      }
+      var ob = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { run(); ob.disconnect(); }
+        });
+      }, { threshold: 0.3 });
+      ob.observe(board);
+    })();
+
+    // Section 4 — TOC scrollspy + reading progress ring
+    (function () {
+      var sec = document.getElementById('case-body');
+      if (!sec) return;
+      var ring = document.getElementById('toc-ring');
+      var pct = document.getElementById('toc-pct');
+      var links = document.querySelectorAll('#toc-list a');
+      var CIRC = 43.98;
+
+      function onScroll() {
+        var rect = sec.getBoundingClientRect();
+        var vh = window.innerHeight;
+        var total = rect.height - vh;
+        var p = total > 0 ? Math.min(Math.max(-rect.top / total, 0), 1) : (rect.top < 0 ? 1 : 0);
+        ring.style.strokeDashoffset = (CIRC * (1 - p)).toFixed(2);
+        pct.textContent = Math.round(p * 100) + '%';
+
+        var current = links[0];
+        links.forEach(function (a) {
+          var target = document.querySelector(a.getAttribute('href'));
+          if (target && target.getBoundingClientRect().top <= vh * 0.35) current = a;
+        });
+        links.forEach(function (a) { a.classList.toggle('on', a === current); });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    // Section 6 — FAQ accordion (same toggle behavior as WebsiteFAQ)
+    (function () {
+      document.querySelectorAll('.faq-item .faq-q').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btn.parentElement.classList.toggle('open');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

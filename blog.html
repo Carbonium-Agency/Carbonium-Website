@@ -1,425 +1,663 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — AI Marketing Insights | Carbonium</title>
-  <meta name="description" content="AI marketing guides, case studies, and strategies for ambitious businesses in the UAE and beyond. Real-world intelligence from Carbonium.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/blog.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog — Carbonium</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #1A1A1A;
+    --paper: #F1F1F1;
+    --mid: #555555;
+    --soft: #707070;
+    --fade: #9A9A9A;
+    --hair: #D3D3D3;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    font-family: 'Satoshi', system-ui, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; color: inherit; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+  /* ─────────────── Nav (locked) ─────────────── */
+  nav.site {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 72px;
+    background: rgba(241,241,241,.6);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,.05);
+  }
+  nav.site .inner {
+    max-width: 1200px; margin: 0 auto; height: 100%; padding: 0 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  nav.site img { height: 26px; width: auto; }
+  nav.site ul { display: flex; gap: 30px; list-style: none; }
+  nav.site ul a {
+    font-size: 14px; font-weight: 500; color: #2E2E2E;
+    font-family: 'DM Sans', sans-serif; transition: color .18s;
+  }
+  nav.site ul a:hover { color: var(--ink); }
+  nav.site ul a.active { color: var(--ink); font-weight: 700; }
+  .nav-cta {
+    background: var(--ink); color: #fff; padding: 11px 22px; border-radius: 8px;
+    font-size: 14px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; border: none;
+  }
+  @media (max-width: 760px) { nav.site ul { display: none; } }
+
+  /* ─────────────── Section 1 — Hero (dark) ─────────────── */
+  .b-hero { background: #1A1A1A; padding: 172px 0 80px; }
+  .crumb {
+    font-family: 'DM Sans', sans-serif; font-size: 13px; color: #9A9A9A;
+    display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 48px;
+  }
+  .crumb a { color: #9A9A9A; transition: color .18s; }
+  .crumb a:hover { color: #fff; }
+  .crumb .here { color: #fff; }
+  .eyebrow-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #2A2A2A; border: 1px solid #353535; border-radius: 999px;
+    padding: 7px 16px; font-family: 'DM Sans', sans-serif; font-size: 12px;
+    font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #CFCFCF;
+  }
+  .eyebrow-pill .dot { width: 5px; height: 5px; border-radius: 50%; background: #6F6F6F; }
+  .b-hero .center { text-align: center; }
+  .b-hero h1 {
+    font-family: 'Satoshi', sans-serif; font-weight: 900;
+    font-size: clamp(40px, 6vw, 64px); line-height: 1.02; letter-spacing: -.035em;
+    color: #fff; margin: 26px 0 0;
+  }
+  .b-hero .sub {
+    font-family: 'Satoshi', sans-serif; font-weight: 400;
+    font-size: clamp(16px, 1.6vw, 18px); line-height: 1.6; color: #9A9A9A;
+    max-width: 640px; margin: 22px auto 0;
+  }
+  .filters {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+    max-width: 720px; margin: 44px auto 0;
+  }
+  .filter-pill {
+    font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
+    letter-spacing: .03em; color: #B6B6B6; background: #2A2A2A;
+    border: 1px solid #353535; border-radius: 999px; padding: 9px 18px;
+    cursor: pointer; transition: background .18s, color .18s, border-color .18s;
+  }
+  .filter-pill:hover { background: #fff; color: #1A1A1A; border-color: #fff; }
+  .filter-pill.active { background: #fff; color: #1A1A1A; border-color: #fff; }
+
+  /* ─────────────── Section blocks ─────────────── */
+  .block { padding: 90px 0; }
+  .block.paper { background: #F1F1F1; }
+  .block.white { background: #FFFFFF; }
+  .sec-head {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 24px; margin-bottom: 40px;
+  }
+  .sec-head h2 {
+    font-family: 'Satoshi', sans-serif; font-weight: 900;
+    font-size: clamp(28px, 3.4vw, 36px); letter-spacing: -.03em; color: #1A1A1A;
+  }
+  .view-all {
+    font-family: 'Satoshi', sans-serif; font-weight: 600; font-size: 14px;
+    color: #1A1A1A; white-space: nowrap; display: inline-flex; align-items: center; gap: 7px;
+    transition: gap .2s ease;
+  }
+  .view-all:hover { gap: 12px; }
+
+  /* image placeholder */
+  .ph {
+    background: #E7E7E7; display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Sans', sans-serif; font-size: 13px; color: #A6A6A6; letter-spacing: .02em;
+    aspect-ratio: 16 / 9;
+  }
+  /* polished thumbnail frame — rounded with corner-dot accents */
+  .thumb {
+    position: relative; aspect-ratio: 16 / 10; background: #E7E7E7;
+    border-radius: 16px; margin: 0; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Sans', sans-serif; font-size: 13px; color: #A6A6A6; letter-spacing: .02em;
+    transition: opacity .22s ease;
+  }
+  .thumb .cd { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #C8C8C8; }
+  .thumb .cd.tl { top: 11px; left: 11px; }
+  .thumb .cd.tr { top: 11px; right: 11px; }
+  .thumb .cd.bl { bottom: 11px; left: 11px; }
+  .thumb .cd.br { bottom: 11px; right: 11px; }
+  .cat-pill {
+    display: inline-block; font-family: 'DM Sans', sans-serif; font-size: 11px;
+    font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #555555;
+    background: #F1F1F1; border: 1px solid #D3D3D3; border-radius: 999px; padding: 5px 12px;
+  }
+
+  /* ─────────────── Featured card ─────────────── */
+  .featured {
+    display: grid; grid-template-columns: 1.05fr 1fr; gap: 0;
+    background: #FFFFFF; border: 1px solid #D3D3D3; border-radius: 12px; overflow: hidden;
+  }
+  .featured .ph { aspect-ratio: auto; height: 100%; min-height: 320px; border-radius: 0; }
+  .featured .fcontent { padding: 40px; display: flex; flex-direction: column; align-items: flex-start; }
+  .featured h3 {
+    font-family: 'Satoshi', sans-serif; font-weight: 900;
+    font-size: clamp(26px, 2.6vw, 32px); line-height: 1.12; letter-spacing: -.025em;
+    color: #1A1A1A; margin: 18px 0 14px; text-wrap: pretty;
+  }
+  .featured .excerpt {
+    font-family: 'Satoshi', sans-serif; font-size: 16px; line-height: 1.6; color: #555555;
+    margin-bottom: 24px; max-width: 46ch;
+  }
+  .featured .meta {
+    font-family: 'DM Sans', sans-serif; font-size: 13px; color: #9A9A9A; margin-bottom: 22px;
+  }
+  .read-more {
+    font-family: 'Satoshi', sans-serif; font-weight: 600; font-size: 14px; color: #1A1A1A;
+    display: inline-flex; align-items: center; gap: 7px; margin-top: auto; transition: gap .2s ease;
+  }
+  .read-more:hover { gap: 12px; }
+  @media (max-width: 820px) { .featured { grid-template-columns: 1fr; } .featured .ph { aspect-ratio: 16/9; min-height: 0; } }
+
+  /* ─────────────── Post grid ─────────────── */
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 24px; }
+  .card {
+    background: transparent; border: none; border-radius: 0; overflow: visible;
+    display: flex; flex-direction: column; cursor: pointer;
+  }
+  .card:hover .thumb { opacity: .9; }
+  .card .body { padding: 0; display: flex; flex-direction: column; }
+  .card .body .cat-pill, .card .body p, .card .body .foot { display: none; }
+  .card h4 {
+    font-family: 'Satoshi', sans-serif; font-weight: 700; font-size: 19px; line-height: 1.3;
+    letter-spacing: -.01em; color: #1A1A1A; margin: 14px 0 0;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .card p {
+    font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: 14px; line-height: 1.55; color: #555555;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .card .foot {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: auto; padding-top: 18px;
+  }
+  .card .date { font-family: 'DM Sans', sans-serif; font-size: 12px; color: #9A9A9A; }
+  .card .rm {
+    font-family: 'Satoshi', sans-serif; font-weight: 600; font-size: 13px; color: #1A1A1A;
+    display: inline-flex; align-items: center; gap: 5px; transition: gap .2s ease;
+  }
+  .card:hover .rm { gap: 9px; }
+  @media (max-width: 980px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 680px) { .grid { grid-template-columns: 1fr; } .sec-head { flex-direction: column; align-items: flex-start; } }
+
+  /* WhatsApp FAB */
+  .wa-fab {
+    position: fixed; bottom: 28px; right: 28px; z-index: 900; width: 52px; height: 52px;
+    background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+  }
+</style>
 </head>
 <body>
 
-<!-- ── Navigation ── -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
-  <div class="container">
-    <div class="nav__inner">
-      <a href="index.html" class="nav__logo-link" aria-label="Carbonium home">
-        <img src="https://carbonium.agency/images/200/19017010/Screenshot_2025-09-02_at_19.34.19-removebg-preview-5E6yHE6egdgW_Dskl8RvoQ.png" alt="Carbonium" class="nav__logo">
-      </a>
-      <ul class="nav__links">
-        <li><a href="index.html">Home</a></li>
+  <nav class="site">
+    <div class="inner">
+      <a href="index.html"><img src="assets/logos/carbonium-logo.png" alt="Carbonium"></a>
+      <ul>
         <li><a href="services.html">Services</a></li>
+        <li><a href="#">Case Studies</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
         <li><a href="blog.html" class="active">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <a href="contact.html" class="btn btn--primary nav__cta">Get a Free Strategy Call</a>
-      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="nav-cta" onclick="location.href='contact.html'">Let's Talk</button>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Mobile nav -->
-<div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
-  <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="about.html">About</a>
-  <a href="case-studies.html">Case Studies</a>
-  <a href="blog.html">Blog</a>
-  <a href="contact.html">Contact</a>
-  <a href="contact.html" class="btn btn--primary" style="margin-top:16px;">Get a Free Strategy Call</a>
-</div>
+  <!-- ───────── Section 1 — Hero ───────── -->
+  <header class="b-hero">
+    <div class="wrap center">
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span><span class="here">Blog</span>
+      </nav>
+      <h1>Carbonium Blog</h1>
+      <p class="sub">Learn how to use AI to grow your business. Real playbooks, real tools, and the latest AI marketing moves — for businesses and founders.</p>
+      <div class="filters" id="filters">
+        <span class="filter-pill active">Flash News</span>
+        <span class="filter-pill">Playbooks</span>
+        <span class="filter-pill">AI in Action</span>
+        <span class="filter-pill">AI Tools</span>
+        <span class="filter-pill">List of Articles</span>
+      </div>
+    </div>
+  </header>
 
-<!-- ── Blog Hero ── -->
-<header class="blog-hero">
-  <div class="container">
-    <span class="eyebrow">The Carbonium Blog</span>
-    <h1 class="blog-hero__title">Insights &amp; Strategies</h1>
-    <p class="blog-hero__sub">AI marketing guides, case studies, and strategies for ambitious businesses. Real-world intelligence, no fluff.</p>
-    <nav class="blog-cats" aria-label="Post categories">
-      <a href="blog.html"          class="blog-cat-pill blog-cat-pill--active">Latest</a>
-      <a href="blog-category.html" class="blog-cat-pill">AI Marketing</a>
-      <a href="blog-category.html" class="blog-cat-pill">Paid Ads</a>
-      <a href="blog-category.html" class="blog-cat-pill">SEO &amp; Content</a>
-      <a href="blog-category.html" class="blog-cat-pill">Social Media</a>
-      <a href="blog-category.html" class="blog-cat-pill">Case Studies</a>
-      <a href="blog-category.html" class="blog-cat-pill">Guides</a>
-    </nav>
-  </div>
-</header>
-
-<!-- ── Blog Content ── -->
-<main class="blog-index">
-  <div class="blog-index-inner">
-    <div class="container">
-
-      <!-- Featured post -->
-      <a href="blog-post.html" class="blog-featured">
-        <div class="blog-featured__thumb thumb--1"></div>
-        <div class="blog-featured__body">
-          <span class="blog-featured__badge">&#9733; Featured</span>
-          <h2 class="blog-featured__title">How AI Is Transforming Digital Marketing in the UAE (2026 Guide)</h2>
-          <p class="blog-featured__excerpt">AI is reshaping how UAE businesses attract, convert, and retain customers. Companies using AI marketing systems are seeing 3× better ROI, instant lead response times, and content output that would take entire teams to match manually.</p>
-          <div class="blog-featured__meta">
-            <span>Sutriano Wu</span>
-            <span class="blog-featured__dot"></span>
-            <span>June 2026</span>
-            <span class="blog-featured__dot"></span>
-            <span>8 min read</span>
+  <!-- ───────── Section 3 — Flash News ───────── -->
+  <section class="block white">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Flash News</h2>
+        <a class="view-all" href="#">View all <span>→</span></a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">Flash News</span>
+            <h4>New Model Drops: What Actually Changes for Marketers This Week</h4>
+            <p>Cheaper tokens, longer context, faster output. We cut past the launch hype to the three things that matter for your stack.</p>
+            <div class="foot"><span class="date">June 25, 2026</span><a class="rm" href="#">Read more →</a></div>
           </div>
-          <span class="blog-featured__read">Read Post →</span>
-        </div>
-      </a>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">Flash News</span>
+            <h4>Meta Rolls Out New AI Ad Tools — The Early Numbers Are In</h4>
+            <p>Advertisers got fresh generative controls overnight. Here's what's working, what's noise, and where to point budget.</p>
+            <div class="foot"><span class="date">June 21, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">Flash News</span>
+            <h4>Google's Answer Engine Is Live. Here's the SEO Fallout.</h4>
+            <p>Zero-click results just expanded again. What it means for organic traffic and how to stay visible to AI answers.</p>
+            <div class="foot"><span class="date">June 18, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">Flash News</span>
+            <h4>Agents API Ships: Why Your Marketing Stack Just Got Cheaper</h4>
+            <p>Building autonomous workflows just got dramatically simpler. A quick read on what's newly possible — and at what cost.</p>
+            <div class="foot"><span class="date">June 13, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">Flash News</span>
+            <h4>The Privacy Update Quietly Reshaping First-Party Data</h4>
+            <p>A change most teams missed is about to reshape attribution. What to check in your setup before the next campaign.</p>
+            <div class="foot"><span class="date">June 9, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">Flash News</span>
+            <h4>TikTok's New Generative Ad Format, Explained in 2 Minutes</h4>
+            <p>A new AI-built ad unit just hit the platform. The fast facts on format, fit, and whether it's worth testing now.</p>
+            <div class="foot"><span class="date">June 4, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-      <!-- Latest -->
-      <div class="blog-row">
-        <div class="blog-row__head">
-          <h2>Latest</h2>
-          <a href="blog-category.html" class="blog-row__viewall">View all →</a>
-        </div>
-        <div class="blog-row__cards">
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--2"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__cat">AI Marketing</span>
-              <span class="blog-card__title">How AI Is Transforming Digital Marketing in the UAE</span>
-              <span class="blog-card__meta">8 min read</span>
+  <!-- ───────── Section 4 — Playbooks ───────── -->
+  <section class="block paper">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Playbooks</h2>
+        <a class="view-all" href="#">View all <span>→</span></a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">Playbooks</span>
+            <h4>The 7-Day AI Lead Engine: A Build Playbook for Founders</h4>
+            <p>Day by day, the exact steps to stand up an always-on lead qualifier — even if you've never shipped automation before.</p>
+            <div class="foot"><span class="date">June 23, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">Playbooks</span>
+            <h4>How to Write a System Prompt That Protects Your Brand Voice</h4>
+            <p>A copy-paste framework for turning your brand guidelines into a prompt that keeps every AI output unmistakably yours.</p>
+            <div class="foot"><span class="date">June 19, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">Playbooks</span>
+            <h4>The WhatsApp Automation Playbook: From First Reply to Closed Deal</h4>
+            <p>Every message flow, trigger, and fallback we wire up to turn a WhatsApp number into a 24/7 sales channel.</p>
+            <div class="foot"><span class="date">June 15, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">Playbooks</span>
+            <h4>Setting Up an AI Content Pipeline That Never Misses a Deadline</h4>
+            <p>Brief in, finished assets out. The repeatable production line that keeps your calendar full without late nights.</p>
+            <div class="foot"><span class="date">June 11, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">Playbooks</span>
+            <h4>The Paid Social Testing Framework We Run on Every Account</h4>
+            <p>How we structure creative tests so winners surface fast and budget never bleeds into guesswork.</p>
+            <div class="foot"><span class="date">June 6, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">Playbooks</span>
+            <h4>Mapping Your Funnel Before You Automate a Single Step</h4>
+            <p>Automate a broken funnel and you scale the leak. The mapping exercise we run before touching any tooling.</p>
+            <div class="foot"><span class="date">June 1, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Section 5 — AI in Action ───────── -->
+  <section class="block white">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>AI in Action</h2>
+        <a class="view-all" href="#">View all <span>→</span></a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">AI in Action</span>
+            <h4>We Let an AI Agent Run a $10K Ad Budget for a Week — Here's What Happened</h4>
+            <p>No human touched the bids. We watched an agent pace spend, kill losers, and double down on winners in real time.</p>
+            <div class="foot"><span class="date">June 24, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">AI in Action</span>
+            <h4>Watch an AI Qualify 200 Leads Overnight While the Team Slept</h4>
+            <p>Every inbound got scored, tagged, and routed before 9am. Here's the transcript of an agent working a full inbox solo.</p>
+            <div class="foot"><span class="date">June 20, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">AI in Action</span>
+            <h4>From Cold DM to Booked Call: An Agent Handles the Whole Thread</h4>
+            <p>We hand a single agent one cold lead and let it run. It qualifies, objection-handles, and books — start to finish.</p>
+            <div class="foot"><span class="date">June 17, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">AI in Action</span>
+            <h4>We Generated a Month of Social Content in 40 Minutes — Live</h4>
+            <p>Thirty on-brand posts, captions, and hooks from a single brief. We timed it and screen-recorded the whole run.</p>
+            <div class="foot"><span class="date">June 12, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">AI in Action</span>
+            <h4>An AI Rewrote Our Worst-Performing Landing Page. Conversions Doubled.</h4>
+            <p>Same offer, same traffic — new copy written and tested by an agent. The before-and-after numbers speak for themselves.</p>
+            <div class="foot"><span class="date">June 8, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">AI in Action</span>
+            <h4>Real-Time Personalization: One Page, 5,000 Versions, Zero Designers</h4>
+            <p>Every visitor saw a page built for them on the fly. We break down the system generating it all in milliseconds.</p>
+            <div class="foot"><span class="date">June 2, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Section 6 — AI Tools ───────── -->
+  <section class="block paper">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>AI Tools</h2>
+        <a class="view-all" href="#">View all <span>→</span></a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">AI Tools</span>
+            <h4>The 9 AI Marketing Tools We Actually Use Every Day</h4>
+            <p>No affiliate fluff — the exact stack our team opens every morning, what each one does, and where it earns its seat.</p>
+            <div class="foot"><span class="date">June 24, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">AI Tools</span>
+            <h4>Best AI Video Generators for Performance Ads, Ranked</h4>
+            <p>We ran the same script through every major tool and graded output, speed, and cost. The winners may surprise you.</p>
+            <div class="foot"><span class="date">June 20, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">AI Tools</span>
+            <h4>We Tested 6 AI Copywriters on the Same Brief. One Won.</h4>
+            <p>Identical prompt, six tools, one blind scorecard. The full results and the copywriter we'd actually pay for.</p>
+            <div class="foot"><span class="date">June 16, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">AI Tools</span>
+            <h4>The Cheapest AI Stack That Still Closes Deals</h4>
+            <p>You don't need enterprise pricing to run a serious AI funnel. The lean toolset that punches far above its monthly cost.</p>
+            <div class="foot"><span class="date">June 10, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">AI Tools</span>
+            <h4>CRM Automation Tools That Play Nice With AI Agents</h4>
+            <p>Not every CRM is agent-ready. The platforms with the hooks, APIs, and triggers that let automation actually run.</p>
+            <div class="foot"><span class="date">June 7, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">AI Tools</span>
+            <h4>AI Analytics Dashboards That Surface Insight, Not Noise</h4>
+            <p>The reporting tools that tell you what to do next instead of burying the signal under another 40 charts.</p>
+            <div class="foot"><span class="date">June 3, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Section 7 — List of Articles ───────── -->
+  <section class="block white">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>List of Articles</h2>
+        <a class="view-all" href="#">View all <span>→</span></a>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">List of Articles</span>
+            <h4>12 AI Marketing Moves Every Founder Should Steal This Quarter</h4>
+            <p>Quick wins you can ship this week — from automated follow-ups to AI-built landing pages — ranked by effort and payoff.</p>
+            <div class="foot"><span class="date">June 22, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">List of Articles</span>
+            <h4>8 Signs Your Marketing Is Ready to Be Automated</h4>
+            <p>Not sure where to start? These eight tells mean your team is leaving easy, automatable wins on the table.</p>
+            <div class="foot"><span class="date">June 18, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">List of Articles</span>
+            <h4>10 Prompts That Instantly Improve Your Ad Copy</h4>
+            <p>Copy-paste these into any model and watch your hooks, angles, and CTAs sharpen up in a single pass.</p>
+            <div class="foot"><span class="date">June 14, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">List of Articles</span>
+            <h4>6 Automations That Pay for Themselves in a Month</h4>
+            <p>Every one of these has a clear, fast ROI. The low-risk automations we recommend new clients ship first.</p>
+            <div class="foot"><span class="date">June 9, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">List of Articles</span>
+            <h4>15 AI Use Cases for Small Marketing Teams</h4>
+            <p>Short-handed? These fifteen plays let a lean team operate like one several times its size.</p>
+            <div class="foot"><span class="date">June 5, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <div class="body">
+            <span class="cat-pill">List of Articles</span>
+            <h4>7 Metrics That Tell You an AI System Is Actually Working</h4>
+            <p>Skip the vanity numbers. These seven signals reveal whether your automation is compounding or just running.</p>
+            <div class="foot"><span class="date">June 1, 2026</span><a class="rm" href="#">Read more →</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── CTA + Footer (locked, ported from WebsiteCTA) ───────── -->
+  <section id="contact" style="background:#1A1A1A;padding:100px 0;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 28px;">
+      <h2 style="font-family:'Satoshi','DM Sans',sans-serif;font-size:clamp(72px,12vw,128px);font-weight:800;line-height:0.92;letter-spacing:-0.045em;color:#FFFFFF;margin:0 0 56px;text-align:center;">Let's Talk.</h2>
+
+      <div style="display:grid;grid-template-columns:45fr 55fr;">
+        <!-- LEFT -->
+        <div style="padding-right:56px;border-right:1px solid #333333;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 0 32px;">
+            <span style="font-family:'Satoshi','DM Sans',sans-serif;font-size:22px;font-weight:600;color:#FFFFFF;letter-spacing:-0.02em;">Follow us</span>
+            <div style="display:flex;gap:12px;">
+              <a href="https://instagram.com" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:50%;background:#2A2A2A;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5" fill="#FFF"></circle></svg></a>
+              <a href="https://tiktok.com" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:50%;background:#2A2A2A;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="#FFF"><path d="M16.5 3c.3 2.1 1.6 3.6 3.7 3.9v2.4c-1.3.1-2.5-.3-3.7-1v5.7c0 3.3-2.4 5.6-5.4 5.6-2.9 0-5-2.1-5-4.9 0-2.9 2.3-4.9 5.3-4.7v2.5c-.5-.1-1-.1-1.5 0-1.1.3-1.7 1-1.6 2.1.1 1.1 1 1.8 2.1 1.7 1.2-.1 1.9-1 1.9-2.3V3h2.7z"></path></svg></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:50%;background:#2A2A2A;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="#FFF"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.62-1.18 2.14-2.43 4.4-2.43 4.7 0 5.57 3.1 5.57 7.13V24h-5v-7c0-1.67-.03-3.82-2.33-3.82-2.33 0-2.68 1.82-2.68 3.7V24h-5V8z"></path></svg></a>
+              <a href="https://wa.me/971567985386" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:50%;background:#2A2A2A;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="#FFF"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.05-1.34A9.93 9.93 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"></path></svg></a>
             </div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--3"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__cat">Paid Ads</span>
-              <span class="blog-card__title">Meta Ads in the UAE: What's Actually Working in 2026</span>
-              <span class="blog-card__meta">6 min read</span>
+          </div>
+
+          <div style="padding:32px 0;border-top:1px solid #333333;">
+            <h3 style="font-family:'Satoshi','DM Sans',sans-serif;font-size:22px;font-weight:600;color:#FFFFFF;letter-spacing:-0.02em;margin:0 0 18px;">What we offer</h3>
+            <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;">
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Weekly performance review</li>
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Reporting portal</li>
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Live Dashboard</li>
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Responds to leads in under 60 seconds</li>
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Runs 24/7 with zero downtime</li>
+            </ul>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:32px 0 0;border-top:1px solid #333333;">
+            <div>
+              <div style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;letter-spacing:0.02em;margin-bottom:14px;">/ Digital</div>
+              <a href="mailto:info@carbonium.agency" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:16px;color:#FFFFFF;">info@carbonium.agency</a>
             </div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--4"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__cat">SEO &amp; Content</span>
-              <span class="blog-card__title">The SEO Playbook for the AI-Era Search Engine</span>
-              <span class="blog-card__meta">7 min read</span>
+            <div>
+              <div style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;letter-spacing:0.02em;margin-bottom:14px;">/ Navigation</div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <a href="index.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Home</a>
+                <a href="about.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">About</a>
+                <a href="services.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Services</a>
+                <a href="#" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Case Studies</a>
+                <a href="blog.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Blog</a>
+                <a href="contact.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Contact</a>
+              </div>
             </div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--5"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__cat">Social Media</span>
-              <span class="blog-card__title">Build a Social Media Presence on Autopilot with AI</span>
-              <span class="blog-card__meta">5 min read</span>
-            </div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--6"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__cat">Case Studies</span>
-              <span class="blog-card__title">Case Study: 40% CPL Reduction for a Dubai Real Estate Client</span>
-              <span class="blog-card__meta">4 min read</span>
-            </div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--1"></div>
-            <div class="blog-card__body">
-              <span class="blog-card__cat">Guides</span>
-              <span class="blog-card__title">The Ultimate AI Marketing Budget Guide for UAE Businesses</span>
-              <span class="blog-card__meta">10 min read</span>
-            </div>
-          </a>
+          </div>
+        </div>
+
+        <!-- RIGHT — form -->
+        <div style="padding-left:56px;">
+          <div style="padding-bottom:28px;border-bottom:1px solid #333333;margin-bottom:28px;">
+            <h3 style="font-family:'Satoshi','DM Sans',sans-serif;font-size:24px;font-weight:600;color:#FFFFFF;letter-spacing:-0.02em;margin:0 0 8px;">Got a question, challenge, or idea?</h3>
+            <p style="font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;margin:0;">Fill out the form — we'll get back to you shortly.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <input type="text" placeholder="Your Name" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;">
+            <input type="email" placeholder="Your Email" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;">
+            <input type="text" placeholder="Your Company" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;">
+            <textarea rows="5" placeholder="Your message" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;resize:vertical;min-height:130px;line-height:1.5;"></textarea>
+          </div>
+          <button onmouseenter="this.style.background='#333333';" onmouseleave="this.style.background='#1A1A1A';" style="width:100%;height:52px;margin-top:24px;background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:background 200ms ease;">&rarr; Let's Talk</button>
+          <p style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;margin:14px 0 0;line-height:1.5;text-align:center;">By submitting, you agree to our <a href="#privacy" style="color:#707070;text-decoration:underline;text-underline-offset:2px;">Privacy Policy</a>.</p>
         </div>
       </div>
 
-      <!-- AI Marketing -->
-      <div class="blog-row">
-        <div class="blog-row__head">
-          <h2>AI Marketing</h2>
-          <a href="blog-category.html" class="blog-row__viewall">View all →</a>
-        </div>
-        <div class="blog-row__cards">
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--1"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">AI Marketing</span><span class="blog-card__title">How AI Is Transforming Digital Marketing in the UAE</span><span class="blog-card__meta">8 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--2"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">AI Marketing</span><span class="blog-card__title">7 AI Marketing Tools Every Dubai Business Needs in 2026</span><span class="blog-card__meta">6 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--3"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">AI Marketing</span><span class="blog-card__title">AI vs Human Marketers: Who Wins in the UAE?</span><span class="blog-card__meta">5 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--4"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">AI Marketing</span><span class="blog-card__title">From Manual to Automated: AI Lead Gen Systems Explained</span><span class="blog-card__meta">7 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--5"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">AI Marketing</span><span class="blog-card__title">The ROI of AI Marketing: What to Expect in Your First 90 Days</span><span class="blog-card__meta">6 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--6"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">AI Marketing</span><span class="blog-card__title">Building an AI Marketing Stack from Scratch</span><span class="blog-card__meta">9 min read</span></div>
-          </a>
-        </div>
-      </div>
-
-      <!-- Paid Ads -->
-      <div class="blog-row">
-        <div class="blog-row__head">
-          <h2>Paid Ads</h2>
-          <a href="blog-category.html" class="blog-row__viewall">View all →</a>
-        </div>
-        <div class="blog-row__cards">
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--3"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Paid Ads</span><span class="blog-card__title">Meta Ads in the UAE: What's Actually Working in 2026</span><span class="blog-card__meta">6 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--4"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Paid Ads</span><span class="blog-card__title">Google vs Meta vs TikTok Ads: Which Platform Wins in the UAE?</span><span class="blog-card__meta">7 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--5"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Paid Ads</span><span class="blog-card__title">How to Cut Your CPL by 40% with AI Bidding Strategies</span><span class="blog-card__meta">5 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--6"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Paid Ads</span><span class="blog-card__title">TikTok Advertising for UAE Businesses: 2026 Starter Guide</span><span class="blog-card__meta">6 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--1"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Paid Ads</span><span class="blog-card__title">The Complete Guide to Retargeting Campaigns in Dubai</span><span class="blog-card__meta">8 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--2"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Paid Ads</span><span class="blog-card__title">Why Most Paid Ad Campaigns Fail (and How AI Fixes Them)</span><span class="blog-card__meta">5 min read</span></div>
-          </a>
-        </div>
-      </div>
-
-      <!-- SEO & Content -->
-      <div class="blog-row">
-        <div class="blog-row__head">
-          <h2>SEO &amp; Content</h2>
-          <a href="blog-category.html" class="blog-row__viewall">View all →</a>
-        </div>
-        <div class="blog-row__cards">
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--5"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">SEO &amp; Content</span><span class="blog-card__title">The SEO Playbook for the AI-Era Search Engine (2026)</span><span class="blog-card__meta">7 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--6"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">SEO &amp; Content</span><span class="blog-card__title">AI Content at Scale: 30 Articles Per Month, Zero Burnout</span><span class="blog-card__meta">6 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--1"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">SEO &amp; Content</span><span class="blog-card__title">Local SEO for Dubai Businesses: The 2026 Playbook</span><span class="blog-card__meta">8 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--2"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">SEO &amp; Content</span><span class="blog-card__title">How to Use AI to Research and Write Winning Blog Posts</span><span class="blog-card__meta">5 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--3"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">SEO &amp; Content</span><span class="blog-card__title">Content Clusters vs Pillar Pages: What Works with AI?</span><span class="blog-card__meta">6 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--4"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">SEO &amp; Content</span><span class="blog-card__title">The UAE Keyword Strategy That Doubled Our Client's Organic Traffic</span><span class="blog-card__meta">7 min read</span></div>
-          </a>
-        </div>
-      </div>
-
-      <!-- Social Media -->
-      <div class="blog-row">
-        <div class="blog-row__head">
-          <h2>Social Media</h2>
-          <a href="blog-category.html" class="blog-row__viewall">View all →</a>
-        </div>
-        <div class="blog-row__cards">
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--6"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Social Media</span><span class="blog-card__title">Build a Social Media Presence on Autopilot with AI</span><span class="blog-card__meta">5 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--1"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Social Media</span><span class="blog-card__title">Instagram vs TikTok for UAE Brands: 2026 Breakdown</span><span class="blog-card__meta">6 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--2"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Social Media</span><span class="blog-card__title">AI Video: Produce 20 Reels Per Week Without a Team</span><span class="blog-card__meta">7 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--3"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Social Media</span><span class="blog-card__title">WhatsApp Marketing: The Channel Your Competitors Are Missing</span><span class="blog-card__meta">5 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--4"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Social Media</span><span class="blog-card__title">Social Media Automation Tools That Actually Work (2026)</span><span class="blog-card__meta">6 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--5"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Social Media</span><span class="blog-card__title">The Science of Viral Hooks: The AI Approach to Short-Form Content</span><span class="blog-card__meta">5 min read</span></div>
-          </a>
-        </div>
-      </div>
-
-      <!-- Case Studies -->
-      <div class="blog-row">
-        <div class="blog-row__head">
-          <h2>Case Studies</h2>
-          <a href="blog-category.html" class="blog-row__viewall">View all →</a>
-        </div>
-        <div class="blog-row__cards">
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--2"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Case Studies</span><span class="blog-card__title">Case Study: 40% CPL Reduction for a Dubai Real Estate Client</span><span class="blog-card__meta">4 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--3"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Case Studies</span><span class="blog-card__title">How We Generated 200+ Leads in 30 Days for a SaaS Startup</span><span class="blog-card__meta">5 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--4"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Case Studies</span><span class="blog-card__title">3× ROI in 90 Days: A Full AI Marketing Case Study</span><span class="blog-card__meta">6 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--5"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Case Studies</span><span class="blog-card__title">From 0 to 10,000 Followers: Social Media Growth Case Study</span><span class="blog-card__meta">4 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--6"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Case Studies</span><span class="blog-card__title">WhatsApp Automation That Recovered $120K in Lost Leads</span><span class="blog-card__meta">5 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--1"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Case Studies</span><span class="blog-card__title">How AI Lead Gen Replaced an Entire Sales Development Team</span><span class="blog-card__meta">6 min read</span></div>
-          </a>
-        </div>
-      </div>
-
-      <!-- Guides -->
-      <div class="blog-row">
-        <div class="blog-row__head">
-          <h2>Guides</h2>
-          <a href="blog-category.html" class="blog-row__viewall">View all →</a>
-        </div>
-        <div class="blog-row__cards">
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--4"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Guides</span><span class="blog-card__title">The Ultimate AI Marketing Budget Guide for UAE Businesses</span><span class="blog-card__meta">10 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--5"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Guides</span><span class="blog-card__title">How to Brief an AI Marketing Agency: A Step-by-Step Guide</span><span class="blog-card__meta">7 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--6"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Guides</span><span class="blog-card__title">AI Marketing for Small Businesses: Where to Start in 2026</span><span class="blog-card__meta">8 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--1"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Guides</span><span class="blog-card__title">Setting Up Your First AI Marketing System: Full Walkthrough</span><span class="blog-card__meta">12 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--2"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Guides</span><span class="blog-card__title">Measuring AI Marketing ROI: Metrics That Actually Matter</span><span class="blog-card__meta">6 min read</span></div>
-          </a>
-          <a href="blog-post.html" class="blog-card">
-            <div class="blog-card__thumb thumb--3"></div>
-            <div class="blog-card__body"><span class="blog-card__cat">Guides</span><span class="blog-card__title">B2B vs B2C AI Marketing: The Complete Playbook</span><span class="blog-card__meta">9 min read</span></div>
-          </a>
-        </div>
-      </div>
-
-    </div><!-- /container -->
-  </div><!-- /blog-index-inner -->
-</main>
-
-<!-- ── Footer ── -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <img src="https://carbonium.agency/images/200/19017010/Screenshot_2025-09-02_at_19.34.19-removebg-preview-5E6yHE6egdgW_Dskl8RvoQ.png" alt="Carbonium" class="footer__logo">
-        <p class="footer__tagline">AI Marketing for the Future of Business.<br>Intelligent systems that compound over time.</p>
-      </div>
-      <div class="footer__col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html#ai-agents">AI Agent Automation</a></li>
-          <li><a href="services.html#paid-ads">Paid Advertising</a></li>
-          <li><a href="services.html#social-media">Social Media AI</a></li>
-          <li><a href="services.html#lead-gen">Lead Generation</a></li>
-          <li><a href="services.html#brand-positioning">Brand Positioning</a></li>
-          <li><a href="services.html#ai-video">AI Video</a></li>
-          <li><a href="services.html#whatsapp">WhatsApp Marketing</a></li>
-          <li><a href="services.html#website-dev">Website Development</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About Carbonium</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Contact</h4>
-        <div class="footer__contact-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Dubai, UAE</span>
-        </div>
-        <div class="footer__contact-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:sutrianowu@carbonium.agency">sutrianowu@carbonium.agency</a>
-        </div>
-        <div class="footer__contact-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          <a href="https://wa.me/971567985386" target="_blank" rel="noopener">Chat on WhatsApp</a>
-        </div>
-        <div style="margin-top:18px;">
-          <a href="contact.html" class="btn btn--primary" style="width:100%;justify-content:center;">Book a Free Call</a>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid #333333;margin-top:56px;padding-top:28px;">
+        <span style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;">© 2026 Carbonium AI Marketing Agency. All rights reserved.</span>
+        <div style="display:flex;gap:24px;">
+          <a href="#privacy" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;">Privacy Policy</a>
+          <a href="#terms" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;">Terms of Service</a>
         </div>
       </div>
     </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2026 Carbonium AI Marketing Agency. All rights reserved. Dubai, UAE.</p>
-    </div>
-  </div>
-</footer>
+  </section>
 
-<a href="https://wa.me/971567985386" class="wa-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+  <a class="wa-fab" href="https://wa.me/971567985386" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
 
-<div id="cookie-banner" role="dialog" aria-label="Cookie consent">
-  <p>We use cookies to improve your experience. By continuing, you accept our cookie policy.</p>
-  <div class="cookie-btns">
-    <button id="cookie-accept" class="btn btn--primary" style="padding:9px 18px;font-size:0.82rem;">Accept All</button>
-    <button id="cookie-manage" class="btn btn--secondary" style="padding:9px 18px;font-size:0.82rem;">Manage</button>
-  </div>
-</div>
-
-<script src="js/main.js"></script>
+  <script>
+    // Category filter pills — visual active toggle
+    (function () {
+      var pills = document.querySelectorAll('#filters .filter-pill');
+      pills.forEach(function (p) {
+        p.addEventListener('click', function () {
+          pills.forEach(function (q) { q.classList.remove('active'); });
+          p.classList.add('active');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

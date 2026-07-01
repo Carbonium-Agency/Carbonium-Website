@@ -1,410 +1,634 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How AI Is Transforming Digital Marketing in the UAE (2026 Guide) | Carbonium Blog</title>
-  <meta name="description" content="AI is reshaping how UAE businesses attract, convert, and retain customers. Learn how AI marketing systems deliver 3× ROI and instant lead response. A complete 2026 guide by Carbonium.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/blog.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>We Let an AI Agent Run a $10K Ad Budget for a Week — Carbonium Blog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #1A1A1A;
+    --paper: #F1F1F1;
+    --mid: #555555;
+    --soft: #707070;
+    --fade: #9A9A9A;
+    --hair: #D3D3D3;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: #FFFFFF;
+    font-family: 'Satoshi', system-ui, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; color: inherit; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 900px; }
+
+  /* ─────────────── Reading progress ─────────────── */
+  .progress-track { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: #D3D3D3; z-index: 1100; }
+  .progress-fill { height: 100%; width: 0; background: #1A1A1A; transition: width .08s linear; }
+
+  /* ─────────────── Nav (locked) ─────────────── */
+  nav.site {
+    position: fixed; top: 3px; left: 0; right: 0; z-index: 100; height: 72px;
+    background: rgba(241,241,241,.6);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,.05);
+  }
+  nav.site .inner {
+    max-width: 1200px; margin: 0 auto; height: 100%; padding: 0 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  nav.site img { height: 26px; width: auto; }
+  nav.site ul { display: flex; gap: 30px; list-style: none; }
+  nav.site ul a { font-size: 14px; font-weight: 500; color: #2E2E2E; font-family: 'DM Sans', sans-serif; transition: color .18s; }
+  nav.site ul a:hover { color: var(--ink); }
+  nav.site ul a.active { color: var(--ink); font-weight: 700; }
+  .nav-cta { background: var(--ink); color: #fff; padding: 11px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; }
+  @media (max-width: 760px) { nav.site ul { display: none; } }
+
+  /* ─────────────── Social share rail ─────────────── */
+  .share-rail {
+    position: fixed; left: 28px; top: 50%; transform: translateY(-50%); z-index: 90;
+    display: flex; flex-direction: column; gap: 12px; align-items: center;
+  }
+  .share-rail .lbl { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #9A9A9A; writing-mode: vertical-rl; margin-bottom: 4px; }
+  .share-rail a {
+    width: 38px; height: 38px; border-radius: 50%; border: 1px solid #D3D3D3; background: #FFFFFF;
+    display: flex; align-items: center; justify-content: center; color: #555555; cursor: pointer;
+    transition: color .18s, border-color .18s;
+  }
+  .share-rail a:hover { color: #1A1A1A; border-color: #1A1A1A; }
+  .share-rail svg { width: 16px; height: 16px; }
+  @media (max-width: 1180px) { .share-rail { display: none; } }
+
+  /* ─────────────── Section 1 — Article header (dark) ─────────────── */
+  .a-hero { background: #1A1A1A; padding: 152px 0 56px; }
+  .crumb { font-family: 'DM Sans', sans-serif; font-size: 13px; color: #9A9A9A; display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 30px; }
+  .a-hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; }
+  .crumb a { color: #9A9A9A; transition: color .18s; }
+  .crumb a:hover { color: #fff; }
+  .crumb .here { color: #fff; }
+  .cat-tag {
+    display: inline-flex; align-items: center; gap: 8px; background: #2A2A2A; border: 1px solid #353535;
+    border-radius: 999px; padding: 6px 14px; font-family: 'DM Sans', sans-serif; font-size: 11px;
+    font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #CFCFCF;
+  }
+  .cat-tag .dot { width: 5px; height: 5px; border-radius: 50%; background: #6F6F6F; }
+  .a-hero h1 {
+    font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: clamp(34px, 3.6vw, 48px);
+    line-height: 1.08; letter-spacing: -.03em; color: #fff; max-width: 640px; margin: 22px 0 0; text-wrap: pretty;
+  }
+  .answer-first {
+    font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: clamp(17px, 1.5vw, 19px);
+    line-height: 1.6; color: #E7E7E7; max-width: 620px; margin: 26px 0 0;
+  }
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 30px;
+    background: #FFFFFF; color: #1A1A1A; border: none; border-radius: 999px; padding: 15px 26px;
+    font-family: 'Satoshi', sans-serif; font-size: 15px; font-weight: 700; cursor: pointer;
+    transition: transform .18s ease-out;
+  }
+  .hero-cta .arr { display: inline-block; transition: transform .18s ease-out; }
+  .hero-cta:hover { transform: translateY(-2px); }
+  .hero-cta:hover .arr { transform: translateX(3px); }
+  .a-hero-img {
+    position: relative; width: 100%; aspect-ratio: 4 / 3.4; background: #E7E7E7; border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .a-hero-img .cd { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #C8C8C8; }
+  .a-hero-img .cd.tl { top: 14px; left: 14px; } .a-hero-img .cd.tr { top: 14px; right: 14px; }
+  .a-hero-img .cd.bl { bottom: 14px; left: 14px; } .a-hero-img .cd.br { bottom: 14px; right: 14px; }
+  .a-hero-img .ilabel { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; color: #9A9A9A; }
+  @media (max-width: 900px) { .a-hero-grid { grid-template-columns: 1fr; gap: 44px; } }
+  .byline { display: flex; align-items: center; gap: 12px; margin-top: 36px; padding-top: 28px; border-top: 1px solid #333333; }
+  .byline .avatar { width: 40px; height: 40px; border-radius: 50%; background: #2A2A2A; border: 1px solid #3A3A3A; flex-shrink: 0; }
+  .byline .who { font-family: 'Satoshi', sans-serif; font-size: 14px; }
+  .byline .who b { color: #fff; font-weight: 600; }
+  .byline .who .meta { color: #9A9A9A; }
+  .byline .who .meta { font-family: 'DM Sans', sans-serif; font-size: 13px; }
+
+  /* ─────────────── Section 2 — Featured media ─────────────── */
+  .sec { padding: 80px 0; }
+  .sec.media { padding: 64px 0 24px; }
+  .video-ph {
+    position: relative; aspect-ratio: 16 / 9; background: #E7E7E7; border-radius: 16px; overflow: hidden;
+    display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px;
+  }
+  .video-ph .cd { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #C8C8C8; }
+  .video-ph .cd.tl { top: 14px; left: 14px; } .video-ph .cd.tr { top: 14px; right: 14px; }
+  .video-ph .cd.bl { bottom: 14px; left: 14px; } .video-ph .cd.br { bottom: 14px; right: 14px; }
+  .play-btn { width: 72px; height: 72px; border-radius: 50%; background: #1A1A1A; display: flex; align-items: center; justify-content: center; }
+  .play-btn svg { width: 24px; height: 24px; margin-left: 4px; }
+  .video-ph .vlabel { font-family: 'DM Sans', sans-serif; font-size: 14px; color: #707070; font-weight: 500; }
+  .media .caption { font-family: 'Satoshi', sans-serif; font-style: italic; font-size: 14px; color: #707070; margin-top: 16px; }
+
+  /* ─────────────── Section 3 — Body + TOC ─────────────── */
+  .body-grid { display: grid; grid-template-columns: minmax(0,1fr) 280px; gap: 64px; align-items: start; }
+  .article { max-width: 760px; }
+  .article h2 {
+    font-family: 'Satoshi', sans-serif; font-weight: 700; font-size: clamp(26px, 2.4vw, 30px);
+    line-height: 1.2; letter-spacing: -.02em; color: #1A1A1A; margin: 52px 0 18px; scroll-margin-top: 110px;
+  }
+  .article h2:first-child { margin-top: 0; }
+  .article p { font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: 17px; line-height: 1.7; color: #1A1A1A; margin-bottom: 18px; }
+  .article ul.body-list { margin: 0 0 18px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .article ul.body-list li { position: relative; padding-left: 26px; font-family: 'Satoshi', sans-serif; font-size: 17px; line-height: 1.6; color: #1A1A1A; }
+  .article ul.body-list li::before { content: ""; position: absolute; left: 6px; top: 11px; width: 6px; height: 6px; border-radius: 50%; background: #1A1A1A; }
+  table.cmp { width: 100%; border-collapse: collapse; margin: 8px 0 24px; font-family: 'Satoshi', sans-serif; }
+  table.cmp th, table.cmp td { border: 1px solid #D3D3D3; padding: 14px 18px; text-align: left; font-size: 15px; }
+  table.cmp thead th { background: #F1F1F1; font-weight: 700; color: #1A1A1A; }
+  table.cmp tbody th { font-weight: 600; color: #1A1A1A; }
+  table.cmp tbody td { color: #555555; }
+
+  .toc { position: sticky; top: 110px; }
+  .toc .toc-head { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #9A9A9A; margin-bottom: 18px; }
+  .toc ul { list-style: none; display: flex; flex-direction: column; gap: 4px; border-left: 1px solid #D3D3D3; }
+  .toc a { display: block; font-family: 'Satoshi', sans-serif; font-size: 14px; line-height: 1.4; color: #707070; padding: 7px 0 7px 18px; margin-left: -1px; border-left: 1px solid transparent; transition: color .18s, border-color .18s; }
+  .toc a:hover { color: #1A1A1A; }
+  .toc a.active { color: #1A1A1A; font-weight: 600; border-left: 1px solid #1A1A1A; }
+  @media (max-width: 900px) { .body-grid { grid-template-columns: 1fr; } .toc { display: none; } }
+
+  /* ─────────────── Section 4 — Download ─────────────── */
+  .download {
+    background: #1A1A1A; border-radius: 16px; padding: 48px;
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center;
+  }
+  .download .label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #9A9A9A; }
+  .download h3 { font-family: 'Satoshi', sans-serif; font-weight: 800; font-size: 28px; letter-spacing: -.02em; color: #fff; margin: 14px 0 12px; }
+  .download p { font-family: 'Satoshi', sans-serif; font-size: 15px; line-height: 1.6; color: #9A9A9A; }
+  .dl-form { display: flex; gap: 12px; }
+  .dl-form input { flex: 1; background: #2A2A2A; border: 1px solid #333333; border-radius: 8px; padding: 15px 16px; font-size: 14px; font-family: 'Satoshi', sans-serif; color: #fff; outline: none; }
+  .dl-form input::placeholder { color: #777; }
+  .btn-light { background: #fff; color: #1A1A1A; border: none; border-radius: 8px; padding: 15px 22px; font-family: 'Satoshi', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; white-space: nowrap; transition: transform .2s ease; }
+  .btn-light:hover { transform: translateY(-2px); }
+  @media (max-width: 760px) { .download { grid-template-columns: 1fr; padding: 36px; } .dl-form { flex-direction: column; } }
+
+  /* ─────────────── Section 5 — Key takeaways ─────────────── */
+  .takeaways { background: #F1F1F1; border: 1px solid #D3D3D3; border-radius: 12px; padding: 28px 32px; }
+  .takeaways h3 { font-family: 'Satoshi', sans-serif; font-weight: 700; font-size: 20px; color: #1A1A1A; margin-bottom: 18px; }
+  .takeaways ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .takeaways li { position: relative; padding-left: 28px; font-family: 'Satoshi', sans-serif; font-size: 16px; line-height: 1.55; color: #1A1A1A; }
+  .takeaways li::before { content: "✓"; position: absolute; left: 4px; top: 0; font-size: 14px; color: #1A1A1A; font-weight: 700; }
+
+  /* ─────────────── Section 6 — FAQ ─────────────── */
+  .faq-sec { background: #F1F1F1; padding: 90px 0; }
+  .eyebrow-pill { display: inline-flex; align-items: center; gap: 8px; background: #FFFFFF; border: 1px solid #D3D3D3; border-radius: 999px; padding: 7px 16px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #555555; }
+  .eyebrow-pill .dot { width: 5px; height: 5px; border-radius: 50%; background: #9A9A9A; }
+  .faq-sec h2 { font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: clamp(28px, 3.2vw, 38px); letter-spacing: -.03em; color: #1A1A1A; margin: 18px 0 40px; }
+  .acc { border-top: 1px solid #D3D3D3; max-width: 900px; }
+  .acc-row { border-bottom: 1px solid #D3D3D3; }
+  .acc-q { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 24px 0; cursor: pointer; }
+  .acc-q span { font-family: 'Satoshi', sans-serif; font-weight: 700; font-size: 17px; color: #1A1A1A; }
+  .acc-q .tog { font-family: 'DM Sans', sans-serif; font-size: 22px; color: #555555; flex-shrink: 0; line-height: 1; transition: transform .2s ease; }
+  .acc-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+  .acc-a p { font-family: 'Satoshi', sans-serif; font-size: 16px; line-height: 1.7; color: #555555; padding: 0 0 24px; max-width: 760px; }
+  .acc-row.open .acc-q .tog { transform: rotate(45deg); }
+
+  /* ─────────────── Section 7 — Author + CTA ─────────────── */
+  .author-cta { background: #1A1A1A; padding: 80px 0; }
+  .author-cta .inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .author-card { display: flex; align-items: flex-start; gap: 18px; padding-right: 40px; border-right: 1px solid #333333; }
+  .author-card .avatar { width: 56px; height: 56px; border-radius: 50%; background: #2A2A2A; border: 1px solid #3A3A3A; flex-shrink: 0; }
+  /* Umbra — The Phantom mini-bot (copied from Robot Showcase) — size via --bot-w */
+  .umbra-bot { position: relative; width: var(--bot-w, 52px); flex-shrink: 0; animation: umbraBob 3.6s ease-in-out infinite; }
+  @keyframes umbraBob { 0%, 100% { transform: translateY(2px); } 50% { transform: translateY(-3px); } }
+  .umbra-bot .u-cloak { position: absolute; left: 50%; top: 50%; width: 158%; height: 78%; transform: translateX(-50%); background: linear-gradient(180deg, #1c1136 0%, #0c0620 75%); border-radius: 46% 46% 42% 42% / 26% 26% 74% 74%; filter: blur(1px); box-shadow: 0 0 14px rgba(160,107,255,.5); z-index: 0; animation: umbraCloak 4s ease-in-out infinite; }
+  @keyframes umbraCloak { 0%, 100% { opacity: .9; } 50% { opacity: .7; } }
+  .umbra-bot .u-head { position: relative; width: 100%; aspect-ratio: 1.12; border-radius: 44% / 50%; background: radial-gradient(circle at 36% 24%, #2a2438, #181426 50%, #0c0a16); box-shadow: inset -3px -4px 7px rgba(0,0,0,.5), inset 3px 3px 6px rgba(160,107,255,.18), 0 4px 9px rgba(0,0,0,.42); z-index: 3; }
+  .umbra-bot .u-visor { position: absolute; left: 50%; top: 50%; width: 74%; height: 56%; transform: translate(-50%, -50%); border-radius: 32% / 40%; background: radial-gradient(circle at 50% 26%, #1a1030, #0a0418 60%, #050210); box-shadow: inset 0 1px 3px rgba(160,107,255,.34), inset 0 -2px 4px #000, 0 0 0 1.5px rgba(160,107,255,.5); overflow: hidden; z-index: 4; }
+  .umbra-bot .u-slit { position: absolute; left: 50%; top: 48%; width: 54%; height: 9%; transform: translate(-50%, -50%); border-radius: 6px; background: linear-gradient(90deg, transparent, #c9a0ff, transparent); box-shadow: 0 0 8px #c9a0ff, 0 0 16px #a06bff; animation: umbraSlit 3.6s ease-in-out infinite; }
+  @keyframes umbraSlit { 0%, 44%, 56%, 100% { opacity: 1; } 22% { opacity: .5; } 49%, 51% { opacity: 0; } }
+  .umbra-bot .u-neck { position: relative; width: 18%; aspect-ratio: 1.55; height: auto; margin: -2px auto -1px; border-radius: 2px; background: linear-gradient(180deg, #a06bff, #1a0e30); box-shadow: 0 0 6px #a06bff; z-index: 2; }
+  .umbra-bot .u-torso { position: relative; width: 60%; margin: 0 auto; aspect-ratio: .82; border-radius: 50% 50% 50% 50% / 62% 62% 42% 42%; background: radial-gradient(circle at 40% 22%, #2a2438, #181426 50%, #0c0a16); box-shadow: inset -4px -5px 8px rgba(0,0,0,.5), inset 3px 3px 6px rgba(160,107,255,.14), 0 5px 11px rgba(0,0,0,.42); z-index: 1; }
+  .umbra-bot .u-arm { position: absolute; width: 22%; height: 42%; border-radius: 54% 54% 50% 50% / 68% 68% 32% 32%; background: radial-gradient(circle at 42% 28%, #2a2438, #181426 58%, #0c0a16); box-shadow: 0 2px 5px rgba(0,0,0,.36); z-index: 0; }
+  .umbra-bot .u-arm.l { left: -22%; top: 6%; transform: rotate(-30deg); transform-origin: 80% 6%; }
+  .umbra-bot .u-arm.r { right: -22%; top: 6%; transform: rotate(30deg); transform-origin: 20% 6%; }
+  /* Umbra interactions — hover reveal + click vanish/rematerialize (from Robot Showcase) */
+  .umbra-bot { cursor: pointer; }
+  .umbra-bot:hover { filter: drop-shadow(0 0 10px #a06bff); }
+  .umbra-bot:hover .u-slit { animation: none; opacity: 1; height: 12%; box-shadow: 0 0 10px #c9a0ff, 0 0 22px #a06bff; }
+  .umbra-bot.gone { filter: none; }
+  .umbra-bot.gone .u-cloak, .umbra-bot.gone .u-head, .umbra-bot.gone .u-neck, .umbra-bot.gone .u-torso { opacity: 0 !important; animation: none !important; transition: opacity .25s ease; }
+  .u-ghost-eye { position: absolute; left: 50%; top: 26%; width: 56%; height: 5%; transform: translate(-50%, -50%); border-radius: 4px; background: linear-gradient(90deg, transparent, #c9a0ff, transparent); box-shadow: 0 0 10px #c9a0ff, 0 0 22px #a06bff; opacity: 0; pointer-events: none; z-index: 5; }
+  .u-ghost-eye.lit { opacity: 1; transition: opacity .35s ease; }
+  .u-ghost-eye.blink { animation: umbraBlinkOnce .42s ease-in-out; }
+  @keyframes umbraBlinkOnce { 0%, 100% { transform: translate(-50%, -50%) scaleY(1); } 50% { transform: translate(-50%, -50%) scaleY(.12); } }
+  .u-flash { position: absolute; left: 50%; top: 26%; width: 140%; height: 0; padding-bottom: 140%; transform: translate(-50%, -50%) scale(0); border-radius: 50%; background: radial-gradient(circle, #fff, #a06bff 45%, transparent 72%); opacity: 0; pointer-events: none; z-index: 6; }
+  .u-flash.go { animation: umbraFlash .6s ease-out 1; }
+  @keyframes umbraFlash { 0% { opacity: 0; transform: translate(-50%, -50%) scale(.2); } 35% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(2.2); } }
+  .umbra-bot.materialize .u-cloak, .umbra-bot.materialize .u-head, .umbra-bot.materialize .u-neck, .umbra-bot.materialize .u-torso { animation: umbraMaterialize .7s ease-out; }
+  @keyframes umbraMaterialize { 0% { opacity: 0; filter: brightness(3); } 35% { opacity: 1; filter: brightness(2); } 100% { opacity: 1; filter: none; } }
+  .u-msg { position: absolute; left: 50%; bottom: 104%; transform: translateX(-50%); white-space: nowrap; font-family: 'DM Mono', 'DM Sans', monospace; font-size: 11px; letter-spacing: .12em; color: #a06bff; text-shadow: 0 0 9px #a06bff; pointer-events: none; z-index: 7; animation: umbraMsg 2.1s ease-in-out forwards; }
+  @keyframes umbraMsg { 0% { opacity: 0; } 25% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; } }
+  .author-card .nm { font-family: 'Satoshi', sans-serif; font-weight: 600; font-size: 17px; color: #fff; margin-bottom: 8px; }
+  .author-card .bio { font-family: 'Satoshi', sans-serif; font-size: 15px; line-height: 1.6; color: #9A9A9A; }
+  .cta-side h3 { font-family: 'Satoshi', sans-serif; font-weight: 800; font-size: clamp(24px, 2.6vw, 32px); letter-spacing: -.02em; color: #fff; margin-bottom: 24px; }
+  @media (max-width: 820px) { .author-cta .inner { grid-template-columns: 1fr; gap: 36px; } .author-card { padding-right: 0; border-right: none; padding-bottom: 36px; border-bottom: 1px solid #333; } }
+
+  /* ─────────────── Section 8 — Discover more ─────────────── */
+  .sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 40px; }
+  .sec-head h2 { font-family: 'Satoshi', sans-serif; font-weight: 900; font-size: clamp(28px, 3.4vw, 36px); letter-spacing: -.03em; color: #1A1A1A; }
+  .view-all { font-family: 'Satoshi', sans-serif; font-weight: 600; font-size: 14px; color: #1A1A1A; white-space: nowrap; display: inline-flex; align-items: center; gap: 7px; transition: gap .2s ease; }
+  .view-all:hover { gap: 12px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 24px; }
+  .card { background: transparent; border: none; display: flex; flex-direction: column; cursor: pointer; }
+  .card:hover .thumb { opacity: .9; }
+  .thumb { position: relative; aspect-ratio: 16 / 10; background: #E7E7E7; border-radius: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center; font-family: 'DM Sans', sans-serif; font-size: 13px; color: #A6A6A6; transition: opacity .22s ease; }
+  .thumb .cd { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #C8C8C8; }
+  .thumb .cd.tl { top: 11px; left: 11px; } .thumb .cd.tr { top: 11px; right: 11px; }
+  .thumb .cd.bl { bottom: 11px; left: 11px; } .thumb .cd.br { bottom: 11px; right: 11px; }
+  .card h4 { font-family: 'Satoshi', sans-serif; font-weight: 700; font-size: 19px; line-height: 1.3; letter-spacing: -.01em; color: #1A1A1A; margin: 14px 0 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  @media (max-width: 980px) { .grid3 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 680px) { .grid3 { grid-template-columns: 1fr; } .sec-head { flex-direction: column; align-items: flex-start; } }
+
+  /* WhatsApp FAB */
+  .wa-fab { position: fixed; bottom: 28px; right: 28px; z-index: 90; width: 52px; height: 52px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.35); }
+</style>
 </head>
 <body>
 
-<!-- ── Navigation ── -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
-  <div class="container">
-    <div class="nav__inner">
-      <a href="index.html" class="nav__logo-link" aria-label="Carbonium home">
-        <img src="https://carbonium.agency/images/200/19017010/Screenshot_2025-09-02_at_19.34.19-removebg-preview-5E6yHE6egdgW_Dskl8RvoQ.png" alt="Carbonium" class="nav__logo">
-      </a>
-      <ul class="nav__links">
-        <li><a href="index.html">Home</a></li>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+  <nav class="site">
+    <div class="inner">
+      <a href="index.html"><img src="assets/logos/carbonium-logo.png" alt="Carbonium"></a>
+      <ul>
         <li><a href="services.html">Services</a></li>
+        <li><a href="#">Case Studies</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
         <li><a href="blog.html" class="active">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <a href="contact.html" class="btn btn--primary nav__cta">Get a Free Strategy Call</a>
-      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="nav-cta" onclick="location.href='contact.html'">Let's Talk</button>
     </div>
+  </nav>
+
+  <!-- Social share rail -->
+  <div class="share-rail">
+    <span class="lbl">Share</span>
+    <a href="#" aria-label="Share on X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M20 4L4 20" stroke-linecap="round"/></svg></a>
+    <a href="#" aria-label="Share on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 014 0v4" stroke-linecap="round"/></svg></a>
+    <a href="#" aria-label="Share on Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 8h2M14 8a3 3 0 013-3M14 8v3m0 0h-3m3 0v9" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg></a>
+    <a href="#" aria-label="Share on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20l1.6-4A7 7 0 1112 19a7 7 0 01-3.4-.9L4 20z" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a id="copyLink" aria-label="Copy link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 007 0l2-2a5 5 0 00-7-7l-1 1M14 11a5 5 0 00-7 0l-2 2a5 5 0 007 7l1-1" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
-</nav>
 
-<!-- Mobile nav -->
-<div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
-  <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="about.html">About</a>
-  <a href="case-studies.html">Case Studies</a>
-  <a href="blog.html">Blog</a>
-  <a href="contact.html">Contact</a>
-  <a href="contact.html" class="btn btn--primary" style="margin-top:16px;">Get a Free Strategy Call</a>
-</div>
-
-<!-- ── Post Header ── -->
-<header class="post-header">
-  <div class="container">
-    <div class="post-header__wrap">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="breadcrumb__sep">/</span>
-        <a href="blog.html">Blog</a>
-        <span class="breadcrumb__sep">/</span>
-        <a href="blog-category.html">AI Marketing</a>
-        <span class="breadcrumb__sep">/</span>
-        <span class="breadcrumb__current">How AI Is Transforming…</span>
+  <!-- ───────── Section 1 — Article header ───────── -->
+  <header class="a-hero">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span><a href="blog.html">Blog</a><span>/</span><span class="here">AI in Action</span>
       </nav>
-      <span class="post-header__badge">AI Marketing</span>
-      <h1 class="post-header__title">How AI Is Transforming Digital Marketing in the UAE (2026 Guide)</h1>
-      <p class="post-header__sub">AI is fundamentally changing how UAE businesses attract, convert, and retain customers. Companies embracing AI marketing systems are pulling ahead — here's what that looks like, and how you can do the same.</p>
-      <div class="post-meta">
-        <div class="post-meta__author">
-          <div class="post-meta__avatar">SW</div>
-          <span>Sutriano Wu</span>
-        </div>
-        <span class="post-meta__dot"></span>
-        <span>June 2026</span>
-        <span class="post-meta__dot"></span>
-        <span>8 min read</span>
-      </div>
-      <div style="margin-top:28px;">
-        <a href="contact.html" class="btn btn--primary">Book a Free Strategy Call</a>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- ── Cover Image ── -->
-<div class="container">
-  <div class="post-cover thumb--1"></div>
-</div>
-
-<!-- ── Article ── -->
-<main class="post-layout">
-  <div class="post-body-wrap">
-
-    <!-- TL;DR -->
-    <div class="post-tldr">
-      <p class="post-tldr__label">TL;DR</p>
-      <p class="post-tldr__text">AI is delivering 3× better ROI, instant lead response, and content output no manual team can match. UAE businesses that adopt AI marketing systems now are establishing compounding advantages their competitors will struggle to close. This guide shows you exactly how — and where to start.</p>
-    </div>
-
-    <!-- Body -->
-    <article class="post-body">
-
-      <h2>The New Reality of Marketing in the UAE</h2>
-      <p>The UAE market moves fast. Consumers are digitally sophisticated, competition is fierce, and the cost of slow response — to a lead, a campaign underperformer, or a market shift — is higher than ever. Traditional marketing playbooks, built on manual execution and weekly reporting cycles, are structurally too slow.</p>
-      <p>AI changes the math. What used to take a team of five working a full week now runs autonomously, in real time, with more precision than any human operation. The businesses that understand this shift early aren't just saving time — they're compounding their advantages every single month.</p>
-      <p>This guide breaks down exactly how AI is reshaping digital marketing in the UAE, what it looks like in practice, and how to start building your own AI-powered system.</p>
-
-      <h2>5 Ways AI Is Reshaping the Marketing Landscape</h2>
-
-      <h3>1. Hyper-Personalised Ad Targeting at Scale</h3>
-      <p>AI-powered advertising platforms analyse thousands of data points per user — browsing behaviour, intent signals, device, time of day, location — and adjust targeting in real time. The result: your ads reach the right people, at the right moment, with a message calibrated to convert. On Meta and Google, AI bidding strategies are now consistently outperforming manual campaigns by 30–50% on cost per acquisition.</p>
-
-      <h3>2. Instant Lead Response with AI Agents</h3>
-      <p>Studies show that responding to a lead within five minutes increases conversion likelihood by 9×. Most businesses in the UAE respond in hours — or not at all. AI agents change this completely. They qualify leads, answer questions, and book appointments 24/7, the moment someone expresses interest. No human bottleneck, no missed opportunities.</p>
-
-      <h3>3. Content Production That Never Sleeps</h3>
-      <p>Consistent, quality content is one of the hardest things to maintain at scale. AI content systems — when properly built and trained on your brand voice — can produce blog posts, social captions, ad copy, and email sequences continuously. Carbonium clients routinely go from 4 pieces of content per month to 30+, without adding headcount.</p>
-
-      <h3>4. Predictive Analytics and Real-Time Optimisation</h3>
-      <p>AI doesn't just report on what happened — it predicts what will happen and adjusts accordingly. Campaign budgets are reallocated automatically toward the best performers. Underperforming creative is paused before it drains budget. The system learns and improves with every data point.</p>
-
-      <h3>5. WhatsApp Marketing at Scale</h3>
-      <p>WhatsApp has the highest open rate of any marketing channel in the UAE — over 98%. AI-powered WhatsApp automation allows businesses to run personalised, two-way conversations with thousands of customers simultaneously. Carbonium has clients recovering significant abandoned enquiry revenue through automated follow-up sequences alone.</p>
-
-      <hr>
-
-      <!-- Comparison table -->
-      <h2>The Numbers: AI Marketing vs Traditional Marketing</h2>
-      <p>The performance gap between AI-assisted and traditional marketing is now measurable and substantial. Here's what we typically see across Carbonium client engagements:</p>
-
-      <table class="comp-table">
-        <thead>
-          <tr>
-            <th>Metric</th>
-            <th>Traditional Marketing</th>
-            <th>AI-Powered (Carbonium)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Lead response time</td>
-            <td class="bad">4–6 hours average</td>
-            <td class="good">Under 2 minutes</td>
-          </tr>
-          <tr>
-            <td>Cost per lead (CPL)</td>
-            <td class="bad">AED 850+</td>
-            <td class="good">AED 450–550</td>
-          </tr>
-          <tr>
-            <td>Content output</td>
-            <td class="bad">4–6 pieces/month</td>
-            <td class="good">25–40 pieces/month</td>
-          </tr>
-          <tr>
-            <td>Ad optimisation</td>
-            <td class="bad">Manual, weekly</td>
-            <td class="good">Real-time, automated</td>
-          </tr>
-          <tr>
-            <td>CRM data hygiene</td>
-            <td class="bad">Manual entry, often outdated</td>
-            <td class="good">Auto-synced, always current</td>
-          </tr>
-          <tr>
-            <td>Campaign iteration speed</td>
-            <td class="bad">Days to weeks</td>
-            <td class="good">Hours</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Inline image -->
-      <div class="post-img thumb--4"></div>
-
-      <h2>What AI Marketing Looks Like in Practice</h2>
-      <p>The term "AI marketing" gets thrown around loosely. Let's be specific about what a well-built AI marketing system actually does day to day.</p>
-
-      <blockquote>
-        <p>"We went from spending two days a week on content and follow-up to having it all handled automatically. The AI system produces better leads and converts them faster than our old process ever did."</p>
-      </blockquote>
-
-      <p>A Carbonium client in the Dubai real estate sector operates an AI marketing system that:</p>
-      <ul>
-        <li>Runs 12 ad variants across Meta and Google simultaneously, with AI optimising budget allocation in real time</li>
-        <li>Captures every inbound lead and responds via WhatsApp within 90 seconds with a personalised message</li>
-        <li>Qualifies the lead through a structured conversation, scores it, and routes it to the right sales agent</li>
-        <li>Publishes three pieces of SEO-optimised content per week — articles, social posts, and email newsletters</li>
-        <li>Re-engages cold leads on a 30-day automated sequence with relevant property updates</li>
-        <li>Reports weekly on CPL, conversion rates, and pipeline value — automatically, in the CEO's inbox</li>
-      </ul>
-      <p>This entire operation runs with one account manager overseeing it — not a team of eight. The savings in headcount alone justify the investment, before counting the revenue gains.</p>
-
-      <hr>
-
-      <!-- Mid-article CTA -->
-      <div class="post-cta-box">
-        <div class="post-cta-box__copy">
-          <p class="post-cta-box__title">Ready to build your AI marketing system?</p>
-          <p class="post-cta-box__sub">30-minute strategy call. No obligation. We'll map out exactly what AI can do for your business.</p>
-        </div>
-        <a href="contact.html" class="btn btn--white">Book a Free Call</a>
-      </div>
-
-      <h2>How to Start with AI Marketing in Your Business</h2>
-      <p>The most common mistake businesses make is trying to implement everything at once. AI marketing is most effective when it's built incrementally, with each layer proven before the next is added.</p>
-
-      <p>Here's the sequence we recommend for most UAE businesses:</p>
-      <ol>
-        <li><strong>Audit your current marketing stack.</strong> Understand what data you have, where your leads come from, and where they're being lost. This becomes the foundation for automation.</li>
-        <li><strong>Start with lead response.</strong> Implement an AI agent that responds to inbound enquiries instantly. This delivers immediate, measurable ROI and requires no disruption to existing campaigns.</li>
-        <li><strong>Optimise your paid advertising.</strong> Switch manual bidding to AI-powered strategies and introduce systematic A/B testing. Results typically show within 30–45 days.</li>
-        <li><strong>Build a content system.</strong> Set up an AI content pipeline trained on your brand voice. Start with one channel and expand.</li>
-        <li><strong>Automate your CRM and follow-up.</strong> Integrate your systems so no lead falls through the cracks. Every enquiry gets a structured, personalised follow-up sequence.</li>
-        <li><strong>Add analytics and reporting.</strong> Build dashboards that give you real-time visibility into every metric that matters — CPL, CAC, pipeline value, content performance.</li>
-      </ol>
-
-      <h2>Common Mistakes to Avoid</h2>
-      <p>AI marketing done wrong can be costly. Here are the failure modes we see most often:</p>
-      <ul>
-        <li><strong>Using AI tools without a strategy.</strong> Tools don't replace thinking. AI amplifies your strategy — if your strategy is weak, AI will amplify that weakness at scale.</li>
-        <li><strong>Skipping the data foundation.</strong> AI systems are only as good as the data they're trained on. Poor data hygiene leads to poor outputs.</li>
-        <li><strong>Over-automating too quickly.</strong> Moving too fast creates fragile systems. Build one layer, prove it, then add the next.</li>
-        <li><strong>Ignoring compliance.</strong> Data privacy regulations in the UAE and GCC are evolving rapidly. Any AI marketing system must be built with compliance in mind from day one.</li>
-      </ul>
-
-      <!-- End CTA -->
-      <div class="post-cta-box">
-        <div class="post-cta-box__copy">
-          <p class="post-cta-box__title">Let's build your AI marketing system.</p>
-          <p class="post-cta-box__sub">Carbonium works with growth-focused businesses in the UAE and beyond. Book your free strategy call today.</p>
-        </div>
-        <a href="contact.html" class="btn btn--white">Get Started →</a>
-      </div>
-
-      <!-- FAQ -->
-      <section class="faq" aria-label="Frequently asked questions">
-        <h2 class="faq__heading">Frequently Asked Questions</h2>
-
-        <details class="faq-item">
-          <summary>What exactly is AI marketing?</summary>
-          <p class="faq-item__body">AI marketing uses artificial intelligence — machine learning models, large language models, and automation systems — to perform marketing tasks faster, smarter, and at greater scale than humans working manually. This includes ad targeting and optimisation, lead qualification, content creation, CRM automation, and predictive analytics.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>How much does AI marketing cost for a UAE business?</summary>
-          <p class="faq-item__body">Costs vary significantly depending on the scope of your system. Entry-level AI marketing implementations — typically a lead response agent and basic ad automation — start from AED 8,000–12,000 per month all-in. Full-stack AI marketing systems for larger businesses range from AED 25,000–60,000+. The ROI typically pays back the investment within 60–90 days.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>How long before I see results from AI marketing?</summary>
-          <p class="faq-item__body">You'll typically see measurable improvements in lead response rates and ad performance within the first 30 days. Compounding benefits — lower CPL, higher content output, better SEO rankings — build over 60–90 days as the system learns and optimises. Most Carbonium clients report clear positive ROI by the end of month two.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Will AI replace my marketing team?</summary>
-          <p class="faq-item__body">No — and we'd advise against framing it that way. AI eliminates repetitive, low-value tasks and amplifies the output of skilled marketers. Your team shifts from executing manual tasks to setting strategy, reviewing AI outputs, and making high-level decisions. The businesses that win are those that redeploy their people toward higher-value work, not those that eliminate them.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Is AI marketing suitable for small businesses in the UAE?</summary>
-          <p class="faq-item__body">Absolutely. Many of our most impactful implementations are for SMEs — businesses with 10–100 staff who lack the budget for large marketing teams. AI lets a small business punch far above its weight, running campaigns and systems that would otherwise require teams ten times the size.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>What platforms does Carbonium use for AI marketing?</summary>
-          <p class="faq-item__body">We work with the leading platforms across each category: Meta Ads, Google Ads, and TikTok for Business for paid advertising; custom AI agents built on large language models for lead qualification and WhatsApp automation; best-in-class content tools for AI-assisted production; and HubSpot, Salesforce, or custom CRM setups for lead management. The specific stack depends on your business needs.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>How is Carbonium different from other marketing agencies?</summary>
-          <p class="faq-item__body">Most agencies offer AI as an add-on to traditional services. Carbonium is built from the ground up around AI — every system we design has AI at its core. We also bring 20+ years of deep regional experience, which means we understand the UAE market, its buyers, and its compliance landscape in ways a generic global agency cannot. We measure everything against revenue outcomes, not vanity metrics.</p>
-        </details>
-
-      </section>
-
-    </article>
-  </div><!-- /post-body-wrap -->
-</main>
-
-<!-- ── Hot & Trending ── -->
-<section class="trending">
-  <div class="container">
-    <h2 class="trending__label">Hot &amp; Trending</h2>
-    <div class="trending__cards">
-      <a href="blog-post.html" class="trending-card">
-        <div class="trending-card__thumb thumb--3"></div>
+      <div class="a-hero-grid">
         <div>
-          <p class="trending-card__title">Meta Ads in the UAE: What's Actually Working in 2026</p>
-          <p class="trending-card__meta">Paid Ads · 6 min read</p>
+          <h1>We Let an AI Agent Run a $10K Ad Budget for a Week — Here's What Happened</h1>
+          <p class="answer-first">We handed a Carbonium automation agent a $10,000 ad budget and full control for seven days. It managed bidding, paused losers, and reallocated spend hourly with no human touch. The result: 31% lower cost-per-acquisition and 2.4× more qualified leads than the previous human-run week. Here's exactly how it ran.</p>
+          <button class="hero-cta" onclick="location.hash = 's1';">See how it works <span class="arr">→</span></button>
+          <div class="byline">
+            <div class="umbra-bot" style="--bot-w: 32px;" aria-hidden="true">
+              <div class="u-cloak"></div>
+              <div class="u-head"><div class="u-visor"><div class="u-slit"></div></div></div>
+              <div class="u-neck"></div>
+              <div class="u-torso"><div class="u-arm l"></div><div class="u-arm r"></div></div>
+            </div>
+            <div class="who"><b>Umbra</b> <span class="meta">· The Phantom · June 24, 2026 · 7 min read</span></div>
+          </div>
         </div>
-      </a>
-      <a href="blog-post.html" class="trending-card">
-        <div class="trending-card__thumb thumb--5"></div>
-        <div>
-          <p class="trending-card__title">Case Study: 40% CPL Reduction for a Dubai Real Estate Client</p>
-          <p class="trending-card__meta">Case Studies · 4 min read</p>
+        <div class="a-hero-img">
+          <i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i>
+          <span class="ilabel">Article Image Placeholder</span>
         </div>
-      </a>
-      <a href="blog-post.html" class="trending-card">
-        <div class="trending-card__thumb thumb--2"></div>
-        <div>
-          <p class="trending-card__title">WhatsApp Marketing: The Channel Your Competitors Are Missing</p>
-          <p class="trending-card__meta">Social Media · 5 min read</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ── Discover More ── -->
-<section class="discover-more">
-  <div class="container">
-    <h2 class="discover-more__label">Discover More</h2>
-    <div class="discover-more__cards">
-      <a href="blog-post.html" class="blog-card">
-        <div class="blog-card__thumb thumb--4"></div>
-        <div class="blog-card__body">
-          <span class="blog-card__cat">AI Marketing</span>
-          <span class="blog-card__title">7 AI Marketing Tools Every Dubai Business Needs in 2026</span>
-          <span class="blog-card__meta">June 2026 · 6 min read</span>
-        </div>
-      </a>
-      <a href="blog-post.html" class="blog-card">
-        <div class="blog-card__thumb thumb--6"></div>
-        <div class="blog-card__body">
-          <span class="blog-card__cat">Guides</span>
-          <span class="blog-card__title">Setting Up Your First AI Marketing System: Full Walkthrough</span>
-          <span class="blog-card__meta">May 2026 · 12 min read</span>
-        </div>
-      </a>
-      <a href="blog-post.html" class="blog-card">
-        <div class="blog-card__thumb thumb--1"></div>
-        <div class="blog-card__body">
-          <span class="blog-card__cat">Case Studies</span>
-          <span class="blog-card__title">How We Generated 200+ Leads in 30 Days for a SaaS Startup</span>
-          <span class="blog-card__meta">May 2026 · 5 min read</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ── Footer ── -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <img src="https://carbonium.agency/images/200/19017010/Screenshot_2025-09-02_at_19.34.19-removebg-preview-5E6yHE6egdgW_Dskl8RvoQ.png" alt="Carbonium" class="footer__logo">
-        <p class="footer__tagline">AI Marketing for the Future of Business.<br>Intelligent systems that compound over time.</p>
       </div>
-      <div class="footer__col">
-        <h4>Services</h4>
+    </div>
+  </header>
+
+  <!-- ───────── Section 2 — Featured media ───────── -->
+  <section class="sec media">
+    <div class="wrap">
+      <div class="video-ph">
+        <i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i>
+        <div class="play-btn"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
+        <div class="vlabel">Watch: the agent running live</div>
+      </div>
+      <p class="caption">Screen recording — the agent managing the live campaign dashboard.</p>
+    </div>
+  </section>
+
+  <!-- ───────── Section 3 — Body + TOC ───────── -->
+  <section class="sec" style="padding-top:32px;">
+    <div class="wrap">
+      <div class="body-grid">
+        <article class="article">
+          <h2 id="s1">What does it actually mean to let an AI agent run a budget?</h2>
+          <p>It means giving a software agent the keys, not just a recommendation. Most "AI" ad tools surface suggestions a human still has to approve — the agent we deployed had write access. It could raise bids, shift budget between ad sets, pause creative, and launch new variants on its own, inside guardrails we set once at the start.</p>
+          <p>For seven days, nobody on our team touched the account. The agent operated on a loop: read the latest performance data, compare it against its targets, decide what to change, execute, and log why. Our only job was to read the log each morning.</p>
+
+          <h2 id="s2">How did the agent make decisions each hour?</h2>
+          <p>Every hour, the agent pulled fresh numbers and ran them against a fixed set of rules. The rules were deliberately simple — the intelligence was in how consistently they were applied, around the clock, without fatigue or second-guessing.</p>
+          <ul class="body-list">
+            <li>Pause any ad set whose cost-per-acquisition ran 40% above the campaign target for two straight hours.</li>
+            <li>Shift freed budget to the top-performing ad set, capped at a 20% increase per hour to avoid the learning phase resetting.</li>
+            <li>Hold spend flat on anything still inside its first 50 conversions — too early to judge.</li>
+            <li>Flag, but never auto-launch, any creative idea that needed a new asset — those waited for human sign-off.</li>
+            <li>Stop all scaling if daily spend pace exceeded the $10,000 weekly cap divided evenly across the run.</li>
+          </ul>
+
+          <h2 id="s3">What were the results vs the human-run week?</h2>
+          <p>We compared the agent's seven days against the previous week, when the same campaigns were managed by an experienced human buyer. The numbers weren't close.</p>
+          <table class="cmp">
+            <thead>
+              <tr><th>Metric</th><th>Human-run week</th><th>Agent-run week</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>Cost per acquisition</th><td>$84</td><td>$58</td></tr>
+              <tr><th>Qualified leads</th><td>112</td><td>269</td></tr>
+              <tr><th>Hours of human work</th><td>9.5</td><td>0.5</td></tr>
+              <tr><th>Wasted spend</th><td>$1,840</td><td>$410</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="s4">Where did the agent get it wrong?</h2>
+          <p>It wasn't flawless. On day three, the agent over-trimmed a mid-tier ad set that was slow but genuinely profitable, because the two-hour window it judged on was too short for that audience's longer consideration cycle. It cost us roughly half a day of momentum before the rule's budget floor kicked it back on. We've since widened the evaluation window for high-consideration audiences — a fix we'd never have found without letting the agent fail in the open.</p>
+
+          <h2 id="s5">Should you hand your budget to an agent?</h2>
+          <p>Not blindly, and not all at once. Start with a capped budget, tight guardrails, and a daily review — exactly as we did. The point isn't to remove humans; it's to move them from clicking buttons every hour to setting strategy and reading outcomes. On that score, a week of autonomous spend made the case better than any deck we could have built.</p>
+        </article>
+
+        <aside class="toc">
+          <div class="toc-head">On this page</div>
+          <ul>
+            <li><a href="#s1" class="active">What it means to let an agent run a budget</a></li>
+            <li><a href="#s2">How the agent made decisions each hour</a></li>
+            <li><a href="#s3">Results vs the human-run week</a></li>
+            <li><a href="#s4">Where the agent got it wrong</a></li>
+            <li><a href="#s5">Should you hand your budget to an agent?</a></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Section 4 — Download ───────── -->
+  <section class="sec" style="padding:24px 0 80px;">
+    <div class="wrap">
+      <div class="download">
+        <div>
+          <span class="label">Free Download</span>
+          <h3>The AI Ad-Budget Agent Playbook</h3>
+          <p>The exact decision rules, guardrails, and prompt structure we used — yours free. Enter your email and we'll send it over.</p>
+        </div>
+        <div>
+          <form class="dl-form" onsubmit="return false;">
+            <input type="email" placeholder="you@company.com" aria-label="Email address">
+            <button type="submit" class="btn-light">Send it to me →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Section 5 — Key takeaways ───────── -->
+  <section class="sec" style="padding:0 0 90px;">
+    <div class="wrap">
+      <div class="takeaways narrow">
+        <h3>Key takeaways</h3>
         <ul>
-          <li><a href="services.html#ai-agents">AI Agent Automation</a></li>
-          <li><a href="services.html#paid-ads">Paid Advertising</a></li>
-          <li><a href="services.html#social-media">Social Media AI</a></li>
-          <li><a href="services.html#lead-gen">Lead Generation</a></li>
-          <li><a href="services.html#brand-positioning">Brand Positioning</a></li>
-          <li><a href="services.html#ai-video">AI Video</a></li>
-          <li><a href="services.html#whatsapp">WhatsApp Marketing</a></li>
-          <li><a href="services.html#website-dev">Website Development</a></li>
+          <li>An autonomous agent ran a $10K ad budget for seven days with no human intervention.</li>
+          <li>It cut cost-per-acquisition by 31% and produced 2.4× more qualified leads than the human-run week.</li>
+          <li>Simple rules applied consistently, hour after hour, beat occasional expert tuning.</li>
+          <li>Its one mistake exposed a blind spot we fixed — transparency is the point, not perfection.</li>
         </ul>
       </div>
-      <div class="footer__col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About Carbonium</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Contact</h4>
-        <div class="footer__contact-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Dubai, UAE</span>
+    </div>
+  </section>
+
+  <!-- ───────── Section 6 — FAQ ───────── -->
+  <section class="faq-sec">
+    <div class="wrap">
+      <span class="eyebrow-pill"><span class="dot"></span>FAQ</span>
+      <h2>Frequently asked questions</h2>
+      <div class="acc" id="acc">
+        <div class="acc-row open">
+          <div class="acc-q"><span>Is it safe to give an AI agent control of real ad spend?</span><span class="tog">+</span></div>
+          <div class="acc-a"><p>Yes, when it runs inside hard guardrails. We cap total spend, set per-hour change limits, and keep a human review loop. The agent can only act within boundaries you define once — it can't blow the budget or launch unapproved assets.</p></div>
         </div>
-        <div class="footer__contact-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:sutrianowu@carbonium.agency">sutrianowu@carbonium.agency</a>
+        <div class="acc-row">
+          <div class="acc-q"><span>How is this different from the AI tools already in ad platforms?</span><span class="tog">+</span></div>
+          <div class="acc-a"><p>Built-in tools optimize within a single platform and still expect a human to manage strategy. Our agent has write access across the account, reasons against your business targets, and documents every decision — so it acts, rather than just suggesting.</p></div>
         </div>
-        <div class="footer__contact-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          <a href="https://wa.me/971567985386" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <div class="acc-row">
+          <div class="acc-q"><span>What happens if the agent makes a bad call?</span><span class="tog">+</span></div>
+          <div class="acc-a"><p>Guardrails contain the downside, and every action is logged with its reasoning. When the agent over-trimmed a profitable ad set, the budget floor reactivated it automatically and we adjusted the rule the next morning.</p></div>
         </div>
-        <div style="margin-top:18px;">
-          <a href="contact.html" class="btn btn--primary" style="width:100%;justify-content:center;">Book a Free Call</a>
+        <div class="acc-row">
+          <div class="acc-q"><span>Do I still need a marketing team?</span><span class="tog">+</span></div>
+          <div class="acc-a"><p>Absolutely — just doing higher-value work. The agent removes the hourly button-clicking; your team moves to strategy, creative direction, and reading outcomes. It's a force multiplier, not a replacement.</p></div>
+        </div>
+        <div class="acc-row">
+          <div class="acc-q"><span>How quickly can an agent be live on my account?</span><span class="tog">+</span></div>
+          <div class="acc-a"><p>Typically within days. We map your targets and guardrails, connect the account in read-only first to validate the agent's decisions, then switch on write access once you're comfortable with what it would have done.</p></div>
         </div>
       </div>
     </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2026 Carbonium AI Marketing Agency. All rights reserved. Dubai, UAE.</p>
+  </section>
+
+  <!-- ───────── Section 7 — Author + CTA ───────── -->
+  <section class="author-cta">
+    <div class="wrap">
+      <div class="inner">
+        <div class="author-card">
+          <div class="umbra-bot" style="--bot-w: 64px;" aria-hidden="true">
+            <div class="u-cloak"></div>
+            <div class="u-head"><div class="u-visor"><div class="u-slit"></div></div></div>
+            <div class="u-neck"></div>
+            <div class="u-torso"><div class="u-arm l"></div><div class="u-arm r"></div></div>
+          </div>
+          <div>
+            <div class="nm">Umbra · The Phantom</div>
+            <div class="bio">You never see it work. You only see it done. Umbra runs Carbonium's automation agents.</div>
+          </div>
+        </div>
+        <div class="cta-side">
+          <h3>Want an agent running your campaigns?</h3>
+          <button class="btn-light" onclick="location.href='contact.html'">Let's Talk →</button>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<a href="https://wa.me/971567985386" class="wa-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+  <!-- ───────── Section 8 — Discover more ───────── -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Discover more</h2>
+        <a class="view-all" href="blog-category.html">View all <span>→</span></a>
+      </div>
+      <div class="grid3">
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <h4>Watch an AI Qualify 200 Leads Overnight While the Team Slept</h4>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <h4>From Cold DM to Booked Call: An Agent Handles the Whole Thread</h4>
+        </article>
+        <article class="card">
+          <div class="thumb"><span>Article Image Placeholder</span><i class="cd tl"></i><i class="cd tr"></i><i class="cd bl"></i><i class="cd br"></i></div>
+          <h4>We Generated a Month of Social Content in 40 Minutes — Live</h4>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<div id="cookie-banner" role="dialog" aria-label="Cookie consent">
-  <p>We use cookies to improve your experience. By continuing, you accept our cookie policy.</p>
-  <div class="cookie-btns">
-    <button id="cookie-accept" class="btn btn--primary" style="padding:9px 18px;font-size:0.82rem;">Accept All</button>
-    <button id="cookie-manage" class="btn btn--secondary" style="padding:9px 18px;font-size:0.82rem;">Manage</button>
-  </div>
-</div>
+  <!-- ───────── CTA + Footer (locked, ported from WebsiteCTA) ───────── -->
+  <section id="contact" style="background:#1A1A1A;padding:100px 0;border-top:1px solid #2A2A2A;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 28px;">
+      <h2 style="font-family:'Satoshi','DM Sans',sans-serif;font-size:clamp(72px,12vw,128px);font-weight:800;line-height:0.92;letter-spacing:-0.045em;color:#FFFFFF;margin:0 0 56px;text-align:center;">Let's Talk.</h2>
 
-<script src="js/main.js"></script>
+      <div style="display:grid;grid-template-columns:45fr 55fr;">
+        <div style="padding-right:56px;border-right:1px solid #333333;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 0 32px;">
+            <span style="font-family:'Satoshi','DM Sans',sans-serif;font-size:22px;font-weight:600;color:#FFFFFF;letter-spacing:-0.02em;">Follow us</span>
+            <div style="display:flex;gap:12px;">
+              <a href="https://instagram.com" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:50%;background:#2A2A2A;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5" fill="#FFF"></circle></svg></a>
+              <a href="https://tiktok.com" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:50%;background:#2A2A2A;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="#FFF"><path d="M16.5 3c.3 2.1 1.6 3.6 3.7 3.9v2.4c-1.3.1-2.5-.3-3.7-1v5.7c0 3.3-2.4 5.6-5.4 5.6-2.9 0-5-2.1-5-4.9 0-2.9 2.3-4.9 5.3-4.7v2.5c-.5-.1-1-.1-1.5 0-1.1.3-1.7 1-1.6 2.1.1 1.1 1 1.8 2.1 1.7 1.2-.1 1.9-1 1.9-2.3V3h2.7z"></path></svg></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:50%;background:#2A2A2A;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="#FFF"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.62-1.18 2.14-2.43 4.4-2.43 4.7 0 5.57 3.1 5.57 7.13V24h-5v-7c0-1.67-.03-3.82-2.33-3.82-2.33 0-2.68 1.82-2.68 3.7V24h-5V8z"></path></svg></a>
+              <a href="https://wa.me/971567985386" target="_blank" rel="noopener" style="width:40px;height:40px;border-radius:50%;background:#2A2A2A;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="#FFF"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.05-1.34A9.93 9.93 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"></path></svg></a>
+            </div>
+          </div>
+
+          <div style="padding:32px 0;border-top:1px solid #333333;">
+            <h3 style="font-family:'Satoshi','DM Sans',sans-serif;font-size:22px;font-weight:600;color:#FFFFFF;letter-spacing:-0.02em;margin:0 0 18px;">What we offer</h3>
+            <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;">
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Weekly performance review</li>
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Reporting portal</li>
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Live Dashboard</li>
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Responds to leads in under 60 seconds</li>
+              <li style="display:flex;align-items:center;gap:10px;font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;"><span style="width:4px;height:4px;border-radius:50%;background:#707070;flex-shrink:0;"></span>Runs 24/7 with zero downtime</li>
+            </ul>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:32px 0 0;border-top:1px solid #333333;">
+            <div>
+              <div style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;letter-spacing:0.02em;margin-bottom:14px;">/ Digital</div>
+              <a href="mailto:info@carbonium.agency" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:16px;color:#FFFFFF;">info@carbonium.agency</a>
+            </div>
+            <div>
+              <div style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;letter-spacing:0.02em;margin-bottom:14px;">/ Navigation</div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <a href="index.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Home</a>
+                <a href="about.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">About</a>
+                <a href="services.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Services</a>
+                <a href="#" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Case Studies</a>
+                <a href="blog.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Blog</a>
+                <a href="contact.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding-left:56px;">
+          <div style="padding-bottom:28px;border-bottom:1px solid #333333;margin-bottom:28px;">
+            <h3 style="font-family:'Satoshi','DM Sans',sans-serif;font-size:24px;font-weight:600;color:#FFFFFF;letter-spacing:-0.02em;margin:0 0 8px;">Got a question, challenge, or idea?</h3>
+            <p style="font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;margin:0;">Fill out the form — we'll get back to you shortly.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <input type="text" placeholder="Your Name" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;">
+            <input type="email" placeholder="Your Email" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;">
+            <input type="text" placeholder="Your Company" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;">
+            <textarea rows="5" placeholder="Your message" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;resize:vertical;min-height:130px;line-height:1.5;"></textarea>
+          </div>
+          <button onmouseenter="this.style.background='#333333';" onmouseleave="this.style.background='#1A1A1A';" style="width:100%;height:52px;margin-top:24px;background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:background 200ms ease;">&rarr; Let's Talk</button>
+          <p style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;margin:14px 0 0;line-height:1.5;text-align:center;">By submitting, you agree to our <a href="#privacy" style="color:#707070;text-decoration:underline;text-underline-offset:2px;">Privacy Policy</a>.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid #333333;margin-top:56px;padding-top:28px;">
+        <span style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;">© 2026 Carbonium AI Marketing Agency. All rights reserved.</span>
+        <div style="display:flex;gap:24px;">
+          <a href="#privacy" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;">Privacy Policy</a>
+          <a href="#terms" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a class="wa-fab" href="https://wa.me/971567985386" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    (function () {
+      // Reading progress
+      var fill = document.getElementById('progressFill');
+      function onScroll() {
+        var h = document.documentElement;
+        var max = h.scrollHeight - h.clientHeight;
+        var pct = max > 0 ? (h.scrollTop || document.body.scrollTop) / max * 100 : 0;
+        fill.style.width = pct + '%';
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Copy link
+      var copy = document.getElementById('copyLink');
+      if (copy) copy.addEventListener('click', function () {
+        if (navigator.clipboard) navigator.clipboard.writeText(window.location.href);
+      });
+
+      // FAQ accordion
+      document.querySelectorAll('#acc .acc-q').forEach(function (q) {
+        q.addEventListener('click', function () {
+          var row = q.parentElement;
+          var a = row.querySelector('.acc-a');
+          var open = row.classList.toggle('open');
+          a.style.maxHeight = open ? a.scrollHeight + 'px' : '0';
+        });
+      });
+      // init open row
+      document.querySelectorAll('#acc .acc-row.open .acc-a').forEach(function (a) { a.style.maxHeight = a.scrollHeight + 'px'; });
+
+      // Umbra mini-bot — vanish & rematerialize on click
+      document.querySelectorAll('.umbra-bot').forEach(function (bot) {
+        bot.addEventListener('click', function () {
+          if (bot.classList.contains('gone') || bot.classList.contains('materialize')) return;
+          bot.classList.add('gone');
+          var eye = document.createElement('div'); eye.className = 'u-ghost-eye'; bot.appendChild(eye);
+          setTimeout(function () { eye.classList.add('lit'); }, 380);
+          setTimeout(function () { eye.classList.add('blink'); }, 760);
+          setTimeout(function () {
+            eye.remove();
+            var flash = document.createElement('div'); flash.className = 'u-flash'; bot.appendChild(flash);
+            requestAnimationFrame(function () { flash.classList.add('go'); });
+            bot.classList.remove('gone'); bot.classList.add('materialize');
+            var msg = document.createElement('div'); msg.className = 'u-msg'; msg.textContent = 'I was never gone.'; bot.appendChild(msg);
+            setTimeout(function () { msg.remove(); flash.remove(); bot.classList.remove('materialize'); }, 2200);
+          }, 1400);
+        });
+      });
+
+      // TOC scrollspy
+      var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+      var sections = links.map(function (l) { return document.querySelector(l.getAttribute('href')); });
+      function spy() {
+        var pos = window.scrollY + 140;
+        var idx = 0;
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i] && sections[i].offsetTop <= pos) idx = i;
+        }
+        links.forEach(function (l, i) { l.classList.toggle('active', i === idx); });
+      }
+      window.addEventListener('scroll', spy, { passive: true });
+      spy();
+    })();
+  </script>
 </body>
 </html>

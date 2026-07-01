@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /thank-you/
-Disallow: /cdn-cgi/
-
-Sitemap: https://www.carbonium.agency/sitemap.xml
