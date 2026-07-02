@@ -132,40 +132,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     // DOMParser/replaceWith are inert per spec — re-create each with
     // createElement so they execute, awaiting onload for src scripts to
     // preserve ordering (React before ReactDOM before Babel before text/babel).
-    // The swap below destroys the original DOM, skeleton included, but the
-    // components need another ~1-2s (CDN scripts + in-browser Babel) before
-    // anything paints. Carry the skeleton into the new document and drop it
-    // only once real content has mounted, so there is no blank gap.
-    const thumbSvg = (function () {
-      const t = document.getElementById('__bundler_thumbnail');
-      return t ? t.innerHTML : '';
-    })();
     const doc = new DOMParser().parseFromString(template, 'text/html');
     document.documentElement.replaceWith(doc.documentElement);
-    if (thumbSvg) {
-      const ov = document.createElement('div');
-      ov.id = '__bundler_thumbnail_overlay';
-      ov.style.cssText = 'position:fixed;inset:0;z-index:9998;background:#faf9f5;display:flex;align-items:center;justify-content:center;opacity:1;transition:opacity .35s ease;pointer-events:none;';
-      ov.innerHTML = thumbSvg;
-      const svg = ov.querySelector('svg');
-      if (svg) { svg.style.width = '100%'; svg.style.height = '100%'; svg.style.objectFit = 'contain'; }
-      const pill = document.createElement('div');
-      pill.style.cssText = 'position:fixed;bottom:20px;right:20px;font:13px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;color:#666;background:#fff;padding:8px 14px;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.12);';
-      pill.textContent = 'Rendering\u2026';
-      ov.appendChild(pill);
-      (document.body || document.documentElement).appendChild(ov);
-      const ovStart = Date.now();
-      const ovDone = function () {
-        ov.style.opacity = '0';
-        setTimeout(function () { ov.remove(); }, 400);
-      };
-      const ovIv = setInterval(function () {
-        const mounted = document.querySelector('section') &&
-          (document.body.innerText || '').trim().length > 100;
-        // 10s failsafe: never leave the overlay covering an error state.
-        if (mounted || Date.now() - ovStart > 10000) { clearInterval(ovIv); ovDone(); }
-      }, 120);
-    }
     const dead = Array.from(document.scripts);
     for (const old of dead) {
       const s = document.createElement('script');
