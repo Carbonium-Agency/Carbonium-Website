@@ -826,12 +826,12 @@
   <!-- ═════ Nav ═════ -->
   <nav class="site">
     <div class="inner">
-      <a href="index.html" class="logo">carbonium<sup>+</sup></a>
+      <a href="/" class="logo">carbonium<sup>+</sup></a>
       <ul>
         <li><a href="services.html" class="current">Services</a></li>
-        <li><a href="#">Case Studies</a></li>
+        <!-- HIDDEN 2026-07-02 — RESTORE WHEN READY: <li><a href="#">Case Studies</a></li> -->
         <li><a href="about.html">About</a></li>
-        <li><a href="#">Blog</a></li>
+        <!-- HIDDEN 2026-07-02 — RESTORE WHEN READY: <li><a href="#">Blog</a></li> -->
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <button class="nav-cta" onclick="location.href='contact.html'">Let's Talk</button>
@@ -840,9 +840,9 @@
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <a href="services.html">Services</a>
-    <a href="#">Case Studies</a>
+    <!-- HIDDEN 2026-07-02 — RESTORE WHEN READY: <a href="#">Case Studies</a> -->
     <a href="about.html">About</a>
-    <a href="#">Blog</a>
+    <!-- HIDDEN 2026-07-02 — RESTORE WHEN READY: <a href="#">Blog</a> -->
     <a href="contact.html">Contact</a>
     <a href="#contact">Let's Talk →</a>
   </div>
@@ -1822,11 +1822,11 @@
             <div>
               <div style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;letter-spacing:0.02em;margin-bottom:14px">/ Navigation</div>
               <div style="display:flex;flex-direction:column;gap:8px">
-                <a href="index.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF">Home</a>
+                <a href="/" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF">Home</a>
                 <a href="about.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF">About</a>
                 <a href="services.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF">Services</a>
-                <a href="#" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF">Case Studies</a>
-                <a href="#" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF">Blog</a>
+                <!-- HIDDEN 2026-07-02 — RESTORE WHEN READY: <a href="#" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF">Case Studies</a> -->
+                <!-- HIDDEN 2026-07-02 — RESTORE WHEN READY: <a href="#" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF">Blog</a> -->
                 <a href="contact.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:400;color:#FFFFFF">Contact</a>
               </div>
             </div>
@@ -1840,21 +1840,21 @@
             <p style="font-family:'Satoshi','DM Sans',sans-serif;font-size:15px;color:#707070;margin:0">Fill out the form — we'll get back to you shortly.</p>
           </div>
           <form onsubmit="return false;" style="display:flex;flex-direction:column;gap:14px">
-            <input type="text" placeholder="Your Name" class="cta-input" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none">
-            <input type="email" placeholder="Your Email" class="cta-input" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none">
-            <input type="text" placeholder="Your Company" class="cta-input" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none">
-            <textarea rows="5" placeholder="Your message" class="cta-input" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;resize:vertical;min-height:130px;line-height:1.5"></textarea>
-            <button type="submit" class="cta-submit" style="width:100%;height:52px;margin-top:24px;background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:background 200ms ease">&rarr; Let's Talk</button>
+            <input type="text" name="name" placeholder="Your Name" class="cta-input" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none">
+            <input type="email" name="email" placeholder="Your Email" class="cta-input" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none">
+            <input type="text" name="company" placeholder="Your Company" class="cta-input" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none">
+            <textarea rows="5" name="message" placeholder="Your message" class="cta-input" style="width:100%;background:#2A2A2A;border:1px solid #333333;border-radius:6px;padding:15px 16px;font-size:14px;font-family:'Satoshi','DM Sans',sans-serif;color:#FFFFFF;outline:none;resize:vertical;min-height:130px;line-height:1.5"></textarea>
+            <button id="ftSubmit" type="button" type="submit" class="cta-submit" style="width:100%;height:52px;margin-top:24px;background:#1A1A1A;color:#FFFFFF;border:none;border-radius:8px;font-family:'Satoshi','DM Sans',sans-serif;font-size:14px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:background 200ms ease">&rarr; Let's Talk</button>
           </form>
-          <p style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;margin:14px 0 0;line-height:1.5;text-align:center">By submitting, you agree to our <a href="#" style="color:#707070;text-decoration:underline;text-underline-offset:2px">Privacy Policy</a>.</p>
+          <p style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555;margin:14px 0 0;line-height:1.5;text-align:center">By submitting, you agree to our <a href="privacy-policy.html" style="color:#707070;text-decoration:underline;text-underline-offset:2px">Privacy Policy</a>.</p>
         </div>
       </div>
 
       <div class="cta-copy" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid #333333;margin-top:56px;padding-top:28px">
         <span style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555">© 2026 Carbonium AI Marketing Agency. All rights reserved.</span>
         <div style="display:flex;gap:24px">
-          <a href="#" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555">Privacy Policy</a>
-          <a href="#" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555">Terms of Service</a>
+          <a href="privacy-policy.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555">Privacy Policy</a>
+          <a href="terms-of-service.html" style="font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#555555">Terms of Service</a>
         </div>
       </div>
     </div>
@@ -2595,5 +2595,40 @@
       io.observe(panel);
     })();
   </script>
+<script>
+/* Footer form -> Formspree */
+(function(){
+  var btn = document.getElementById('ftSubmit');
+  if (!btn) return;
+  var scope = btn.parentElement;
+  var val = function(n){ var el = scope.querySelector('[name="' + n + '"]'); return el ? el.value : ''; };
+  var err = null;
+  btn.addEventListener('click', function(){
+    if (btn.dataset.busy || btn.dataset.done) return;
+    btn.dataset.busy = '1';
+    var fd = new FormData();
+    ['name','email','company','message'].forEach(function(n){ fd.append(n, val(n)); });
+    fd.append('page', location.pathname);
+    fetch('https://formspree.io/f/xnjkgedg', { method:'POST', headers:{ 'Accept':'application/json' }, body: fd })
+      .then(function(r){
+        delete btn.dataset.busy;
+        if (r.ok) {
+          btn.dataset.done = '1';
+          btn.innerHTML = '\u2713 SENT';
+          if (err) err.remove();
+        } else { throw new Error('status ' + r.status); }
+      })
+      .catch(function(){
+        delete btn.dataset.busy;
+        if (!err) {
+          err = document.createElement('p');
+          err.style.cssText = "font-family:'Satoshi','DM Sans',sans-serif;font-size:13px;color:#FF6B6B;margin:12px 0 0;text-align:center;";
+          err.textContent = "Something went wrong \u2014 your message wasn't sent. Please try again, or email info@carbonium.agency.";
+          btn.insertAdjacentElement('afterend', err);
+        }
+      });
+  });
+})();
+</script>
 </body>
 </html>
