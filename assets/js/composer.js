@@ -41,7 +41,7 @@ var LP_TESTS = [
 var UGC_LINES = [
   { t: 'POV: everyone keeps asking where I got these rings 💍', b: false },
   { t: "So I'm finally telling you my secret...", b: false },
-  { t: 'I found ', b: false }, { t: 'YOUR BRAND', b: true }, { t: ' a few months ago and honestly?', b: false },
+  { t: 'I found ', b: false }, { t: 'CARBONIUM', b: true }, { t: ' a few months ago and honestly?', b: false },
   { t: 'The quality is insane for the price.', b: false },
   { t: 'Every piece feels so premium and they never tarnish.', b: false },
   { t: 'I literally wear them every single day now.', b: false },
@@ -50,7 +50,7 @@ var UGC_LINES = [
 ];
 var UGC_SECTIONS = [
   { label: '[HOOK]', showAt: 1, lines: [[{ t: 'POV: everyone keeps asking where I got these rings 💍', b: false }]] },
-  { label: '[PROBLEM → SOLUTION]', showAt: 2, lines: [[{ t: "So I'm finally telling you my secret...", b: false }], [{ t: 'I found ', b: false }, { t: 'YOUR BRAND', b: true }, { t: ' a few months ago and honestly?', b: false }]] },
+  { label: '[PROBLEM → SOLUTION]', showAt: 2, lines: [[{ t: "So I'm finally telling you my secret...", b: false }], [{ t: 'I found ', b: false }, { t: 'CARBONIUM', b: true }, { t: ' a few months ago and honestly?', b: false }]] },
   { label: '[PRODUCT]', showAt: 4, lines: [[{ t: 'The quality is insane for the price.', b: false }], [{ t: 'Every piece feels so premium and they never tarnish.', b: false }]] },
   { label: '[CTA]', showAt: 6, lines: [[{ t: 'Code SARAH = 30% off', b: true }, { t: ' your first order ✨', b: false }]] }
 ];
@@ -231,7 +231,7 @@ export function initComposer(panel) {
   function buildUGC() {
     outEl.innerHTML = scanLine() + '<div style="height:320px;background:#fff;display:flex;gap:10px;padding:10px;box-sizing:border-box">' +
       '<div style="position:relative;height:100%;overflow:hidden;border-radius:16px;border:1.5px solid #333;aspect-ratio:9/16;flex-shrink:0">' +
-        '<video autoplay loop muted playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" src="' + VID + 'asVidF.mp4"></video>' +
+        '<video autoplay loop muted playsinline poster="' + IMG + 'asVidUGC-poster.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" src="' + VID + 'asVidUGC.mp4"></video>' +
         '<div style="position:absolute;top:10px;left:10px;display:flex;align-items:center;gap:4px;z-index:10"><div style="width:8px;height:8px;border-radius:50%;background:#FF3B3B;animation:recBlink 1s ease-in-out infinite"></div><span style="font-size:9px;font-weight:700;color:#fff;font-family:' + DM + ';letter-spacing:0.05em">REC</span></div>' +
         '<div style="position:absolute;left:0;right:0;bottom:36px;overflow:hidden;max-height:130px"><div class="cc-ugc-cap" style="display:flex;flex-direction:column;gap:3px;padding:8px 12px 6px;background:rgba(0,0,0,0.55)"></div></div>' +
         '<div style="position:absolute;bottom:10px;left:12px;display:flex;align-items:center;gap:5px;z-index:10"><span style="font-size:9px;font-weight:700;color:#fff;font-family:' + DM + '">@sarahlifestyle</span><span style="background:rgba(255,255,255,0.2);color:#fff;font-size:7.5px;border-radius:3px;padding:1px 5px;font-family:' + DM + '">Sponsored</span></div>' +
