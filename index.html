@@ -1246,6 +1246,17 @@ $
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+    // Logo: point at "/" and scroll to top on click WITHOUT adding a #hero hash.
+    var logoLink = nav.querySelector('a[href="#hero"]') || (nav.querySelector('img') && nav.querySelector('img').closest('a'));
+    if (logoLink) {
+      logoLink.setAttribute('href', '/');
+      logoLink.addEventListener('click', function (e) {
+        if (location.pathname === '/' || location.pathname.endsWith('/index.html')) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    }
   }
 
   /* ---- FAQ accordion (WebsiteFAQ) ---- */
