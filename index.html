@@ -1275,6 +1275,9 @@ $
   }
   // nav triggers: Contact link + Let's Talk button are the nav's a[href="#"]
   if (nav) nav.querySelectorAll('a[href="#"]').forEach(function (a) { a.addEventListener('click', openModal); });
+  // hero "I Want Now!" opens the contact modal (identical to nav Let's Talk)
+  var heroSec = document.getElementById('hero');
+  if (heroSec) heroSec.querySelectorAll('a').forEach(function (a) { if (/I Want Now/.test(a.textContent)) a.addEventListener('click', openModal); });
 
   /* ---- Budget formatting + validation (ported 1:1 from modal source) ---- */
   var cmSanitize = function (s) {
