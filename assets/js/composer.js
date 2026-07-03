@@ -181,7 +181,7 @@ export function initComposer(panel) {
   function aeoCardHTML(c) {
     return '<div style="background:#fff;border-radius:8px;padding:6px 10px;display:flex;align-items:center;gap:8px;border:' + c.border + ';animation:slideFromLeft 0.3s ease-out forwards;flex:1;min-height:0">' + c.logo +
       '<div style="flex:1;min-width:0"><div style="font-size:12px;font-weight:700;color:' + c.nameColor + ';margin-bottom:2px;font-family:' + DM + '">' + c.name + '</div>' +
-      '<div style="font-size:11px;color:#555;line-height:1.4;font-family:' + DM + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + c.before + '<span style="font-weight:700;color:' + c.accent + ';background:' + c.badgeBg + ';border-radius:3px;padding:0 2px">YOUR BRAND</span>' + c.after + '</div></div>' +
+      '<div style="font-size:11px;color:#555;line-height:1.4;font-family:' + DM + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + c.before + '<span style="font-weight:700;color:' + c.accent + ';background:' + c.badgeBg + ';border-radius:3px;padding:0 2px">CARBONIUM</span>' + c.after + '</div></div>' +
       '<div style="flex-shrink:0;background:' + c.badgeBg + ';color:' + c.badgeColor + ';border-radius:5px;padding:3px 8px;font-size:11px;font-weight:700;font-family:' + DM + ';white-space:nowrap;animation:citedPop 0.3s ease-out 0.5s both">✓ Cited</div></div>';
   }
   function buildAEO() {
