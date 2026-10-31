@@ -140,7 +140,7 @@ export function initComposer(panel) {
       (a >= 2 ? '<div style="width:100%;position:relative;padding-bottom:56.25%;overflow:hidden;background:#EAEAEE"><img src="' + IMG + 'asAdShot.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>' : '') +
       (a >= 2 ? '<div style="padding:7px 10px 2px;font-size:11px;font-weight:700;color:#1A1A1A;line-height:1.4">' + h + caret + '</div>' : '') +
       (a >= 3 ? '<div style="padding:1px 10px 5px;font-size:10px;color:#666;line-height:1.6"><div>The serum dermatologists trust.</div>' + (a >= 4 ? '<div>Now 20% off — 48 hours only.</div>' : '') + '</div>' : '') +
-      (a >= 5 ? '<div style="display:flex;align-items:center;justify-content:space-between;padding:6px 10px;border-top:1px solid #EFEFEF"><span style="font-size:9px;color:#aaa;font-family:' + DM + '">carbonium.agency</span><div style="background:#1A1A1A;color:#fff;border-radius:999px;padding:4px 10px;font-size:9px;font-weight:700">Shop Now →</div></div>' : '') +
+      (a >= 5 ? '<div style="display:flex;align-items:center;justify-content:space-between;padding:6px 10px;border-top:1px solid #EFEFEF"><span style="font-size:9px;color:#aaa;font-family:' + DM + '">carboniumagency.com</span><div style="background:#1A1A1A;color:#fff;border-radius:999px;padding:4px 10px;font-size:9px;font-weight:700">Shop Now →</div></div>' : '') +
       '</div>';
   }
 

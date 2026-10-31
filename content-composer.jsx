@@ -255,7 +255,7 @@ function ContentComposerVis({active}) {
               )}
               {adStep >= 5 && (
                 <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'6px 10px',borderTop:'1px solid #EFEFEF'}}>
-                  <span style={{fontSize:'9px',color:'#aaa',fontFamily:'DM Sans,sans-serif'}}>carbonium.agency</span>
+                  <span style={{fontSize:'9px',color:'#aaa',fontFamily:'DM Sans,sans-serif'}}>carboniumagency.com</span>
                   <div style={{background:'#1A1A1A',color:'#fff',borderRadius:'999px',padding:'4px 10px',fontSize:'9px',fontWeight:700}}>Shop Now →</div>
                 </div>
               )}
