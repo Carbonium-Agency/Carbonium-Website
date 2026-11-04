@@ -6,9 +6,9 @@
   var LINKS = [
     ['Services', 'services.html'],
     ['Case Studies', 'case-studies.html'],
-    ['About', 'about.html'],
-    ['Blog', 'blog.html'],
-    ['Contact', 'contact.html']
+    ['Lab', 'lab.html'],
+    ['Insights', 'insights.html'],
+    ['About', 'about.html']
   ];
   var nav = document.querySelector('nav.site') || document.querySelector('nav');
   if (!nav) return;
