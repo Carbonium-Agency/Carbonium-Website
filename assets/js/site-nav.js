@@ -17,7 +17,7 @@
 
   var css = document.createElement('style');
   css.textContent =
-    'html{overflow-x:clip}' +
+    'html,body{overflow-x:clip!important}' +
     '.snav-btn{display:none;background:none;border:0;cursor:pointer;padding:8px;margin-left:8px}' +
     '.snav-btn span{display:block;width:22px;height:2px;background:#1A1A1A;margin:4px 0;transition:transform .25s,opacity .25s}' +
     '.snav-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}' +
