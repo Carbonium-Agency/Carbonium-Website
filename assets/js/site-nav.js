@@ -7,6 +7,7 @@
     ['Services', 'services.html'],
     ['Case Studies', 'case-studies.html'],
     ['About', 'about.html'],
+    ['Blog', 'blog.html'],
     ['Contact', 'contact.html']
   ];
   var nav = document.querySelector('nav.site') || document.querySelector('nav');
