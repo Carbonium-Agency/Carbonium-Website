@@ -1,7 +1,8 @@
 /* Contact auto-reply hook (added 2026-11-05).
    Every form on the site posts to Formspree with fetch(). This wraps fetch so
    that, once Formspree accepts a submission, the visitor's name and email are
-   also sent to /autoreply.php, which emails them a confirmation.
+   also sent to /autoreply.php, which emails them a confirmation and
+   copies the enquiry to info@carboniumagency.com.
    The form itself works exactly as before; if this step fails nothing changes
    for the visitor. */
 (function () {
@@ -16,12 +17,13 @@
         typeof FormData !== 'undefined' && init.body instanceof FormData;
       if (isForm) {
         var email = String(init.body.get('email') || '');
-        var name = String(init.body.get('name') || '');
+        var keep = ['name', 'email', 'company', 'message', 'budget_min', 'budget_max', 'page'];
+        var vals = {};
+        keep.forEach(function (k) { var v = init.body.get(k); if (typeof v === 'string') vals[k] = v; });
         p.then(function (r) {
           if (!r || !r.ok || !email) return;
           var fd = new FormData();
-          fd.append('email', email);
-          fd.append('name', name);
+          Object.keys(vals).forEach(function (k) { fd.append(k, vals[k]); });
           fd.append('website', '');
           orig.call(window, '/autoreply.php', { method: 'POST', body: fd, credentials: 'same-origin' }).catch(function () {});
         }).catch(function () {});
