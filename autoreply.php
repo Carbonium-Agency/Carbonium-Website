@@ -9,7 +9,7 @@
    private config file exists; otherwise it falls back to PHP mail().
 
    Private config, OUTSIDE the website folder (never in GitHub):
-     <home>/domains/carboniumagency.com/carbonium-mail.php
+     /home/<hosting user>/carbonium-mail.php
        <?php return ['user' => 'info@carboniumagency.com', 'pass' => 'MAILBOX PASSWORD'];
 
    Abuse guards: POST only, same-site origin, honeypot, strict email check,
@@ -57,8 +57,11 @@ $hIp = hits($fIp, 3600, $now); $hEm = hits($fEm, 86400, $now); $hAll = hits($fAl
 if (count($hIp) >= 5 || count($hAll) >= 60) done(200, 'ok');            // silently skip everything
 
 /* ---------- mail transport ---------- */
-$cfgFile = dirname(rtrim($_SERVER['DOCUMENT_ROOT'] ?? __DIR__, '/')) . '/carbonium-mail.php';
-$cfg = is_file($cfgFile) ? @include $cfgFile : null;
+$docRoot = rtrim($_SERVER['DOCUMENT_ROOT'] ?? __DIR__, '/');      // /home/<user>/domains/<site>/public_html
+$cfg = null;
+foreach ([dirname($docRoot, 3), dirname($docRoot)] as $d) {          // home folder first, then the site folder
+  if (is_file($d . '/carbonium-mail.php')) { $cfg = @include $d . '/carbonium-mail.php'; break; }
+}
 
 function smtp_send($cfg, $from, $to, $raw) {
   $fp = @stream_socket_client('ssl://smtp.hostinger.com:465', $errno, $errstr, 15);
