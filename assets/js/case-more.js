@@ -1,7 +1,6 @@
 /* "More case studies": two random other cases on every visit, with animated thumbnails (case-fx.js). */
 (function () {
   var grid = document.querySelector('.more-grid');
-  if (!grid) return;
   var CASES = [
  {
   "h": "case-study-tigerwit.html",
@@ -68,6 +67,20 @@
  }
 ];
   var here = location.pathname.split('/').pop() || '';
+
+  // Hero visual: same animated treatment as this case's thumbnail
+  var me = CASES.filter(function (c) { return c.h === here; })[0], hero = document.querySelector('.cs-visual');
+  if (me && hero && !/fx-/.test(hero.className)) {
+    var hs = document.createElement('style'); hs.textContent = '.cs-visual.logo.fx-logo{background:#FFFFFF!important}'; document.head.appendChild(hs);
+    var tmp = document.createElement('div'); tmp.innerHTML = me.t;
+    var src = tmp.firstChild, timg = src.querySelector('img'), himg = hero.querySelector('img');
+    src.className.split(' ').forEach(function (c) { if (c && c !== 'logo') hero.classList.add(c); });
+    if (src.dataset.fx) hero.dataset.fx = src.dataset.fx;
+    if (src.style.background) hero.style.background = src.style.background;
+    if (himg && timg) himg.src = timg.getAttribute('src');
+    Array.prototype.forEach.call(src.querySelectorAll('canvas, .shine'), function (n) { hero.appendChild(n); });
+  }
+  if (!grid) return;
   var pool = CASES.filter(function (c) { return c.h !== here; });
   for (var i = pool.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = pool[i]; pool[i] = pool[j]; pool[j] = t; }
   grid.innerHTML = pool.slice(0, 2).map(function (c) {

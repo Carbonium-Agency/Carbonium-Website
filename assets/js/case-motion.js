@@ -11,14 +11,19 @@
     '.cm-on .cm.cm-z{transform:scale(.94)}' +
     '.cm-on .cm.in{opacity:1;transform:none}' +
     '.cm-on .cs-visual{overflow:hidden}' +
-    '.cm-on .cs-visual img{animation:cmKen 18s ease-in-out infinite alternate}' +
+    '.cm-on .cs-visual:not([class*="fx-"]) img{animation:cmKen 18s ease-in-out infinite alternate}' +
     '@keyframes cmKen{from{transform:scale(1)}to{transform:scale(1.06)}}' +
     '.cm-on .ch-label{position:relative}' +
     '.cm-on .cblock h2.cm{clip-path:inset(0 100% 0 0);transform:none;transition:clip-path 1s cubic-bezier(.2,.7,.2,1),opacity .4s;transition-delay:var(--cm-d,0s)}' +
     '.cm-on .cblock h2.cm.in{clip-path:inset(0 0 0 0)}' +
-    '.cm-on figure{overflow:hidden}' +
-    '.cm-on figure img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}' +
-    '.cm-on figure:hover img{transform:scale(1.035)}' +
+    '.cm-frame{position:relative;overflow:hidden;border-radius:14px;background:#F1F1F1}' +
+    '.cm-frame img{border-radius:0!important;display:block;transform-origin:var(--ox,50%) var(--oy,50%);animation:cmDrift var(--du,16s) ease-in-out infinite alternate;animation-play-state:paused}' +
+    '.cm-frame.live img{animation-play-state:running}' +
+    '@keyframes cmDrift{from{transform:scale(1)}to{transform:scale(1.045) translate(var(--dx,0),var(--dy,0))}}' +
+    '.cm-frame:after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:45%;pointer-events:none;background:linear-gradient(100deg,transparent,rgba(255,255,255,.28) 50%,transparent);animation:cmShine var(--sh,9s) ease-in-out var(--sd,0s) infinite;animation-play-state:paused}' +
+    '.cm-frame.live:after{animation-play-state:running}' +
+    '@keyframes cmShine{0%,70%{left:-60%}100%{left:130%}}' +
+    'figure:hover .cm-frame img{animation-duration:6s}' +
     '.cm-on .ccard,.cm-on .stat,.cm-on .more-card{will-change:transform}' +
     '.cm-on .ccard.in,.cm-on .stat.in{transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .35s ease-out}' +
     '.cm-on .ccard.in:hover,.cm-on .stat.in:hover{transform:translateY(-4px)}' +
@@ -69,6 +74,20 @@
   }
   tag(document.querySelector('.cta-card'), 'cm-z');
   group('.more-grid', 0.1);
+
+  // Content images: slow drift + light sweep while on screen
+  var live = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { e.target.classList.toggle('live', e.isIntersecting); });
+  }, { threshold: 0.05 });
+  document.querySelectorAll('.cbody figure > img').forEach(function (img, i) {
+    var fr = document.createElement('div');
+    fr.className = 'cm-frame';
+    var r = function (a, b) { return (a + Math.random() * (b - a)).toFixed(2); };
+    fr.style.cssText = '--du:' + r(14, 22) + 's;--dx:' + r(-1.6, 1.6) + '%;--dy:' + r(-1.2, 1.2) + '%;--ox:' + r(30, 70) + '%;--oy:' + r(30, 70) + '%;--sh:' + r(8, 12) + 's;--sd:' + r(0, 6) + 's';
+    img.parentNode.insertBefore(fr, img);
+    fr.appendChild(img);
+    live.observe(fr);
+  });
 
   // Count-up for single-number stats ("106,208", "$10,000,000+", "5.8×", "11 cities")
   function countUp(el) {
