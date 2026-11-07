@@ -318,7 +318,7 @@ window.CarboniumBuildSquad = function(){
     }).join('');
   }
 
-  renderRow('row', CHARS.slice(0,5));
+  renderRow('row', CHARS.concat(CHARS2.slice(0,1)));
 
   /* ═══════════ Interactive click reactions (vanilla JS) ═══════════ */
   const LOTUS_SVG = '<svg width="17" height="14" viewBox="0 0 14 11"><path d="M7 1 C8 4 8 7 7 10 C6 7 6 4 7 1 M7 10 C4 9 2 6 2 3 C5 4 6 7 7 10 M7 10 C10 9 12 6 12 3 C9 4 8 7 7 10" fill="currentColor"/></svg>';
