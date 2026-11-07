@@ -64,7 +64,8 @@ export function initComposer(panel) {
   // keyframes the modes rely on (all but ugcLineIn already in page; add safely)
   if (!document.getElementById('__composer-kf')) {
     var st = document.createElement('style'); st.id = '__composer-kf';
-    st.textContent = '@keyframes ugcLineIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}';
+    st.textContent = '@keyframes ugcLineIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}' +
+      '@media (max-width:700px){.cc-ugc-wrap{height:auto!important}.cc-ugc-phone{height:auto!important;width:44%!important}}';
     document.head.appendChild(st);
   }
 
@@ -229,8 +230,8 @@ export function initComposer(panel) {
 
   // ---- UGC (built once, then script lines / caption revealed) ----
   function buildUGC() {
-    outEl.innerHTML = scanLine() + '<div style="height:320px;background:#fff;display:flex;gap:10px;padding:10px;box-sizing:border-box">' +
-      '<div style="position:relative;height:100%;overflow:hidden;border-radius:16px;border:1.5px solid #333;aspect-ratio:9/16;flex-shrink:0">' +
+    outEl.innerHTML = scanLine() + '<div class="cc-ugc-wrap" style="height:320px;background:#fff;display:flex;gap:10px;padding:10px;box-sizing:border-box">' +
+      '<div class="cc-ugc-phone" style="position:relative;height:100%;overflow:hidden;border-radius:16px;border:1.5px solid #333;aspect-ratio:9/16;flex-shrink:0">' +
         '<video autoplay loop muted playsinline poster="' + IMG + 'asVidUGC-poster.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" src="' + VID + 'asVidUGC.mp4"></video>' +
         '<div style="position:absolute;top:10px;left:10px;display:flex;align-items:center;gap:4px;z-index:10"><div style="width:8px;height:8px;border-radius:50%;background:#FF3B3B;animation:recBlink 1s ease-in-out infinite"></div><span style="font-size:9px;font-weight:700;color:#fff;font-family:' + DM + ';letter-spacing:0.05em">REC</span></div>' +
         '<div style="position:absolute;left:0;right:0;bottom:36px;overflow:hidden;max-height:130px"><div class="cc-ugc-cap" style="display:flex;flex-direction:column;gap:3px;padding:8px 12px 6px;background:rgba(0,0,0,0.55)"></div></div>' +
