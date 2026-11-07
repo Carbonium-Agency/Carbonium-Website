@@ -637,7 +637,7 @@ export function initCardAtom(host) {
       if(window.__card03Active) startScene();
 
       ro=new ResizeObserver(function(){
-        if(!hostRef.current) return; var w=host.clientWidth, h=host.clientHeight; if(!w||!h) return;
+        if(!host) return; var w=host.clientWidth, h=host.clientHeight; if(!w||!h) return;
         camera.aspect=w/h; camera.updateProjectionMatrix(); applyPan(); renderer.setSize(w,h);
       });
       ro.observe(host);
