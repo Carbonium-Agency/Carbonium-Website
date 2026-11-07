@@ -559,7 +559,7 @@ const run=(base,swC,sw,tbC,tb,btC,bt,cards,top)=>{size();addEventListener('resiz
  new IntersectionObserver(e=>{const v=e[0].isIntersecting;if(v&&!on){on=true;last=0;requestAnimationFrame(frame)}else if(!v)on=false},{threshold:.05}).observe(w)};
 {const go=()=>(window.requestIdleCallback||setTimeout)(()=>img.complete&&img.naturalWidth?init():img.addEventListener('load',init,{once:true}));const lio=new IntersectionObserver(e=>{if(e[0].isIntersecting){lio.disconnect();go()}},{rootMargin:'200px'});lio.observe(w)}})();
 </script>
-<script src="assets/js/site-nav.js?v=5" defer></script>
+<script src="assets/js/site-nav.js?v=6" defer></script>
 <script src="assets/js/autoreply.js?v=2" defer></script>
 </body>
 </html>
