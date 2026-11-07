@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img" aria-label="Illustration: a launch route with five numbered stops across a new market">
+  <defs>
+    <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5B8CFF"/><stop offset="1" stop-color="#1D47C9"/></linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#4F7DFF" stop-opacity="0.35"/><stop offset="1" stop-color="#4F7DFF" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#CFCFCF"/></pattern>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.12"/></filter>
+  </defs>
+  <rect width="800" height="400" fill="#E9E9E9"/>
+  <rect width="800" height="400" fill="url(#dots)"/>
+  <!-- land masses -->
+  <path d="M118 236c-26-42 22-96 88-104 54-6 76 22 136 14 50-7 92-32 150-20 62 13 108 54 92 104-14 44-78 60-134 56-48-3-70 24-126 28-62 5-96-20-130-28-40-9-58-18-76-50z" fill="#F7F7F7" stroke="#D3D3D3" stroke-width="2"/>
+  <path d="M604 112c28-20 86-16 96 14 8 24-16 44-50 46-34 2-72-20-46-60z" fill="#F7F7F7" stroke="#D3D3D3" stroke-width="2"/>
+  <path d="M90 318c20-16 70-8 72 14 1 18-24 28-50 24-26-4-40-22-22-38z" fill="#F7F7F7" stroke="#D3D3D3" stroke-width="2"/>
+  <!-- route -->
+  <path id="route" d="M168 262 C 220 190, 290 300, 350 232 S 470 150, 520 214 S 640 250, 700 140" fill="none" stroke="#0A0A0A" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <!-- launch glow -->
+  <circle cx="168" cy="262" r="70" fill="url(#glow)"/>
+  <circle cx="168" cy="262" r="26" fill="url(#orb)"/>
+  <circle cx="168" cy="262" r="36" fill="none" stroke="#4F7DFF" stroke-opacity="0.45" stroke-width="2"/>
+  <path d="M160 270l8-18 8 18-8-5z" fill="#fff"/>
+  <!-- stops -->
+  <g font-family="'DM Sans', Satoshi, Arial, sans-serif" font-weight="700" font-size="13" text-anchor="middle">
+    <g transform="translate(350 232)"><circle r="14" fill="#0A0A0A"/><circle r="5" fill="#fff"/><text y="-24" fill="#0A0A0A">02</text></g>
+    <g transform="translate(520 214)"><circle r="14" fill="#0A0A0A"/><circle r="5" fill="#fff"/><text y="-24" fill="#0A0A0A">03</text></g>
+    <g transform="translate(618 262)"><circle r="14" fill="#0A0A0A"/><circle r="5" fill="#fff"/><text y="36" fill="#0A0A0A">04</text></g>
+    <g transform="translate(700 140)"><circle r="14" fill="#0A0A0A"/><circle r="5" fill="#fff"/><text y="-24" fill="#0A0A0A">05</text></g>
+    <text x="168" y="318" fill="#0A0A0A">01 · LAUNCH</text>
+  </g>
+  <!-- label card -->
+  <g transform="translate(470 300)" filter="url(#sh)">
+    <rect width="250" height="62" rx="14" fill="#fff"/>
+    <rect x="16" y="20" width="22" height="22" rx="6" fill="url(#orb)"/>
+    <text x="52" y="29" font-family="'DM Sans', Satoshi, Arial, sans-serif" font-size="11" font-weight="700" fill="#7C7C7C" letter-spacing="1.5">NEW MARKET</text>
+    <text x="52" y="48" font-family="Satoshi, 'DM Sans', Arial, sans-serif" font-size="16" font-weight="800" fill="#0A0A0A">Research → Launch → Scale</text>
+  </g>
+  <!-- compass -->
+  <g transform="translate(60 60)" stroke="#9A9A9A" stroke-width="2" fill="none"><circle r="22"/><path d="M0-22V22M-22 0H22"/><path d="M0-12l6 12-6 12-6-12z" fill="#0A0A0A" stroke="none"/></g>
+</svg>
