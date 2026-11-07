@@ -95,10 +95,8 @@
   var counters = document.querySelectorAll('.stat .n, .cs-head-stat .n');
   counters.forEach(function (n) { n.dataset.cmCount = '1'; });
 
-  var io = new IntersectionObserver(function (es) {
-    es.forEach(function (e) {
-      if (!e.isIntersecting) return;
-      var el = e.target;
+  function reveal(el) {
+      if (el.classList.contains('in')) return;
       el.classList.add('in');
       io.unobserve(el);
       var blk = el.closest && el.closest('.cblock'), h2 = blk && blk.querySelector(':scope > h2.cm');
@@ -107,9 +105,12 @@
         delete n.dataset.cmCount;
         setTimeout(function () { countUp(n); }, (parseFloat(getComputedStyle(el).getPropertyValue('--cm-d')) || 0) * 1000 + 150);
       });
-    });
+  }
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) reveal(e.target); });
   }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-  document.querySelectorAll('.cm').forEach(function (el) { if (!el.matches('.cblock > h2')) io.observe(el); });
+  var pending = [];
+  document.querySelectorAll('.cm').forEach(function (el) { if (!el.matches('.cblock > h2')) { io.observe(el); pending.push(el); } });
 
   // Reading progress bar
   var bar = document.createElement('div');
@@ -119,6 +120,7 @@
   var ticking = false;
   function prog() {
     ticking = false;
+    pending.forEach(function (el) { if (!el.classList.contains('in') && el.getBoundingClientRect().top < innerHeight) reveal(el); });
     var h = root.scrollHeight - innerHeight;
     bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, scrollY / h) : 0) + ')';
   }
