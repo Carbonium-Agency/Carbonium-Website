@@ -4,6 +4,7 @@
 (function () {
   if (document.getElementById('hamb')) return;
   var LINKS = [
+    ['Home', 'index.html'],
     ['Services', 'services.html'],
     ['Case Studies', 'case-studies.html'],
     ['Lab', 'lab.html'],
