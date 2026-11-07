@@ -2214,7 +2214,7 @@ function MI_SETUP(root){
   if (!gen) return;
   var panel = gen.parentElement && gen.parentElement.parentElement;
   if (!panel) return;
-  import('./assets/js/composer.js?v=2').then(function (m) {
+  import('./assets/js/composer.js?v=3').then(function (m) {
     var api = m.initComposer(panel);
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (es) {
