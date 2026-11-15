@@ -117,7 +117,7 @@ if (count($hEm) < 1) {
   $hi = $first !== '' ? "Hi $first," : "Hi,";
   $body = $hi . "\r\n\r\n"
     . "Thanks for reaching out to Carbonium. Your message has arrived, and a member of our team will review it and get back to you shortly.\r\n\r\n"
-    . "If it's urgent, reply to this email or message us on WhatsApp: +971 56 798 5386 (https://wa.me/971567985386).\r\n\r\n"
+    . "If it's urgent, just reply to this email.\r\n\r\n"
     . "Carbonium\r\n"
     . "Global AI marketing agency\r\n"
     . "https://carboniumagency.com\r\n\r\n"
